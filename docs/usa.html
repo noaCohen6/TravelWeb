@@ -1,80 +1,159 @@
-<html>
+<html lang="en">
 <head>
-	<title>USA</title>
-	<style>
-		.country-img {
-			width: 200px;
-			height: 150px;
-			margin: 10px;
-		}
-		
-		 attr {
-			background-color: #f0f0f0;
-			padding: 10px;
-			border: 1px solid #ddd;
-			margin-bottom: 10px;
-		}
-		
-		.attr-name {
-			font-weight: bold;
-		}
-		
-		.attr-desc {
-			font-size: 14px;
-			color: #666;
-		}
-		
-		.attr-coord {
-			font-size: 12px;
-			color: #999;
-		}
-	</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>USA Travel Guide</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 1em;
+      text-align: center;
+    }
+    section {
+      padding: 1em;
+    }
+    h2 {
+      margin-top: 0;
+    }
+    .photos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .photo {
+      margin: 10px;
+      width: 200px;
+    }
+    .attractions {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .attraction {
+      margin-bottom: 20px;
+    }
+    .attraction h3 {
+      margin-top: 0;
+    }
+  </style>
 </head>
 <body>
-	<header>
-		<h1>United States of America</h1>
-		<p>Welcome to the USA, a country known for its diverse culture, rich history, and breathtaking landscapes.</p>
-	</header>
-	
-	<section>
-		<h2>Photos</h2>
-		<img src="https://source.unsplash.com/1200x800/?USA,landscape" alt="USA landscape" class="country-img" style="width: 100%; height: 300px; object-fit: cover; border-radius: 8px; margin: 10px 0;">
-		<img src="https://source.unsplash.com/1200x800/?USA,city" alt="USA city" class="country-img" style="width: 100%; height: 300px; object-fit: cover; border-radius: 8px; margin: 10px 0;">
-		<img src="https://source.unsplash.com/1200x800/?USA,culture" alt="USA culture" class="country-img" style="width: 100%; height: 300px; object-fit: cover; border-radius: 8px; margin: 10px 0;">
-	</section>
-	
-	<section>
-		<h2>Attractions</h2>
-		<div class="attr">
-			<div class="attr-name">Grand Canyon</div>
-			<div class="attr-desc">One of the most iconic natural wonders in the USA, the Grand Canyon is a breathtaking example of erosion and geological history.</div>
-			<div class="attr-coord">36.1069° N, 112.1129° W</div>
-		</div>
-		<div class="attr">
-			<div class="attr-name">Statue of Liberty</div>
-			<div class="attr-desc">A symbol of freedom and democracy, the Statue of Liberty is one of the most recognizable landmarks in the world.</div>
-			<div class="attr-coord">40.6933° N, 74.0467° W</div>
-		</div>
-		<div class="attr">
-			<div class="attr-name">Golden Gate Bridge</div>
-			<div class="attr-desc">An engineering marvel and iconic symbol of San Francisco, the Golden Gate Bridge is a must-visit attraction in the USA.</div>
-			<div class="attr-coord">37.7749° N, 122.4194° W</div>
-		</div>
-		<div class="attr">
-			<div class="attr-name">Yosemite National Park</div>
-			<div class="attr-desc">Known for its stunning granite cliffs, waterfalls, and giant sequoia groves, Yosemite is a nature lover's paradise.</div>
-			<div class="attr-coord">37.8651° N, 119.5383° W</div>
-		</div>
-		<div class="attr">
-			<div class="attr-name">Las Vegas Strip</div>
-			<div class="attr-desc">A city that never sleeps, the Las Vegas Strip is a hub of entertainment, dining, and nightlife.</div>
-			<div class="attr-coord">36.1699° N, 115.1398° W</div>
-		</div>
-	</section>
-	
-	<section>
-		<h2>Map</h2>
-		<iframe src="https://www.google.com/maps/d/embed?mid=1aIjZ7Vf1xL0a1ZK5xY8hjJjJjJh&hl=en" width="600" height="400"></iframe>
-	</section>
+  <header>
+    <h1>USA Travel Guide</h1>
+    <p>The United States of America is a vast and diverse country, offering a wide range of experiences for visitors. From the bright lights of New York City to the sun-kissed beaches of California, the USA has something for everyone.</p>
+  </header>
+  <section id="photos">
+    <h2>Photos</h2>
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; margin: 20px 0;">
+  <div style="flex: 0 0 30%; margin: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden;">
+    <img src="https://source.unsplash.com/1200x800/?USA,landscape" alt="USA landscape" style="width: 100%; height: 250px; object-fit: cover; display: block;">
+    <div style="padding: 10px; text-align: center;">USA landscape</div>
+  </div>
+  <div style="flex: 0 0 30%; margin: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden;">
+    <img src="https://source.unsplash.com/1200x800/?USA,city" alt="USA city" style="width: 100%; height: 250px; object-fit: cover; display: block;">
+    <div style="padding: 10px; text-align: center;">USA city</div>
+  </div>
+  <div style="flex: 0 0 30%; margin: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden;">
+    <img src="https://source.unsplash.com/1200x800/?USA,culture" alt="USA culture" style="width: 100%; height: 250px; object-fit: cover; display: block;">
+    <div style="padding: 10px; text-align: center;">USA culture</div>
+  </div>
+  <div style="flex: 0 0 30%; margin: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden;">
+    <img src="https://source.unsplash.com/1200x800/?USA,travel" alt="USA travel" style="width: 100%; height: 250px; object-fit: cover; display: block;">
+    <div style="padding: 10px; text-align: center;">USA travel</div>
+  </div>
+  <div style="flex: 0 0 30%; margin: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden;">
+    <img src="https://source.unsplash.com/1200x800/?USA,architecture" alt="USA architecture" style="width: 100%; height: 250px; object-fit: cover; display: block;">
+    <div style="padding: 10px; text-align: center;">USA architecture</div>
+  </div>
+</div>
+
+    <div class="photos">
+      <img class="photo" src="" alt="Photo 1">
+      <img class="photo" src="" alt="Photo 2">
+      <img class="photo" src="" alt="Photo 3">
+    </div>
+  </section>
+  <section id="attractions">
+    <h2>Attractions</h2>
+    <ul class="attractions">
+      <li class="attraction">
+        <h3>Grand Canyon</h3>
+        <p>One of the most iconic natural wonders in the USA, the Grand Canyon is a must-visit attraction. Located in Arizona, the canyon is over a mile deep and 277 miles long.</p>
+        <p>Coordinates: 36.1069, -112.1129</p>
+      </li>
+      <li class="attraction">
+        <h3>Statue of Liberty</h3>
+        <p>Located in New York Harbor, the Statue of Liberty is a symbol of freedom and democracy. The statue was a gift from France to the USA and was dedicated in 1886.</p>
+        <p>Coordinates: 40.6933, -74.0467</p>
+      </li>
+      <li class="attraction">
+        <h3>Golden Gate Bridge</h3>
+        <p>Located in San Francisco, California, the Golden Gate Bridge is an iconic suspension bridge that spans the Golden Gate strait. The bridge is over a mile long and offers stunning views of the city and the bay.</p>
+        <p>Coordinates: 37.7749, -122.4194</p>
+      </li>
+      <li class="attraction">
+        <h3>Mount Rushmore</h3>
+        <p>Located in the Black Hills of South Dakota, Mount Rushmore is a famous sculpture that features the faces of four U.S. presidents: George Washington, Thomas Jefferson, Theodore Roosevelt, and Abraham Lincoln.</p>
+        <p>Coordinates: 43.8792, -103.4591</p>
+      </li>
+      <li class="attraction">
+        <h3>Las Vegas Strip</h3>
+        <p>Located in Nevada, the Las Vegas Strip is a famous stretch of road that is home to many casinos, hotels, and entertainment venues. The strip is known for its bright lights and extravagant displays.</p>
+        <p>Coordinates: 36.1147, -115.1728</p>
+      </li>
+    </ul>
+  </section>
+  <section id="map-section">
+    <h2>Interactive Map</h2>
+    <div id="map" style="width: 100%; height: 500px;"></div>
+    <script>
+      function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 7,
+          center: {lat: 37.0902, lng: -95.7129}
+        });
+
+        // Create markers for each attraction
+        var attractions = [
+          {name: 'Grand Canyon', lat: 36.1069, lng: -112.1129, description: 'One of the most iconic natural wonders in the USA, the Grand Canyon is a must-visit attraction. Located in Arizona, the canyon is over a mile deep and 277 miles long.'},
+          {name: 'Statue of Liberty', lat: 40.6933, lng: -74.0467, description: 'Located in New York Harbor, the Statue of Liberty is a symbol of freedom and democracy. The statue was a gift from France to the USA and was dedicated in 1886.'},
+          {name: 'Golden Gate Bridge', lat: 37.7749, lng: -122.4194, description: 'Located in San Francisco, California, the Golden Gate Bridge is an iconic suspension bridge that spans the Golden Gate strait. The bridge is over a mile long and offers stunning views of the city and the bay.'},
+          {name: 'Mount Rushmore', lat: 43.8792, lng: -103.4591, description: 'Located in the Black Hills of South Dakota, Mount Rushmore is a famous sculpture that features the faces of four U.S. presidents: George Washington, Thomas Jefferson, Theodore Roosevelt, and Abraham Lincoln.'},
+          {name: 'Las Vegas Strip', lat: 36.1147, lng: -115.1728, description: 'Located in Nevada, the Las Vegas Strip is a famous stretch of road that is home to many casinos, hotels, and entertainment venues. The strip is known for its bright lights and extravagant displays.'},
+        ];
+
+        // Add markers to the map
+        var bounds = new google.maps.LatLngBounds();
+        for (var i = 0; i < attractions.length; i++) {
+          var marker = new google.maps.Marker({
+            position: {lat: attractions[i].lat, lng: attractions[i].lng},
+            map: map,
+            title: attractions[i].name
+          });
+
+          // Add info window
+          (function(marker, attraction) {
+            var infowindow = new google.maps.InfoWindow({
+              content: '<div><strong>' + attraction.name + '</strong><p>' + attraction.description + '</p></div>'
+            });
+            marker.addListener('click', function() {
+              infowindow.open(map, marker);
+            });
+            bounds.extend(marker.getPosition());
+          })(marker, attractions[i]);
+        }
+        map.fitBounds(bounds);
+      }
+    </script>
+    <script async defer
+      src="https://maps.googleapis.com/maps/api/js?callback=initMap">
+    </script>
+  </section>
 </body>
 </html>
