@@ -1,31 +1,83 @@
-<html>
+```html
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title>Israel Travel Guide</title>
-<style>
-body {
-font-family: Arial, sans-serif;
-}
-img {
-width: 300px;
-height: 200px;
-border: 1px solid black;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Israel Tourist Guide</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        .images {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .image {
+            width: 30%;
+            margin: 10px;
+            border: 1px solid #ddd;
+            padding: 10px;
+        }
+        .image img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+        .recommendations {
+            margin-top: 20px;
+        }
+        .map {
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
-<h1>Israel Travel Guide</h1>
-<p>Welcome to Israel, a country with a rich history and diverse landscapes. Here are some must-see attractions and recommendations for your trip.</p>
-<h2>Attractions</h2>
-<ul>
-<li><a href="https://www.google.com/maps/place/Tel+Aviv+Beach/@32.074444,34.768056,12z/data=!4m5!3m4!1s0x151d4bf4f9c64f6b:0x9cb8cf8b7b6c7a2a!8m2!3d32.074444!4d34.768056" target="_blank">Tel Aviv Beach</a></li>
-<li><a href="https://www.google.com/maps/place/Old+City+(Jerusalem)/@31.783333,35.216667,12z/data=!4m5!3m4!1s0x151d4ccc8e4c7b5f:0x79eb2e5e2c07d767!8m2!3d31.783333!4d35.216667" target="_blank">Old City (Jerusalem)</a></li>
-<li><a href="https://www.google.com/maps/place/Dead+Sea/@31.533333,35.466667,12z/data=!4m5!3m4!1s0x1503358f80b7e3c1:0x95a1dfc4c9e9e7b!8m2!3d31.533333!4d35.466667" target="_blank">Dead Sea</a></li>
-</ul>
-<h2>Photos</h2>
-<img src="https://source.unsplash.com/featured/?Israel,city" alt="Tel Aviv Beach">
-<img src="https://source.unsplash.com/featured/?Israel,culture" alt="Old City (Jerusalem)">
-<img src="https://source.unsplash.com/featured/?Israel,travel" alt="Dead Sea">
-<h2>Map</h2>
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12948.49244511122!2d34.76634791539241!3d32.06433108200012!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151d4bf4f9c64f6b%3A0x9cb8cf8b7b6c7a2a!2sTel+Aviv+Beach!5e0!3m2!1sen!2sus!4v1684611111111!5m2!1sen!2sus" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+    <div class="container">
+        <div class="header">
+            <h1>Israel Tourist Guide</h1>
+        </div>
+        <div class="images">
+            <div class="image">
+                <img src="https://source.unsplash.com/1200x800/?Israel,landscape" alt="Israel landscape" style="width: 100%; height: auto; display: block;" alt="Jerusalem Old City">
+            </div>
+            <div class="image">
+                <img src="https://source.unsplash.com/1200x800/?Israel,city" alt="Israel city" style="width: 100%; height: auto; display: block;" alt="Tel Aviv Beach">
+            </div>
+            <div class="image">
+                <img src="https://source.unsplash.com/1200x800/?Israel,culture" alt="Israel culture" style="width: 100%; height: auto; display: block;" alt="Masada National Park">
+            </div>
+        </div>
+        <div class="recommendations">
+            <h2>Local Attractions:</h2>
+            <ul>
+                <li><a href="https://www.touristisrael.com/jerusalem/1445/">Jerusalem Old City</a></li>
+                <li><a href="https://www.touristisrael.com/tel-aviv/1448/">Tel Aviv Beach</a></li>
+                <li><a href="https://www.touristisrael.com/masada/1486/">Masada National Park</a></li>
+            </ul>
+        </div>
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2280.395341355445!2d34.76677501551773!3d31.77711158133565!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1502db9f5c85e7d7%3A0x3c3f1c64a45a2c2!2sMasada%20National%20Park!5e0!3m2!1sen!2sil!4v1675093956545!5m2!1sen!2sil" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+    </div>
 </body>
 </html>
+```
