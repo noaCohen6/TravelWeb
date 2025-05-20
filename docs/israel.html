@@ -1,84 +1,49 @@
 <html>
 <head>
-<title>Israel Tourism</title>
-<style>
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
-}
-
-.container {
-  max-width: 800px;
-  margin: 40px auto;
-  padding: 20px;
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-.img-container {
-  text-align: center;
-}
-
-.img-container img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 10px;
-  margin-bottom: 20px;
-}
-
-.recommendations {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.recommendations li {
-  margin-bottom: 10px;
-}
-
-.recommendations li a {
-  text-decoration: none;
-  color: #337ab7;
-}
-
-.recommendations li a:hover {
-  color: #23527c;
-}
-
-.map-container {
-  text-align: center;
-}
-
-.map-container iframe {
-  width: 100%;
-  height: 400px;
-  border: none;
-  border-radius: 10px;
-}
-</style>
+	<title>Israel Tourism</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+		}
+		.container {
+			width: 80%;
+			margin: 0 auto;
+		}
+		.image-container {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-around;
+		}
+		.image {
+			width: 30%;
+			margin: 10px;
+		}
+		.map {
+			width: 100%;
+			height: 500px;
+			border: 1px solid black;
+		}
+	</style>
 </head>
 <body>
-<div class="container">
-<h1>Israel Tourism</h1>
-<div class="img-container">
-<img src="https://israeltourism.com/wp-content/uploads/2020/01/haifa-bahai-gardens.jpg" alt="Haifa Bahai Gardens">
-<img src="https://cdn.getyourguide.com/img/tour_img-123333-1.jpg" alt="Tel Aviv Beach">
-<img src="https://www.touristisrael.com/wp-content/uploads/2018/01/masada-1200x630.jpg" alt="Masada">
-</div>
-<h2>Recommendations for Local Attractions:</h2>
-<ul class="recommendations">
-<li><a href="https://www.visitjerusalem.com/">Jerusalem Old City</a> - A historic and cultural hub with numerous landmarks and attractions.</li>
-<li><a href="https://www.touristisrael.com/masada/">Masada National Park</a> - An ancient fortress with stunning views of the Dead Sea.</li>
-<li><a href="https://www.bahai.org/">Haifa Bahai Gardens</a> - A beautiful and peaceful garden with stunning views of the city.</li>
-<li><a href="https://www.tel-aviv.gov.il/en">Tel Aviv Beach</a> - A popular beach with clear waters and vibrant atmosphere.</li>
-</ul>
-<h2>Map with Coordinates of Attractions:</h2>
-<div class="map-container">
-<iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d13554.118176051838!2d34.776111115000004!3d31.783333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!12m4!1m2!1m1!1e1!4m5!1s0x1502bfd5f4921b45%3A0x1f7a8a5f4d4ce3ed!2sJerusalem!3m2!1d31.783333!2d35.216667!3m3!1m2!1s0x1502d102be85a3f9%3A0x1f7a9d0f4d4ce3ed!2sMasada%20National%20Park!5e1!12m4!1m2!1m1!1e1!4m5!1s0x1502d91e4f7f3f3f%3A0x1f7a8a5f4d4ce3ed!2sHaifa!3m2!1d32.816667!2d35.0!3m3!1m2!1s0x1502c9b9c9b59c47%3A0x1f7a8a5f4d4ce3ed!2sTel%20Aviv!5e1!3m2!1sen!2sil!4v1653058146543!5m2!1sen!2sil" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-</div>
-</div>
+	<div class="container">
+		<h1>Israel Tourism</h1>
+		<p>Israel is a country located in the Middle East, known for its rich history, diverse culture, and stunning landscapes. Here are some recommendations for local attractions and a map to help you plan your trip.</p>
+		<div class="image-container">
+			<img class="image" src="https://source.unsplash.com/600x400/?tel-aviv-beach" alt="Tel Aviv Beach">
+			<img class="image" src="https://source.unsplash.com/600x400/?jerusalem-old-city" alt="Jerusalem Old City">
+			<img class="image" src="https://source.unsplash.com/600x400/?dead-sea" alt="Dead Sea">
+		</div>
+		<h2>Local Attractions</h2>
+		<ul>
+			<li><a href="https://www.touristisrael.com/tel-aviv/" target="_blank">Tel Aviv</a>: known for its beautiful beaches, vibrant nightlife, and historic architecture.</li>
+			<li><a href="https://www.touristisrael.com/jerusalem/" target="_blank">Jerusalem</a>: a city steeped in history and culture, with landmarks like the Western Wall and the Church of the Holy Sepulchre.</li>
+			<li><a href="https://www.touristisrael.com/dead-sea/" target="_blank">Dead Sea</a>: a unique natural wonder, where you can float in the water and enjoy the stunning scenery.</li>
+		</ul>
+		<h2>Map</h2>
+		<div class="map">
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12951.98231411122!2d34.781327814999996!3d31.783030300000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1502cd5c38f2c6f7%3A0x3c4799c9fbd1e8b0!2sTel%20Aviv-Yafo%2C%20Israel!5e0!3m2!1sen!2sus!4v1677739562431!5m2!1sen!2sus" width="100%" height="500" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+		</div>
+	</div>
 </body>
 </html>
