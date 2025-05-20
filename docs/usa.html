@@ -1,51 +1,80 @@
 <html>
 <head>
-	<title>USA Local Attractions</title>
+	<title>USA</title>
 	<style>
-		body {
-			font-family: Arial, sans-serif;
+		.country-img {
+			width: 200px;
+			height: 150px;
+			margin: 10px;
 		}
-		.container {
-			width: 80%;
-			margin: 40px auto;
-			text-align: center;
+		
+		 attr {
+			background-color: #f0f0f0;
+			padding: 10px;
+			border: 1px solid #ddd;
+			margin-bottom: 10px;
 		}
-		.images {
-			display: flex;
-			justify-content: space-around;
-			margin-bottom: 20px;
+		
+		.attr-name {
+			font-weight: bold;
 		}
-		.image {
-			width: 30%;
-			border: 1px solid #ccc;
-			border-radius: 10px;
-			box-shadow: 0 0 10px rgba(0,0,0,0.1);
+		
+		.attr-desc {
+			font-size: 14px;
+			color: #666;
 		}
-		.map {
-			width: 80%;
-			height: 400px;
-			border: 1px solid #ccc;
-			border-radius: 10px;
-			box-shadow: 0 0 10px rgba(0,0,0,0.1);
+		
+		.attr-coord {
+			font-size: 12px;
+			color: #999;
 		}
 	</style>
 </head>
 <body>
-	<div class="container">
-		<h1>USA Local Attractions</h1>
-		<div class="images">
-			<img src="https://source.unsplash.com/1200x800/?USA,landscape" alt="USA landscape" style="width: 100%; height: auto; display: block;" alt="USA Attraction 1">
-			<img src="https://source.unsplash.com/1200x800/?USA,city" alt="USA city" style="width: 100%; height: auto; display: block;" alt="USA Attraction 2">
-			<img src="https://source.unsplash.com/1200x800/?USA,culture" alt="USA culture" style="width: 100%; height: auto; display: block;" alt="USA Attraction 3">
+	<header>
+		<h1>United States of America</h1>
+		<p>Welcome to the USA, a country known for its diverse culture, rich history, and breathtaking landscapes.</p>
+	</header>
+	
+	<section>
+		<h2>Photos</h2>
+		<img src="https://source.unsplash.com/1200x800/?USA,landscape" alt="USA landscape" class="country-img" style="width: 100%; height: 300px; object-fit: cover; border-radius: 8px; margin: 10px 0;">
+		<img src="https://source.unsplash.com/1200x800/?USA,city" alt="USA city" class="country-img" style="width: 100%; height: 300px; object-fit: cover; border-radius: 8px; margin: 10px 0;">
+		<img src="https://source.unsplash.com/1200x800/?USA,culture" alt="USA culture" class="country-img" style="width: 100%; height: 300px; object-fit: cover; border-radius: 8px; margin: 10px 0;">
+	</section>
+	
+	<section>
+		<h2>Attractions</h2>
+		<div class="attr">
+			<div class="attr-name">Grand Canyon</div>
+			<div class="attr-desc">One of the most iconic natural wonders in the USA, the Grand Canyon is a breathtaking example of erosion and geological history.</div>
+			<div class="attr-coord">36.1069° N, 112.1129° W</div>
 		</div>
-		<h2>Recommendations:</h2>
-		<ul>
-			<li><a href="https://www.nps.gov/yose/index.htm" target="_blank">Yosemite National Park</a></li>
-			<li><a href="https://www.centralpark.com/" target="_blank">Central Park</a></li>
-			<li><a href="https://www.grandcanyon.org/" target="_blank">Grand Canyon</a></li>
-		</ul>
-		<h2>Map:</h2>
-		<iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3135.878736722281!2d-118.24276738429117!3d34.05263478068329!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c759f28bacd3%3A0xa6ff67f9c67f5d0!2sLos+Angeles%2C+CA%2C+USA!5e0!3m2!1sen!2sin!4v1643723327425!5m2!1sen!2sin" frameborder="0" style="border:0" allowfullscreen></iframe>
-	</div>
+		<div class="attr">
+			<div class="attr-name">Statue of Liberty</div>
+			<div class="attr-desc">A symbol of freedom and democracy, the Statue of Liberty is one of the most recognizable landmarks in the world.</div>
+			<div class="attr-coord">40.6933° N, 74.0467° W</div>
+		</div>
+		<div class="attr">
+			<div class="attr-name">Golden Gate Bridge</div>
+			<div class="attr-desc">An engineering marvel and iconic symbol of San Francisco, the Golden Gate Bridge is a must-visit attraction in the USA.</div>
+			<div class="attr-coord">37.7749° N, 122.4194° W</div>
+		</div>
+		<div class="attr">
+			<div class="attr-name">Yosemite National Park</div>
+			<div class="attr-desc">Known for its stunning granite cliffs, waterfalls, and giant sequoia groves, Yosemite is a nature lover's paradise.</div>
+			<div class="attr-coord">37.8651° N, 119.5383° W</div>
+		</div>
+		<div class="attr">
+			<div class="attr-name">Las Vegas Strip</div>
+			<div class="attr-desc">A city that never sleeps, the Las Vegas Strip is a hub of entertainment, dining, and nightlife.</div>
+			<div class="attr-coord">36.1699° N, 115.1398° W</div>
+		</div>
+	</section>
+	
+	<section>
+		<h2>Map</h2>
+		<iframe src="https://www.google.com/maps/d/embed?mid=1aIjZ7Vf1xL0a1ZK5xY8hjJjJjJh&hl=en" width="600" height="400"></iframe>
+	</section>
 </body>
 </html>
