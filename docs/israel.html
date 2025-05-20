@@ -6,71 +6,116 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Israel</title>
     <style>
-        .country-img {
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        .photos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+        .photos img {
             width: 200px;
             height: 150px;
             margin: 10px;
-            border-radius: 10px;
+            border: 1px solid #ddd;
         }
-        
+        .attractions {
+            padding: 20px;
+        }
         .attraction {
             margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #ddd;
         }
-        
+        .attraction h2 {
+            margin-top: 0;
+        }
         .map {
-            width: 80%;
-            height: 400px;
-            margin: 20px auto;
-            border: 1px solid black;
+            padding: 20px;
+            text-align: center;
+        }
+        .map iframe {
+            width: 100%;
+            height: 500px;
+            border: none;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Welcome to Israel</h1>
-        <p>Israel, officially known as the State of Israel, is a country in Western Asia. It is situated on the southeastern shore of the Mediterranean Sea and the northern shore of the Red Sea.</p>
-    </header>
-    
-    <section>
-        <h2>Photos</h2>
-        <img src="https://source.unsplash.com/1200x800/?Israel,landscape" alt="Israel landscape" class="country-img" style="width: 100%; height: 300px; object-fit: cover; border-radius: 8px; margin: 10px 0;">
-        <img src="https://source.unsplash.com/1200x800/?Israel,city" alt="Israel city" class="country-img" style="width: 100%; height: 300px; object-fit: cover; border-radius: 8px; margin: 10px 0;">
-        <img src="https://source.unsplash.com/1200x800/?Israel,culture" alt="Israel culture" class="country-img" style="width: 100%; height: 300px; object-fit: cover; border-radius: 8px; margin: 10px 0;">
-    </section>
-    
-    <section>
-        <h2>Attractions</h2>
-        <article class="attraction">
-            <h3>Western Wall</h3>
-            <p>The Western Wall, also known as the Wailing Wall, is an ancient limestone wall in the Old City of Jerusalem.</p>
-            <p>Coordinates: 31.7765° N, 35.2343° E</p>
-        </article>
-        <article class="attraction">
-            <h3>Tel Aviv Beach</h3>
-            <p>Tel Aviv Beach is a popular beach in the city of Tel Aviv, known for its clear waters and vibrant atmosphere.</p>
-            <p>Coordinates: 32.0743° N, 34.7683° E</p>
-        </article>
-        <article class="attraction">
-            <h3>Dead Sea</h3>
-            <p>The Dead Sea is a saltwater lake bordered by Jordan, Israel, and Palestine, known for its unique buoyancy and therapeutic properties.</p>
-            <p>Coordinates: 31.5333° N, 35.6167° E</p>
-        </article>
-        <article class="attraction">
-            <h3>Masada</h3>
-            <p>Masada is an ancient fortress situated on a plateau overlooking the Dead Sea, known for its historic significance and stunning views.</p>
-            <p>Coordinates: 31.3253° N, 35.3533° E</p>
-        </article>
-        <article class="attraction">
-            <h3>Haifa Bahai Gardens</h3>
-            <p>The Haifa Bahai Gardens are a beautiful and serene garden complex in the city of Haifa, featuring stunning views of the city and the sea.</p>
-            <p>Coordinates: 32.8158° N, 34.9833° E</p>
-        </article>
-    </section>
-    
-    <section>
-        <h2>Map</h2>
-        <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d129669.49293411148!2d34.768305999999995!3d32.0853335!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1502bf4c96cd79d1%3A0x7a5b5bf7317c6c6d!2sTel%20Aviv-Yafo%2C%20Israel!5e0!3m2!1sen!2sus!4v1662011641349!5m2!1sen!2sus" frameborder="0" allowfullscreen></iframe>
-    </section>
+    <div class="container">
+        <div class="header">
+            <h1>Israel</h1>
+            <p>Israel, a country located in the Middle East, is a land of rich history, diverse culture, and breathtaking landscapes.</p>
+        </div>
+        <div class="photos">
+            <img src="" alt="Image 1">
+            <img src="" alt="Image 2">
+            <img src="" alt="Image 3">
+        </div>
+        <div class="attractions">
+            <h1>Top Attractions</h1>
+            <div class="attraction">
+                <h2>Western Wall</h2>
+                <p>The Western Wall, also known as the Wailing Wall, is a sacred site in Jerusalem and one of the most important landmarks in Israel.</p>
+                <p>Coordinates: 31.7767° N, 35.2344° E</p>
+            </div>
+            <div class="attraction">
+                <h2>Masada</h2>
+                <p>Masada is an ancient fortress located on a hilltop near the Dead Sea, known for its stunning views and rich history.</p>
+                <p>Coordinates: 31.3267° N, 35.3533° E</p>
+            </div>
+            <div class="attraction">
+                <h2>Church of the Holy Sepulchre</h2>
+                <p>The Church of the Holy Sepulchre is a significant site in Jerusalem, believed to be the location of Jesus' crucifixion and burial.</p>
+                <p>Coordinates: 31.7789° N, 35.2296° E</p>
+            </div>
+            <div class="attraction">
+                <h2>Dead Sea</h2>
+                <p>The Dead Sea is a saltwater lake located between Israel and Jordan, known for its unique buoyancy and therapeutic properties.</p>
+                <p>Coordinates: 31.5333° N, 35.5667° E</p>
+            </div>
+            <div class="attraction">
+                <h2>Haifa</h2>
+                <p>Haifa is a city located in northern Israel, known for its beautiful beaches, stunning views, and vibrant cultural scene.</p>
+                <p>Coordinates: 32.8167° N, 34.9833° E</p>
+            </div>
+        </div>
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12929543.65412943!2d34.671722!3d31.213941!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1502b3049fd7437d%3A0x8e7f57772527708!2sIsrael!5e0!3m2!1sen!2sin!4v1674334441446!5m2!1sen!2sin" width="800" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+    </div>
+
+<h2>Photos of Israel</h2>
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; margin: 20px 0;">
+  <div style="flex: 0 0 30%; margin: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden;">
+    <img src="https://source.unsplash.com/1200x800/?Israel,landscape" alt="Israel landscape" style="width: 100%; height: 250px; object-fit: cover; display: block;">
+    <div style="padding: 10px; text-align: center;">Israel landscape</div>
+  </div>
+  <div style="flex: 0 0 30%; margin: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden;">
+    <img src="https://source.unsplash.com/1200x800/?Israel,city" alt="Israel city" style="width: 100%; height: 250px; object-fit: cover; display: block;">
+    <div style="padding: 10px; text-align: center;">Israel city</div>
+  </div>
+  <div style="flex: 0 0 30%; margin: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden;">
+    <img src="https://source.unsplash.com/1200x800/?Israel,culture" alt="Israel culture" style="width: 100%; height: 250px; object-fit: cover; display: block;">
+    <div style="padding: 10px; text-align: center;">Israel culture</div>
+  </div>
+</div>
 </body>
 </html>
 ```
