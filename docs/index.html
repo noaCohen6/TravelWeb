@@ -1,84 +1,52 @@
 <html>
 <head>
-<title>Israel Travel Guide</title>
-<style>
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-.header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-}
-
-.container {
-    max-width: 800px;
-    margin: auto;
-    padding: 20px;
-}
-
-.image-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.image-container img {
-    width: 30%;
-    margin: 10px;
-    border-radius: 10px;
-}
-
-.attractions {
-    padding: 20px;
-    background-color: #f0f0f0;
-    border: 1px solid #ddd;
-    margin-bottom: 20px;
-}
-
-.map {
-    padding: 20px;
-    background-color: #f0f0f0;
-    border: 1px solid #ddd;
-    margin-bottom: 20px;
-}
-
-a {
-    color: #337ab7;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-</style>
+	<title>USA Travel Guide</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+		}
+		.container {
+			width: 80%;
+			margin: 0 auto;
+		}
+		.image-container {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+		.image {
+			width: 30%;
+			margin: 10px;
+			border: 1px solid #ccc;
+			border-radius: 10px;
+			box-shadow: 0 0 10px rgba(0,0,0,0.1);
+		}
+		.map {
+			width: 100%;
+			height: 500px;
+			border: 1px solid #ccc;
+			border-radius: 10px;
+		}
+	</style>
 </head>
 <body>
-<div class="header">
-<h1>Israel Travel Guide</h1>
-</div>
-<div class="container">
-<div class="image-container">
-<img src="https://source.unsplash.com/600x400/?tel-aviv-beach" alt="Tel Aviv Beach">
-<img src="https://source.unsplash.com/600x400/?jerusalem-old-city" alt="Jerusalem Old City">
-<img src="https://source.unsplash.com/600x400/?haifa-bahai-gardens" alt="Haifa Bahai Gardens">
-</div>
-<div class="attractions">
-<h2>Top Attractions in Israel</h2>
-<ul>
-<li><a href="https://www.visitjerusalem.com/">Jerusalem Old City</a>: A historic city with significant cultural and religious importance.</li>
-<li><a href="https://www.touristisrael.com/tel-aviv/">Tel Aviv Beach</a>: A beautiful beach with a vibrant atmosphere and stunning views of the Mediterranean Sea.</li>
-<li><a href="https://www.bahai.org/">Haifa Bahai Gardens</a>: A stunning garden with breathtaking views of the city and a peaceful atmosphere.</li>
-</ul>
-</div>
-<div class="map">
-<h2>Map of Attractions in Israel</h2>
-<iframe src="https://www.google.com/maps/d/embed?mid=1z1aYtLxvV4QpF6YzRrQ6Z6KdLg" width="100%" height="400"></iframe>
-</div>
-</div>
+	<div class="container">
+		<h1>USA Travel Guide</h1>
+		<div class="image-container">
+			<img class="image" src="https://picsum.photos/200/300" alt="New York City">
+			<img class="image" src="https://source.unsplash.com/featured/?grand+canyon" alt="Grand Canyon">
+			<img class="image" src="https://source.unsplash.com/featured/?golden+gate+bridge" alt="Golden Gate Bridge">
+		</div>
+		<h2>Local Attractions</h2>
+		<ul>
+			<li><a href="https://www.google.com/maps/place/New+York+City,+NY/@40.7128,-74.0060,12z/data=!3m1!4b1!4m5!3m4!1s0x89c24fa5d33f5b19:0xc80b8f06e2afe03a!8m2!3d40.7128!4d-74.0060" target="_blank">New York City</a></li>
+			<li><a href="https://www.google.com/maps/place/Grand+Canyon+National+Park,+AZ/@36.1069,-112.1129,12z/data=!3m1!4b1!4m5!3m4!1s0x872fcccb3f9353f5:0xd7f5f3fd23e6ae6a!8m2!3d36.1069!4d-112.1129" target="_blank">Grand Canyon National Park</a></li>
+			<li><a href="https://www.google.com/maps/place/Golden+Gate+Bridge,+San+Francisco,+CA/@37.7749,-122.4194,12z/data=!3m1!4b1!4m5!3m4!1s0x80859a70b06e1fbf:0xa66a8a14a01c81df!8m2!3d37.7749!4d-122.4194" target="_blank">Golden Gate Bridge</a></li>
+		</ul>
+		<h2>Map</h2>
+		<div class="map">
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.839740605863!2d-96.802688!3d37.090167!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x878e3f2cb1d0d14f%3A0x7ea8e6c6ab6ae72d!2sUnited+States!5e0!3m2!1sen!2s!4v1643723324144!5m2!1sen!2s" width="100%" height="500" frameborder="0" style="border:0" allowfullscreen></iframe>
+		</div>
+	</div>
 </body>
 </html>
