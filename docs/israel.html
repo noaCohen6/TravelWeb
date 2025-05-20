@@ -1,49 +1,81 @@
 <html>
 <head>
-	<title>Israel Tourism</title>
+	<title>Israel</title>
 	<style>
 		body {
 			font-family: Arial, sans-serif;
+			margin: 0;
+			padding: 0;
 		}
-		.container {
-			width: 80%;
-			margin: 0 auto;
+		.header {
+			background-image: linear-gradient(to bottom, #ff9900, #ffa07a);
+			color: #ffffff;
+			padding: 20px;
+			text-align: center;
 		}
-		.image-container {
+		.images {
 			display: flex;
 			flex-wrap: wrap;
-			justify-content: space-around;
+			justify-content: center;
 		}
 		.image {
 			width: 30%;
 			margin: 10px;
 		}
+		.attractions {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+		.attraction {
+			background-color: #f7f7f7;
+			margin: 10px;
+			padding: 20px;
+			border: 1px solid #ddd;
+			border-radius: 10px;
+			box-shadow: 0 0 10px rgba(0,0,0,0.1);
+			width: 30%;
+		}
 		.map {
 			width: 100%;
 			height: 500px;
-			border: 1px solid black;
+			border: 1px solid #ddd;
 		}
 	</style>
 </head>
 <body>
-	<div class="container">
-		<h1>Israel Tourism</h1>
-		<p>Israel is a country located in the Middle East, known for its rich history, diverse culture, and stunning landscapes. Here are some recommendations for local attractions and a map to help you plan your trip.</p>
-		<div class="image-container">
-			<img class="image" src="https://source.unsplash.com/600x400/?tel-aviv-beach" alt="Tel Aviv Beach">
-			<img class="image" src="https://source.unsplash.com/600x400/?jerusalem-old-city" alt="Jerusalem Old City">
-			<img class="image" src="https://source.unsplash.com/600x400/?dead-sea" alt="Dead Sea">
+	<div class="header">
+		<h1>Israel</h1>
+	</div>
+	<div class="images">
+		<img class="image" src="https://source.unsplash.com/featured/?Israel,desert" alt="Israel Desert">
+		<img class="image" src="https://source.unsplash.com/featured/?Tel-Aviv,Israel,beach" alt="Tel Aviv Beach">
+		<img class="image" src="https://source.unsplash.com/featured/?Jerusalem,Israel,old-city" alt="Jerusalem Old City">
+	</div>
+	<div class="attractions">
+		<div class="attraction">
+			<h2>Western Wall</h2>
+			<p>The Western Wall is a sacred site in Judaism, located in the Old City of Jerusalem.</p>
 		</div>
-		<h2>Local Attractions</h2>
-		<ul>
-			<li><a href="https://www.touristisrael.com/tel-aviv/" target="_blank">Tel Aviv</a>: known for its beautiful beaches, vibrant nightlife, and historic architecture.</li>
-			<li><a href="https://www.touristisrael.com/jerusalem/" target="_blank">Jerusalem</a>: a city steeped in history and culture, with landmarks like the Western Wall and the Church of the Holy Sepulchre.</li>
-			<li><a href="https://www.touristisrael.com/dead-sea/" target="_blank">Dead Sea</a>: a unique natural wonder, where you can float in the water and enjoy the stunning scenery.</li>
-		</ul>
-		<h2>Map</h2>
-		<div class="map">
-			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12951.98231411122!2d34.781327814999996!3d31.783030300000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1502cd5c38f2c6f7%3A0x3c4799c9fbd1e8b0!2sTel%20Aviv-Yafo%2C%20Israel!5e0!3m2!1sen!2sus!4v1677739562431!5m2!1sen!2sus" width="100%" height="500" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+		<div class="attraction">
+			<h2>Tel Aviv Beach</h2>
+			<p>Tel Aviv Beach is a popular destination for beachgoers, with its beautiful sand and clear waters.</p>
 		</div>
+		<div class="attraction">
+			<h2>Dead Sea</h2>
+			<p>The Dead Sea is a unique natural phenomenon, with its salty waters and stunning scenery.</p>
+		</div>
+		<div class="attraction">
+			<h2>Haifa</h2>
+			<p>Haifa is a charming city, located on the slopes of Mount Carmel, with its beautiful gardens and stunning views.</p>
+		</div>
+		<div class="attraction">
+			<h2>Masada</h2>
+			<p>Masada is an ancient fortress, located on a rocky outcrop, with its rich history and stunning scenery.</p>
+		</div>
+	</div>
+	<div class="map">
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12995.845761314414!2d34.779215814999996!3d31.783333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15021eb1c95f7a5f%3A0x87a5790d6c8b6f3!2sIsrael!5e0!3m2!1sen!2s!4v1674214448141!5m2!1sen!2s" width="100%" height="500" frameborder="0" style="border:0" allowfullscreen></iframe>
 	</div>
 </body>
 </html>
