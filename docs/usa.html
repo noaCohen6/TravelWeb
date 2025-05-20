@@ -1,55 +1,55 @@
-```html
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
+  <title>Discover USA</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>USA</title>
   <style>
     body {
       font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
     }
     header {
       background-color: #333;
       color: #fff;
-      padding: 1em;
+      padding: 20px;
       text-align: center;
     }
     section {
-      padding: 1em;
-    }
-    #map-section {
-      padding: 0;
+      padding: 20px;
     }
     .photos {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
     }
-    .photo {
-      margin: 10px;
+    .photos img {
       width: 200px;
       height: 150px;
-      border: 1px solid #ddd;
-      padding: 10px;
+      margin: 10px;
     }
     .attractions {
       list-style: none;
       padding: 0;
       margin: 0;
     }
-    .attraction {
-      padding: 10px;
-      border-bottom: 1px solid #ccc;
+    .attractions li {
+      margin-bottom: 20px;
     }
-    .attraction:last-child {
-      border-bottom: none;
+    .attractions li h3 {
+      margin-top: 0;
+    }
+    #map-section {
+      padding: 20px;
+    }
+    #map {
+      border: 1px solid #ddd;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>United States of America</h1>
+    <h1>Welcome to USA</h1>
 <section id="photos">
 <h2>Photos of USA</h2>
 <div style="display: flex; flex-wrap: wrap; justify-content: space-between; margin: 20px 0;">
@@ -68,31 +68,36 @@
 </div>
 </section>
 
-    <p>The United States of America, commonly referred to as the United States or America, is a federal republic composed of 50 states, a federal district, and several territories. It is located in North America, bordered by Canada to the north, Mexico to the south, the Atlantic Ocean to the east, and the Pacific Ocean to the west.</p>
+    <p>The United States of America is a vast and diverse country, offering a wide range of exciting experiences for tourists. From the bright lights of New York City to the sun-kissed beaches of California, and from the majestic Grand Canyon to the vibrant city of New Orleans, there's something for everyone in the USA.</p>
   </header>
   <section>
     <section>
     <h2>Attractions</h2>
     <ul class="attractions">
-      <li class="attraction">
+      <li>
         <h3>Grand Canyon</h3>
-        <p>The Grand Canyon is one of the most iconic natural wonders in the United States, located in Arizona. It is a steep-sided canyon carved by the Colorado River over millions of years.</p>
+        <p>One of the most iconic natural wonders in the USA, the Grand Canyon is a breathtaking example of erosion and geological history.</p>
+        <p>Coordinates: 36.1069, -112.1129</p>
       </li>
-      <li class="attraction">
+      <li>
         <h3>Statue of Liberty</h3>
-        <p>The Statue of Liberty is a colossal neoclassical sculpture located in New York Harbor, within the state of New York. It was a gift from the people of France to the people of the United States.</p>
+        <p>A symbol of freedom and democracy, the Statue of Liberty is a must-visit attraction in New York City.</p>
+        <p>Coordinates: 40.6933, -74.0462</p>
       </li>
-      <li class="attraction">
+      <li>
         <h3>Golden Gate Bridge</h3>
-        <p>The Golden Gate Bridge is a suspension bridge located in San Francisco, California. It spans the Golden Gate strait, which is the opening of San Francisco Bay into the Pacific Ocean.</p>
+        <p>An engineering marvel and an iconic landmark, the Golden Gate Bridge is a must-see in San Francisco.</p>
+        <p>Coordinates: 37.7749, -122.4194</p>
       </li>
-      <li class="attraction">
-        <h3>Lincoln Memorial</h3>
-        <p>The Lincoln Memorial is a national monument located in Washington, D.C. It honors President Abraham Lincoln and features a large marble statue of him.</p>
+      <li>
+        <h3>Las Vegas Strip</h3>
+        <p>A vibrant and exciting destination, the Las Vegas Strip is known for its casinos, shows, and nightlife.</p>
+        <p>Coordinates: 36.1147, -115.1728</p>
       </li>
-      <li class="attraction">
+      <li>
         <h3>Yellowstone National Park</h3>
-        <p>Yellowstone National Park is a national park located in Wyoming, Montana, and Idaho. It is known for its geothermal features, including Old Faithful, as well as its diverse wildlife and ecosystems.</p>
+        <p>American's first national park, Yellowstone is home to geysers, hot springs, and an incredible array of wildlife.</p>
+        <p>Coordinates: 44.4272, -110.5652</p>
       </li>
     </ul>
   </section>
@@ -103,16 +108,16 @@
       function initMap() {
         var map = new google.maps.Map(document.getElementById('map'), {
           zoom: 7,
-          center: {lat: 37.0902, lng: -95.7129}
+          center: {lat: 39.8283, lng: -98.5795}
         });
 
         // Create markers for each attraction
         var attractions = [
-          {name: 'Grand Canyon', lat: 36.1069, lng: -112.1130, description: 'The Grand Canyon is one of the most iconic natural wonders in the United States, located in Arizona. It is a steep-sided canyon carved by the Colorado River over millions of years.'},
-          {name: 'Statue of Liberty', lat: 40.6933, lng: -74.0467, description: 'The Statue of Liberty is a colossal neoclassical sculpture located in New York Harbor, within the state of New York. It was a gift from the people of France to the people of the United States.'},
-          {name: 'Golden Gate Bridge', lat: 37.7749, lng: -122.4194, description: 'The Golden Gate Bridge is a suspension bridge located in San Francisco, California. It spans the Golden Gate strait, which is the opening of San Francisco Bay into the Pacific Ocean.'},
-          {name: 'Lincoln Memorial', lat: 38.8893, lng: -77.0501, description: 'The Lincoln Memorial is a national monument located in Washington, D.C. It honors President Abraham Lincoln and features a large marble statue of him.'},
-          {name: 'Yellowstone National Park', lat: 44.4272, lng: -110.5654, description: 'Yellowstone National Park is a national park located in Wyoming, Montana, and Idaho. It is known for its geothermal features, including Old Faithful, as well as its diverse wildlife and ecosystems.'}
+          {name: 'Grand Canyon', lat: 36.1069, lng: -112.1129, description: 'One of the most iconic natural wonders in the USA'},
+          {name: 'Statue of Liberty', lat: 40.6933, lng: -74.0462, description: 'A symbol of freedom and democracy'},
+          {name: 'Golden Gate Bridge', lat: 37.7749, lng: -122.4194, description: 'An engineering marvel and an iconic landmark'},
+          {name: 'Las Vegas Strip', lat: 36.1147, lng: -115.1728, description: 'A vibrant and exciting destination'},
+          {name: 'Yellowstone National Park', lat: 44.4272, lng: -110.5652, description: 'American\'s first national park'}
         ];
 
         // Add markers to the map
@@ -144,4 +149,3 @@
   </section>
 </body>
 </html>
-```
