@@ -1,61 +1,59 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Discover Israel</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #f0f0f0;
-            padding: 20px;
-            text-align: center;
-        }
-        h1 {
-            color: #00698f;
-        }
-        .intro {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        .photos {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-        .photo {
-            margin: 10px;
-            width: calc(25% - 20px);
-        }
-        .photo img {
-            width: 100%;
-            height: 150px;
-            object-fit: cover;
-            border-radius: 10px;
-        }
-        .map {
-            padding: 20px;
-        }
-        @media only screen and (max-width: 600px) {
-            .photo {
-                width: calc(50% - 20px);
-            }
-        }
-        @media only screen and (max-width: 400px) {
-            .photo {
-                width: 100%;
-            }
-        }
-    </style>
+	<title>Israel</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			margin: 0;
+			padding: 0;
+		}
+		
+		header {
+			background-color: #333;
+			color: #fff;
+			padding: 20px;
+			text-align: center;
+		}
+		
+		section {
+			padding: 20px;
+		}
+		
+		Photos {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+		
+		img {
+			width: 200px;
+			height: 150px;
+			margin: 10px;
+		}
+		
+		.attraction {
+			background-color: #f0f0f0;
+			padding: 10px;
+			border: 1px solid #ddd;
+			margin-bottom: 10px;
+		}
+		
+		.attraction h2 {
+			margin-top: 0;
+		}
+		
+		iframe {
+			border: none;
+		}
+	</style>
 </head>
 <body>
-<section id="photos">
-<h2>Photos of Israel</h2>
+	<header>
+		<h1>Welcome to Israel</h1>
+		<p>Israel, a country in Western Asia, is known for its rich history, diverse culture, and beautiful landscapes. From the ancient city of Jerusalem to the vibrant beaches of Tel Aviv, Israel has something to offer for every kind of traveler.</p>
+	</header>
+	<section>
+		<h1>Photos</h1>
 <div style="display: flex; flex-wrap: wrap; justify-content: space-between; margin: 20px 0;">
   <div style="flex: 0 0 30%; margin: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden;">
     <img src="https://source.unsplash.com/1200x800/?Israel,landscape" alt="Israel landscape" style="width: 100%; height: 250px; object-fit: cover; display: block;">
@@ -78,33 +76,44 @@
     <div style="padding: 10px; text-align: center;">Israel architecture</div>
   </div>
 </div>
-</section>
 
-    <header>
-        <h1>Welcome to Israel</h1>
-        <div class="intro">
-            <p>Israel, a country located in the Middle East, is a land of rich history, diverse culture, and breathtaking landscapes. From the ancient city of Jerusalem to the vibrant beaches of Tel Aviv, Israel has something to offer for every kind of traveler. With its unique blend of traditional and modern attractions, Israel is a destination that will leave you with unforgettable memories.</p>
-        </div>
-    </header>
-    <section class="photos">
-        <div class="photo">
-            <img src="" alt="Image 1">
-        </div>
-        <div class="photo">
-            <img src="" alt="Image 2">
-        </div>
-        <div class="photo">
-            <img src="" alt="Image 3">
-        </div>
-        <div class="photo">
-            <img src="" alt="Image 4">
-        </div>
-        <div class="photo">
-            <img src="" alt="Image 5">
-        </div>
-    </section>
-    <section class="map">
-        <iframe src="https://maps.google.com/maps?q=Israel&t=&z=6&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" style="width: 100%; height: 400px;"></iframe>
-    </section>
+		<div class="Photos">
+			<img src="" alt="Image 1">
+			<img src="" alt="Image 2">
+			<img src="" alt="Image 3">
+		</div>
+	</section>
+	<section>
+		<h1>Attractions</h1>
+		<div class="attraction">
+			<h2>Western Wall</h2>
+			<p>The Western Wall, also known as the Wailing Wall, is a sacred site in Jerusalem and one of the most famous landmarks in Israel.</p>
+			<p>Coordinates: 31.7753° N, 35.2354° E</p>
+		</div>
+		<div class="attraction">
+			<h2>Masada</h2>
+			<p>Masada is an ancient fortress located on a plateau overlooking the Dead Sea, and it's a UNESCO World Heritage Site.</p>
+			<p>Coordinates: 31.3133° N, 35.3533° E</p>
+		</div>
+		<div class="attraction">
+			<h2>Haifa</h2>
+			<p>Haifa is a beautiful city located on the Mediterranean coast, known for its stunning beaches, gardens, and scenic views.</p>
+			<p>Coordinates: 32.8167° N, 34.9833° E</p>
+		</div>
+		<div class="attraction">
+			<h2>Dead Sea</h2>
+			<p>The Dead Sea is a saltwater lake located between Israel, Jordan, and Palestine, and it's known for its unique landscape and therapeutic properties.</p>
+			<p>Coordinates: 31.5333° N, 35.5833° E</p>
+		</div>
+		<div class="attraction">
+			<h2>Tel Aviv</h2>
+			<p>Tel Aviv is a vibrant city located on the Mediterranean coast, known for its beautiful beaches, cultural attractions, and nightlife.</p>
+			<p>Coordinates: 32.0667° N, 34.7667° E</p>
+		</div>
+	</section>
+	<section>
+		<h1>Map</h1>
+		<iframe src="https://maps.google.com/maps?q=Israel&t=&z=6&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" style="width: 100%; height: 400px;"></iframe>
+	</section>
 </body>
 </html>
