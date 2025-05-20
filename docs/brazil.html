@@ -1,80 +1,112 @@
 <html>
 <head>
-	<title>Brazil</title>
-	<style>
-		.country-img {
-			width: 200px;
-			height: 150px;
-			margin: 10px;
-			border-radius: 10px;
-		}
-		
-		.attractions {
-			display: flex;
-			flex-direction: column;
-		}
-		
-		.attraction {
-			background-color: #f0f0f0;
-			padding: 10px;
-			margin-bottom: 10px;
-			border-radius: 10px;
-			box-shadow: 0 0 10px rgba(0,0,0,0.1);
-		}
-		
-		.attraction h3 {
-			margin-top: 0;
-		}
-		
-		.map {
-			width: 800px;
-			height: 600px;
-			border: 1px solid black;
-		}
-	</style>
+    <title>Brazil</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .photos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .photos img {
+            width: 200px;
+            height: 150px;
+            margin: 10px;
+        }
+        
+        .attractions {
+            padding: 20px;
+        }
+        
+        .attraction {
+            margin-bottom: 20px;
+        }
+        
+        .map {
+            padding: 20px;
+        }
+        
+        iframe {
+            width: 100%;
+            height: 500px;
+            border: none;
+        }
+    </style>
 </head>
 <body>
-	<header>
-		<h1>Brazil</h1>
-		<p>Brazil is the largest country in both South America and the Latin American region.</p>
-	</header>
-	<section>
-		<h2>Photos</h2>
-		<img src="https://source.unsplash.com/1200x800/?Brazil,landscape" alt="Brazil landscape" class="country-img" style="width: 100%; height: 300px; object-fit: cover; border-radius: 8px; margin: 10px 0;">
-		<img src="https://source.unsplash.com/1200x800/?Brazil,city" alt="Brazil city" class="country-img" style="width: 100%; height: 300px; object-fit: cover; border-radius: 8px; margin: 10px 0;">
-		<img src="https://source.unsplash.com/1200x800/?Brazil,culture" alt="Brazil culture" class="country-img" style="width: 100%; height: 300px; object-fit: cover; border-radius: 8px; margin: 10px 0;">
-	</section>
-	<section class="attractions">
-		<h2>Attractions</h2>
-		<div class="attraction">
-			<h3>Christ the Redeemer</h3>
-			<p>One of the Seven Wonders of the World, located in Rio de Janeiro.</p>
-			<p>Coordinates: -22.9083, -43.2106</p>
-		</div>
-		<div class="attraction">
-			<h3>Sugarloaf Mountain</h3>
-			<p>A peak at the mouth of Guanabara Bay on a peninsula that sticks out into the Atlantic Ocean.</p>
-			<p>Coordinates: -22.8973, -43.1633</p>
-		</div>
-		<div class="attraction">
-			<h3>Copacabana Beach</h3>
-			<p>One of the most famous beaches in the world, known for its white sand and vibrant atmosphere.</p>
-			<p>Coordinates: -22.9673, -43.1823</p>
-		</div>
-		<div class="attraction">
-			<h3>Iguazu Falls</h3>
-			<p>A breathtaking waterfall on the border of Brazil and Argentina.</p>
-			<p>Coordinates: -25.6963, -54.4367</p>
-		</div>
-		<div class="attraction">
-			<h3>Amazon Rainforest</h3>
-			<p>The world's largest tropical rainforest, covering over 5.5 million square kilometers.</p>
-			<p>Coordinates: -3.9673, -62.0153</p>
-		</div>
-	</section>
-	<section>
-		<h2>Map</h2>
-		<iframe src="https://www.google.com/maps/d/embed?mid=1QKb3rX7QY7Kd4g4B9h8Kd4g4B9h8Kd4g4&hl=en" class="map" frameborder="0" allowfullscreen></iframe>
-	</section>
+    <header>
+        <h1>Brazil</h1>
+        <p>Brazil, a country in South America, is known for its stunning beaches, vibrant culture, and rich history.</p>
+    </header>
+    
+    <section class="photos">
+        <h2>Photos</h2>
+        <img src="" alt="Brazil Image 1">
+        <img src="" alt="Brazil Image 2">
+        <img src="" alt="Brazil Image 3">
+    </section>
+    
+    <section class="attractions">
+        <h2>Attractions</h2>
+        <div class="attraction">
+            <h3>Christ the Redeemer</h3>
+            <p>One of the Seven Wonders of the World, this iconic statue is located in Rio de Janeiro.</p>
+            <p>Coordinates: -22.9068, -43.2105</p>
+        </div>
+        <div class="attraction">
+            <h3>Iguazu Falls</h3>
+            <p>A breathtaking waterfall on the border of Brazil and Argentina.</p>
+            <p>Coordinates: -25.6953, -54.4367</p>
+        </div>
+        <div class="attraction">
+            <h3>Sugarloaf Mountain</h3>
+            <p>A peak in Rio de Janeiro offering stunning views of the city.</p>
+            <p>Coordinates: -22.9497, -43.2096</p>
+        </div>
+        <div class="attraction">
+            <h3>Copacabana Beach</h3>
+            <p>A famous beach in Rio de Janeiro known for its vibrant atmosphere.</p>
+            <p>Coordinates: -22.9681, -43.2002</p>
+        </div>
+        <div class="attraction">
+            <h3>Amazon Rainforest</h3>
+            <p>The world's largest tropical rainforest, covering over 5 million square kilometers.</p>
+            <p>Coordinates: 3.9748, -62.0042</p>
+        </div>
+    </section>
+    
+    <section class="map">
+        <h2>Map</h2>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.764292679956!2d-43.210499949999996!3d-22.906814099999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x997f2a344d233d%3A0x40155ae5705e5120!2sCristo%20Redentor!5e0!3m2!1spt-BR!2sbr!4v1641584115553!5m2!1spt-BR!2sbr" width="600" height="450" frameborder="0" style="border:0"></iframe>
+    </section>
+
+<h2>Photos of Brazil</h2>
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; margin: 20px 0;">
+  <div style="flex: 0 0 30%; margin: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden;">
+    <img src="https://source.unsplash.com/1200x800/?Brazil,landscape" alt="Brazil landscape" style="width: 100%; height: 250px; object-fit: cover; display: block;">
+    <div style="padding: 10px; text-align: center;">Brazil landscape</div>
+  </div>
+  <div style="flex: 0 0 30%; margin: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden;">
+    <img src="https://source.unsplash.com/1200x800/?Brazil,city" alt="Brazil city" style="width: 100%; height: 250px; object-fit: cover; display: block;">
+    <div style="padding: 10px; text-align: center;">Brazil city</div>
+  </div>
+  <div style="flex: 0 0 30%; margin: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden;">
+    <img src="https://source.unsplash.com/1200x800/?Brazil,culture" alt="Brazil culture" style="width: 100%; height: 250px; object-fit: cover; display: block;">
+    <div style="padding: 10px; text-align: center;">Brazil culture</div>
+  </div>
+</div>
 </body>
 </html>
