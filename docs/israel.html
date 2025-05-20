@@ -1,83 +1,62 @@
-```html
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Israel Tourist Guide</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        .container {
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 20px;
-            background-color: #f9f9f9;
-            border: 1px solid #ddd;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .header {
-            background-color: #333;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-        }
-        .images {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-        .image {
-            width: 30%;
-            margin: 10px;
-            border: 1px solid #ddd;
-            padding: 10px;
-        }
-        .image img {
-            width: 100%;
-            height: 150px;
-            object-fit: cover;
-        }
-        .recommendations {
-            margin-top: 20px;
-        }
-        .map {
-            margin-top: 20px;
-        }
-    </style>
+	<title>Discover Israel</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+		}
+		.container {
+			width: 80%;
+			margin: 40px auto;
+			text-align: center;
+		}
+		.photos {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+		.photos img {
+			width: 30%;
+			margin: 10px;
+			border-radius: 10px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+		}
+		.recommendations {
+			margin-top: 40px;
+		}
+		.recommendations ul {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+		}
+		.recommendations li {
+			margin-bottom: 20px;
+		}
+		iframe {
+			width: 80%;
+			height: 400px;
+			margin: 20px auto;
+			border: none;
+		}
+	</style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <h1>Israel Tourist Guide</h1>
-        </div>
-        <div class="images">
-            <div class="image">
-                <img src="https://source.unsplash.com/1200x800/?Israel,landscape" alt="Israel landscape" style="width: 100%; height: auto; display: block;" alt="Jerusalem Old City">
-            </div>
-            <div class="image">
-                <img src="https://source.unsplash.com/1200x800/?Israel,city" alt="Israel city" style="width: 100%; height: auto; display: block;" alt="Tel Aviv Beach">
-            </div>
-            <div class="image">
-                <img src="https://source.unsplash.com/1200x800/?Israel,culture" alt="Israel culture" style="width: 100%; height: auto; display: block;" alt="Masada National Park">
-            </div>
-        </div>
-        <div class="recommendations">
-            <h2>Local Attractions:</h2>
-            <ul>
-                <li><a href="https://www.touristisrael.com/jerusalem/1445/">Jerusalem Old City</a></li>
-                <li><a href="https://www.touristisrael.com/tel-aviv/1448/">Tel Aviv Beach</a></li>
-                <li><a href="https://www.touristisrael.com/masada/1486/">Masada National Park</a></li>
-            </ul>
-        </div>
-        <div class="map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2280.395341355445!2d34.76677501551773!3d31.77711158133565!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1502db9f5c85e7d7%3A0x3c3f1c64a45a2c2!2sMasada%20National%20Park!5e0!3m2!1sen!2sil!4v1675093956545!5m2!1sen!2sil" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-        </div>
-    </div>
+	<div class="container">
+		<h1>Discover Israel</h1>
+		<div class="photos">
+			<img src="https://source.unsplash.com/1200x800/?Israel,landscape" alt="Israel landscape" style="width: 100%; height: auto; display: block;" alt="Tel Aviv Beach">
+			<img src="https://source.unsplash.com/1200x800/?Israel,city" alt="Israel city" style="width: 100%; height: auto; display: block;" alt="Jerusalem Old City">
+			<img src="https://source.unsplash.com/1200x800/?Israel,culture" alt="Israel culture" style="width: 100%; height: auto; display: block;" alt="Dead Sea">
+		</div>
+		<div class="recommendations">
+			<h2>Local Attractions:</h2>
+			<ul>
+				<li><a href="https://www.visit-tel-aviv.com/" target="_blank">Tel Aviv</a>: Known for its vibrant nightlife, beautiful beaches, and rich cultural scene.</li>
+				<li><a href="https://www.jerusalem.muni.il/" target="_blank">Jerusalem</a>: A historic city with a rich spiritual heritage, home to the Western Wall and the Church of the Holy Sepulchre.</li>
+				<li><a href="https://www.deadseaisrael.com/" target="_blank">Dead Sea</a>: A unique natural wonder, famous for its floatation properties and stunning scenery.</li>
+			</ul>
+		</div>
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3249.8865554156745!2d35.21430431539292!3d31.78303568124681!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1502e2e0d0c21f0b%3A0x40f6a5770c06986!2sTel%20Aviv-Yafo%2C%20Israel!5e0!3m2!1sen!2sus!4v1643723414548!5m2!1sen!2sus" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+	</div>
 </body>
 </html>
-```
