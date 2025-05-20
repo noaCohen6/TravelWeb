@@ -1,95 +1,70 @@
 <html>
 <head>
-	<title>Israel</title>
+	<title>Israel Travel Guide</title>
 	<style>
-		body {
-			font-family: Arial, sans-serif;
+		.country-img {
+			width: 300px;
+			height: 200px;
+			margin: 10px;
+			border: 1px solid black;
 		}
-		.container {
-			max-width: 800px;
-			margin: 40px auto;
-			padding: 20px;
-			background-color: #f9f9f9;
-			border: 1px solid #ddd;
-			box-shadow: 0 0 10px rgba(0,0,0,0.1);
-		}
-		.header {
-			background-color: #333;
-			color: #fff;
-			padding: 20px;
-			text-align: center;
-		}
-		.photos {
-			display: flex;
-			flex-wrap: wrap;
-			justify-content: center;
-		}
-		.attractions {
-			list-style: none;
-			padding: 0;
-			margin: 0;
-		}
-		.attractions li {
+		
+		.attraction {
 			margin-bottom: 20px;
 		}
-		.attractions li h2 {
-			margin-top: 0;
-		}
-		iframe {
-			width: 100%;
-			height: 400px;
-			border: none;
+		
+		.map {
+			width: 800px;
+			height: 600px;
+			border: 1px solid black;
 		}
 	</style>
 </head>
 <body>
-	<div class="container">
-		<div class="header">
-			<h1>Israel</h1>
-			<p>Introduction to Israel: Israel is a country located in the Middle East, known for its rich history, culture, and natural beauty.</p>
-		</div>
-		<section>
-			<h2>Photos</h2>
-			<div class="photos">
-				<img src="https://source.unsplash.com/1200x800/?Israel,landscape" alt="Israel landscape" style="width: 100%; height: auto; display: block;" alt="Image 1" style="width: 200px; height: 150px; margin: 10px;">
-				<img src="https://source.unsplash.com/1200x800/?Israel,city" alt="Israel city" style="width: 100%; height: auto; display: block;" alt="Image 2" style="width: 200px; height: 150px; margin: 10px;">
-				<img src="https://source.unsplash.com/1200x800/?Israel,culture" alt="Israel culture" style="width: 100%; height: auto; display: block;" alt="Image 3" style="width: 200px; height: 150px; margin: 10px;">
-			</div>
-		</section>
-		<section>
-			<h2>Attractions</h2>
-			<ul class="attractions">
-				<li>
-					<h2>Western Wall</h2>
-					<p>Description: The Western Wall is a sacred site in Jerusalem, considered the holiest site in Judaism.</p>
-					<p>Coordinates: 31.7767° N, 35.2343° E</p>
-				</li>
-				<li>
-					<h2>Masada</h2>
-					<p>Description: Masada is an ancient fortress located on a plateau overlooking the Dead Sea.</p>
-					<p>Coordinates: 31.3254° N, 35.3533° E</p>
-				</li>
-				<li>
-					<h2>Dead Sea</h2>
-					<p>Description: The Dead Sea is a saltwater lake located between Israel and Jordan, known for its unique properties and stunning scenery.</p>
-					<p>Coordinates: 31.5333° N, 35.6167° E</p>
-				</li>
-				<li>
-					<h2>Caesarea</h2>
-					<p>Description: Caesarea is an ancient Roman city located on the Mediterranean coast, featuring impressive ruins and a rich history.</p>
-					<p>Coordinates: 32.5167° N, 34.8833° E</p>
-				</li>
-				<li>
-					<h2>Tel Aviv</h2>
-					<p>Description: Tel Aviv is a vibrant city located on the Mediterranean coast, known for its beautiful beaches, cultural attractions, and nightlife.</p>
-					<p>Coordinates: 32.0667° N, 34.7667° E</p>
-				</li>
-			</ul>
-		</section>
-		<section>
-			<h2>Map</h2>
-			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d129294.33333333334!2d34.883333!3d31.766666!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1502c3bc1e3737e3%3A0x4876f6a4db5a4b0!2sIsrael!5e0!3m2!1sen!2sus!4v1643723414412!5m2!1sen!2sus" width="800" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
-		</div>
-	</div>
+	<header>
+		<h1>Welcome to Israel</h1>
+		<p>Israel, a country in Western Asia, is known for its rich history, cultural heritage, and breathtaking landscapes. From the ancient city of Jerusalem to the stunning beaches of Tel Aviv, Israel has something to offer for every type of traveler.</p>
+	</header>
+	
+	<section>
+		<h2>Photos</h2>
+		<img src="https://source.unsplash.com/1200x800/?Israel,landscape" alt="Israel landscape" class="country-img" style="width: 100%; height: 300px; object-fit: cover; border-radius: 8px; margin: 10px 0;">
+		<img src="https://source.unsplash.com/1200x800/?Israel,city" alt="Israel city" class="country-img" style="width: 100%; height: 300px; object-fit: cover; border-radius: 8px; margin: 10px 0;">
+		<img src="https://source.unsplash.com/1200x800/?Israel,culture" alt="Israel culture" class="country-img" style="width: 100%; height: 300px; object-fit: cover; border-radius: 8px; margin: 10px 0;">
+	</section>
+	
+	<section>
+		<h2>Attractions</h2>
+		<article class="attraction">
+			<h3>Western Wall</h3>
+			<p>The Western Wall, also known as the Wailing Wall, is a sacred site in Jerusalem and a must-visit attraction in Israel.</p>
+			<p>Coordinates: 31.7767° N, 35.2344° E</p>
+		</article>
+		<article class="attraction">
+			<h3>Tel Aviv Museum of Art</h3>
+			<p>The Tel Aviv Museum of Art is one of the largest and most important art museums in Israel, featuring a collection of Israeli and international art.</p>
+			<p>Coordinates: 32.0703° N, 34.7868° E</p>
+		</article>
+		<article class="attraction">
+			<h3>Dead Sea</h3>
+			<p>The Dead Sea is a unique natural wonder, known for its salty waters and stunning scenery.</p>
+			<p>Coordinates: 31.5333° N, 35.6167° E</p>
+		</article>
+		<article class="attraction">
+			<h3>Haifa</h3>
+			<p>Haifa is a beautiful city located on the Mediterranean coast, known for its stunning beaches, scenic parks, and historic sites.</p>
+			<p>Coordinates: 32.8167° N, 34.9833° E</p>
+		</article>
+		<article class="attraction">
+			<h3>Negev Desert</h3>
+			<p>The Negev Desert is a vast and beautiful desert region in southern Israel, known for its stunning landscapes and unique wildlife.</p>
+			<p>Coordinates: 30.6667° N, 34.7833° E</p>
+		</article>
+	</section>
+	
+	<section>
+		<h2>Map</h2>
+		<iframe class="map" src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d12929416.78778965!2d35.183289999999995!3d31.794816000000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1502b04a0d13cc6b%3A0x7ef9dd7017f0c70!2sIsrael!5e0!3m2!1sen!2sus!4v1671229651431!5m2!1sen!2sus" frameborder="0" allowfullscreen></iframe>
+	</section>
 </body>
 </html>
