@@ -1,52 +1,99 @@
 <html>
 <head>
-	<title>USA Travel Guide</title>
-	<style>
-		body {
-			font-family: Arial, sans-serif;
-		}
-		.container {
-			width: 80%;
-			margin: 0 auto;
-		}
-		.image-container {
-			display: flex;
-			flex-wrap: wrap;
-			justify-content: center;
-		}
-		.image {
-			width: 30%;
-			margin: 10px;
-			border: 1px solid #ccc;
-			border-radius: 10px;
-			box-shadow: 0 0 10px rgba(0,0,0,0.1);
-		}
-		.map {
-			width: 100%;
-			height: 500px;
-			border: 1px solid #ccc;
-			border-radius: 10px;
-		}
-	</style>
+<title>Egypt Travel Guide</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.image-container {
+  margin: 20px 0;
+}
+
+.image-container img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.map-container {
+  margin: 20px 0;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 400px;
+  border: none;
+}
+
+.attractions {
+  margin: 20px 0;
+}
+
+.attractions ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.attractions li {
+  margin-bottom: 10px;
+}
+
+.attractions a {
+  text-decoration: none;
+  color: #337ab7;
+}
+
+.attractions a:hover {
+  color: #23527c;
+}
+</style>
 </head>
 <body>
-	<div class="container">
-		<h1>USA Travel Guide</h1>
-		<div class="image-container">
-			<img class="image" src="https://picsum.photos/200/300" alt="New York City">
-			<img class="image" src="https://source.unsplash.com/featured/?grand+canyon" alt="Grand Canyon">
-			<img class="image" src="https://source.unsplash.com/featured/?golden+gate+bridge" alt="Golden Gate Bridge">
-		</div>
-		<h2>Local Attractions</h2>
-		<ul>
-			<li><a href="https://www.google.com/maps/place/New+York+City,+NY/@40.7128,-74.0060,12z/data=!3m1!4b1!4m5!3m4!1s0x89c24fa5d33f5b19:0xc80b8f06e2afe03a!8m2!3d40.7128!4d-74.0060" target="_blank">New York City</a></li>
-			<li><a href="https://www.google.com/maps/place/Grand+Canyon+National+Park,+AZ/@36.1069,-112.1129,12z/data=!3m1!4b1!4m5!3m4!1s0x872fcccb3f9353f5:0xd7f5f3fd23e6ae6a!8m2!3d36.1069!4d-112.1129" target="_blank">Grand Canyon National Park</a></li>
-			<li><a href="https://www.google.com/maps/place/Golden+Gate+Bridge,+San+Francisco,+CA/@37.7749,-122.4194,12z/data=!3m1!4b1!4m5!3m4!1s0x80859a70b06e1fbf:0xa66a8a14a01c81df!8m2!3d37.7749!4d-122.4194" target="_blank">Golden Gate Bridge</a></li>
-		</ul>
-		<h2>Map</h2>
-		<div class="map">
-			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.839740605863!2d-96.802688!3d37.090167!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x878e3f2cb1d0d14f%3A0x7ea8e6c6ab6ae72d!2sUnited+States!5e0!3m2!1sen!2s!4v1643723324144!5m2!1sen!2s" width="100%" height="500" frameborder="0" style="border:0" allowfullscreen></iframe>
-		</div>
-	</div>
+<div class="container">
+  <div class="header">
+    <h1>Egypt Travel Guide</h1>
+  </div>
+  <div class="image-container">
+    <img src="https://source.unsplash.com/1600x900/?pyramids,egypt" alt="Pyramids of Giza">
+  </div>
+  <div class="image-container">
+    <img src="https://source.unsplash.com/1600x900/?nile,river,egypt" alt="Nile River">
+  </div>
+  <div class="image-container">
+    <img src="https://source.unsplash.com/1600x900/?cairo,egypt" alt="Cairo City">
+  </div>
+  <div class="map-container">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1938.7061353356653!2d31.23339281493295!3d30.062421181987965!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583fa6a5a6a6a7%3A0x6f4a3d0fd3f3d3f3!2sPyramids+of+Giza!5e0!3m2!1sen!2seg!4v1643723348148!5m2!1sen!2seg" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+  </div>
+  <div class="attractions">
+    <h2>Must-visit Attractions:</h2>
+    <ul>
+      <li><a href="https://www.pyramidsofgiza.net/">Pyramids of Giza</a></li>
+      <li><a href="https://www.egypt.travel/en/attractions/the-egyptian-museum">The Egyptian Museum</a></li>
+      <li><a href="https://www.abusimbel.com/">Abu Simbel Temples</a></li>
+    </ul>
+  </div>
+</div>
 </body>
 </html>
