@@ -1,119 +1,167 @@
 ```html
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Brazil - A Country of Diversity and Beauty</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-    header {
-      background-color: #f0f0f0;
-      padding: 20px;
-      text-align: center;
-    }
-    .container {
-      max-width: 1200px;
-      margin: 40px auto;
-      padding: 20px;
-      background-color: #fff;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-    section {
-      margin-bottom: 40px;
-    }
-    h1, h2, h3 {
-      color: #333;
-    }
-    img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-      margin: 10px 0;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brazil</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        .photos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .photos img {
+            width: 200px;
+            height: 150px;
+            margin: 10px;
+            border-radius: 10px;
+        }
+        .attractions {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .attraction {
+            background-color: #f0f0f0;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 10px;
+            width: calc(33.33% - 20px);
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .attraction h3 {
+            margin-top: 0;
+        }
+        #map-section {
+            margin-top: 20px;
+        }
+        #map {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>Brazil - A Country of Diversity and Beauty</h1>
-    <p>Brazil is the largest country in both South America and the Latin American region. It is the world's fifth-largest country, both by geographical area and by population. It is the largest Portuguese-speaking country in the world, and the only one in the Americas.</p>
-  </header>
-  <main class="container">
-    <section id="photos">
-      <h2>Photos</h2>
-      <img src="https://loremflickr.com/1200/800/Brazil+landmarks" alt="Brazil photo 1" loading="lazy" style="width: 100%; height: auto; max-height: 400px; object-fit: cover; display: block;" alt="Image 1">
-      <img src="https://loremflickr.com/1200/800/Brazil+landmarks?random=720" alt="Brazil photo 2" loading="lazy" style="width: 100%; height: auto; max-height: 400px; object-fit: cover; display: block;" alt="Image 2">
-      <img src="https://loremflickr.com/1200/800/Brazil+landmarks?random=1417" alt="Brazil photo 3" loading="lazy" style="width: 100%; height: auto; max-height: 400px; object-fit: cover; display: block;" alt="Image 3">
+<section id="photos">
+<h2>Photos of Brazil</h2>
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; margin: 20px 0;">
+  <div style="flex: 0 0 30%; margin: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden;">
+    <img src="https://source.unsplash.com/1200x800/?Brazil,landscape" alt="Brazil landscape" style="width: 100%; height: 250px; object-fit: cover; display: block;">
+    <div style="padding: 10px; text-align: center;">Brazil landscape</div>
+  </div>
+  <div style="flex: 0 0 30%; margin: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden;">
+    <img src="https://source.unsplash.com/1200x800/?Brazil,city" alt="Brazil city" style="width: 100%; height: 250px; object-fit: cover; display: block;">
+    <div style="padding: 10px; text-align: center;">Brazil city</div>
+  </div>
+  <div style="flex: 0 0 30%; margin: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden;">
+    <img src="https://source.unsplash.com/1200x800/?Brazil,culture" alt="Brazil culture" style="width: 100%; height: 250px; object-fit: cover; display: block;">
+    <div style="padding: 10px; text-align: center;">Brazil culture</div>
+  </div>
+  <div style="flex: 0 0 30%; margin: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden;">
+    <img src="https://source.unsplash.com/1200x800/?Brazil,travel" alt="Brazil travel" style="width: 100%; height: 250px; object-fit: cover; display: block;">
+    <div style="padding: 10px; text-align: center;">Brazil travel</div>
+  </div>
+  <div style="flex: 0 0 30%; margin: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden;">
+    <img src="https://source.unsplash.com/1200x800/?Brazil,architecture" alt="Brazil architecture" style="width: 100%; height: 250px; object-fit: cover; display: block;">
+    <div style="padding: 10px; text-align: center;">Brazil architecture</div>
+  </div>
+</div>
+</section>
+
+    <header class="header">
+        <h1>Brazil</h1>
+        <p>Brazil, officially the Federative Republic of Brazil, is the largest country in both South America and the Latin American region. It is the world's fifth-largest country, both by geographical area and by population. Brazil is the largest Portuguese-speaking country in the world, and the only one in the Americas.</p>
+    </header>
+    <section class="photos">
+        <img src="" alt="Photo 1">
+        <img src="" alt="Photo 2">
+        <img src="" alt="Photo 3">
     </section>
-    <section id="attractions">
-      <h2>Attractions</h2>
-      <h3>Christ the Redeemer</h3>
-      <p>Located in Rio de Janeiro, Christ the Redeemer is a iconic Art Deco statue of Jesus Christ and one of the Seven Wonders of the World. It is 98 feet tall and has become a symbol of Christianity and of the city of Rio de Janeiro.</p>
-      <p>Coordinates: -22.9068, -43.2106</p>
-      <h3>Sugarloaf Mountain</h3>
-      <p>Also located in Rio de Janeiro, Sugarloaf Mountain is a peak at the mouth of Guanabara Bay and a popular tourist destination. It is known for its stunning views of the city and its iconic cable car ride to the top.</p>
-      <p>Coordinates: -22.9068, -43.2106</p>
-      <h3>Iguazu Falls</h3>
-      <p>Located on the border of Brazil and Argentina, Iguazu Falls is a breathtaking waterfall system consisting of over 275 individual waterfalls. It is one of the largest waterfalls in the world and a popular destination for hiking and adventure sports.</p>
-      <p>Coordinates: -25.6953, -54.4367</p>
-      <h3>Amazon Rainforest</h3>
-      <p>The Amazon Rainforest is the largest tropical rainforest in the world, covering over 60% of Brazil's land area. It is home to a vast array of plant and animal species and is often referred to as the "lungs of the Earth" due to its importance in producing oxygen.</p>
-      <p>Coordinates: -3.1339, -62.0917</p>
-      <h3>Copacabana Beach</h3>
-      <p>Located in Rio de Janeiro, Copacabana Beach is one of the most famous beaches in the world. It is known for its stunning views, vibrant atmosphere, and iconic New Year's Eve celebrations.</p>
-      <p>Coordinates: -22.9674, -43.1823</p>
+    <section class="attractions">
+        <div class="attraction">
+            <h3>Christ the Redeemer</h3>
+            <p>Located in Rio de Janeiro, Christ the Redeemer is a iconic Art Deco statue of Jesus Christ.</p>
+            <p>Coordinates: -22.9068, -43.2106</p>
+        </div>
+        <div class="attraction">
+            <h3>Iguazu Falls</h3>
+            <p>Located on the border of Brazil and Argentina, Iguazu Falls is one of the world's largest and most beautiful waterfalls.</p>
+            <p>Coordinates: -25.6953, -54.4367</p>
+        </div>
+        <div class="attraction">
+            <h3>Copacabana Beach</h3>
+            <p>Located in Rio de Janeiro, Copacabana Beach is one of the most famous and popular beaches in the world.</p>
+            <p>Coordinates: -22.9692, -43.1764</p>
+        </div>
+        <div class="attraction">
+            <h3>Amazon Rainforest</h3>
+            <p>Located in the north of Brazil, the Amazon Rainforest is the world's largest tropical rainforest and home to an incredible array of wildlife.</p>
+            <p>Coordinates: -3.1339, -62.0911</p>
+        </div>
+        <div class="attraction">
+            <h3>Sugarloaf Mountain</h3>
+            <p>Located in Rio de Janeiro, Sugarloaf Mountain is a iconic peak with stunning views of the city.</p>
+            <p>Coordinates: -22.9131, -43.1633</p>
+        </div>
     </section>
     <section id="map-section">
-      <h2>Interactive Map</h2>
-      <div id="map" style="width: 100%; height: 500px;"></div>
-      <script>
-        function initMap() {
-          var map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 7,
-            center: {lat: -14.8600, lng: -51.9300}
-          });
-
-          // Create markers for each attraction
-          var attractions = [
-            {name: 'Christ the Redeemer', lat: -22.9068, lng: -43.2106, description: 'A iconic Art Deco statue of Jesus Christ and one of the Seven Wonders of the World'},
-            {name: 'Sugarloaf Mountain', lat: -22.9068, lng: -43.2106, description: 'A peak at the mouth of Guanabara Bay and a popular tourist destination'},
-            {name: 'Iguazu Falls', lat: -25.6953, lng: -54.4367, description: 'A breathtaking waterfall system consisting of over 275 individual waterfalls'},
-            {name: 'Amazon Rainforest', lat: -3.1339, lng: -62.0917, description: 'The largest tropical rainforest in the world, covering over 60% of Brazil\'s land area'},
-            {name: 'Copacabana Beach', lat: -22.9674, lng: -43.1823, description: 'One of the most famous beaches in the world, known for its stunning views and vibrant atmosphere'}
-          ];
-
-          // Add markers to the map
-          var bounds = new google.maps.LatLngBounds();
-          for (var i = 0; i < attractions.length; i++) {
-            var marker = new google.maps.Marker({
-              position: {lat: attractions[i].lat, lng: attractions[i].lng},
-              map: map,
-              title: attractions[i].name
-            });
-
-            // Add info window
-            (function(marker, attraction) {
-              var infowindow = new google.maps.InfoWindow({
-                content: '<div><strong>' + attraction.name + '</strong><p>' + attraction.description + '</p></div>'
+        <h2>Interactive Map</h2>
+        <div id="map" style="width: 100%; height: 500px;"></div>
+        <script>
+            function initMap() {
+              var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 7,
+                center: {lat: -14.1372, lng: -53.1805}
               });
-              marker.addListener('click', function() {
-                infowindow.open(map, marker);
-              });
-              bounds.extend(marker.getPosition());
-            })(marker, attractions[i]);
-          }
-          map.fitBounds(bounds);
-        }
-      </script>
-      <script async defer
-        src="https://maps.googleapis.com/maps/api/js?callback=initMap">
-      </script>
+
+              // Create markers for each attraction
+              var attractions = [
+                {name: 'Christ the Redeemer', lat: -22.9068, lng: -43.2106, description: 'Located in Rio de Janeiro, Christ the Redeemer is a iconic Art Deco statue of Jesus Christ.'},
+                {name: 'Iguazu Falls', lat: -25.6953, lng: -54.4367, description: 'Located on the border of Brazil and Argentina, Iguazu Falls is one of the world\'s largest and most beautiful waterfalls.'},
+                {name: 'Copacabana Beach', lat: -22.9692, lng: -43.1764, description: 'Located in Rio de Janeiro, Copacabana Beach is one of the most famous and popular beaches in the world.'},
+                {name: 'Amazon Rainforest', lat: -3.1339, lng: -62.0911, description: 'Located in the north of Brazil, the Amazon Rainforest is the world\'s largest tropical rainforest and home to an incredible array of wildlife.'},
+                {name: 'Sugarloaf Mountain', lat: -22.9131, lng: -43.1633, description: 'Located in Rio de Janeiro, Sugarloaf Mountain is a iconic peak with stunning views of the city.'},
+              ];
+
+              // Add markers to the map
+              var bounds = new google.maps.LatLngBounds();
+              for (var i = 0; i < attractions.length; i++) {
+                var marker = new google.maps.Marker({
+                  position: {lat: attractions[i].lat, lng: attractions[i].lng},
+                  map: map,
+                  title: attractions[i].name
+                });
+
+                // Add info window
+                (function(marker, attraction) {
+                  var infowindow = new google.maps.InfoWindow({
+                    content: '<div><strong>' + attraction.name + '</strong><p>' + attraction.description + '</p></div>'
+                  });
+                  marker.addListener('click', function() {
+                    infowindow.open(map, marker);
+                  });
+                  bounds.extend(marker.getPosition());
+                })(marker, attractions[i]);
+              }
+              map.fitBounds(bounds);
+            }
+        </script>
+        <script async defer
+          src="https://maps.googleapis.com/maps/api/js?callback=initMap">
+        </script>
     </section>
-  </main>
 </body>
 </html>
 ```
