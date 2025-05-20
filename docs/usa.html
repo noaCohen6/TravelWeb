@@ -1,41 +1,60 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>USA</title>
-  <link rel="stylesheet" href="styles.css">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-    header {
-      background-color: #333;
-      color: #fff;
-      padding: 20px;
-      text-align: center;
-    }
-    section {
-      padding: 20px;
-    }
-    #map-section {
-      padding: 20px;
-    }
-    #map {
-      border: 1px solid #ddd;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>USA</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        header {
+            background-image: linear-gradient(to bottom, #0459ff, #0295ff);
+            color: #ffffff;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        section {
+            background-color: #f7f7f7;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        h2 {
+            margin-top: 0;
+        }
+        
+        #map-section {
+            height: 600px;
+            overflow: hidden;
+        }
+        
+        #map {
+            border: 1px solid #ddd;
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>USA</h1>
-    <p>The United States of America, commonly known as the USA, is a country located in North America. It is a federal republic consisting of 50 states, a federal district, and several territories. The country is known for its diverse culture, rich history, and iconic landmarks.</p>
-  </header>
-  <section id="photos">
-    <h2>Photos</h2>
+    <header>
+        <h1>United States of America</h1>
+        <p>The United States of America, commonly referred to as the United States or America, is a federal republic consisting of 50 states, a federal district, and several territories.</p>
+    </header>
+    <main>
+        <section id="photos">
+            <h2>Photos</h2>
 <div style="display: flex; flex-wrap: wrap; justify-content: space-between; margin: 20px 0;">
   <div style="flex: 0 0 30%; margin: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden;">
     <img src="https://source.unsplash.com/1200x800/?USA,landscape" alt="USA landscape" style="width: 100%; height: 250px; object-fit: cover; display: block;">
@@ -49,96 +68,88 @@
     <img src="https://source.unsplash.com/1200x800/?USA,culture" alt="USA culture" style="width: 100%; height: 250px; object-fit: cover; display: block;">
     <div style="padding: 10px; text-align: center;">USA culture</div>
   </div>
-  <div style="flex: 0 0 30%; margin: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden;">
-    <img src="https://source.unsplash.com/1200x800/?USA,travel" alt="USA travel" style="width: 100%; height: 250px; object-fit: cover; display: block;">
-    <div style="padding: 10px; text-align: center;">USA travel</div>
-  </div>
-  <div style="flex: 0 0 30%; margin: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden;">
-    <img src="https://source.unsplash.com/1200x800/?USA,architecture" alt="USA architecture" style="width: 100%; height: 250px; object-fit: cover; display: block;">
-    <div style="padding: 10px; text-align: center;">USA architecture</div>
-  </div>
 </div>
 
-    <img src="" alt="Image 1" width="200" height="150">
-    <img src="" alt="Image 2" width="200" height="150">
-    <img src="" alt="Image 3" width="200" height="150">
-  </section>
-  <section id="attractions">
-    <h2>Attractions</h2>
-    <ul>
-      <li>
-        <h3>Grand Canyon</h3>
-        <p>One of the most iconic natural wonders in the USA, the Grand Canyon is a steep-sided canyon carved by the Colorado River.</p>
-        <p>Coordinates: 36.1069, -112.1129</p>
-      </li>
-      <li>
-        <h3>Statue of Liberty</h3>
-        <p>A symbol of freedom and democracy, the Statue of Liberty is a colossal neoclassical sculpture located on Liberty Island in New York Harbor.</p>
-        <p>Coordinates: 40.6933, -74.0467</p>
-      </li>
-      <li>
-        <h3>Golden Gate Bridge</h3>
-        <p>An iconic suspension bridge located in San Francisco, California, the Golden Gate Bridge is a popular tourist destination and a symbol of the city.</p>
-        <p>Coordinates: 37.7749, -122.4194</p>
-      </li>
-      <li>
-        <h3>Las Vegas Strip</h3>
-        <p>A famous stretch of road in Las Vegas, Nevada, known for its casinos, hotels, and entertainment options.</p>
-        <p>Coordinates: 36.1343, -115.1739</p>
-      </li>
-      <li>
-        <h3>Yellowstone National Park</h3>
-        <p>A national park located in Wyoming, Montana, and Idaho, known for its geothermal features, wildlife, and natural beauty.</p>
-        <p>Coordinates: 44.4272, -110.5659</p>
-      </li>
-    </ul>
-  </section>
-  <section id="map-section">
-    <h2>Interactive Map</h2>
-    <div id="map" style="width: 100%; height: 500px;"></div>
-    <script>
-      function initMap() {
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 7,
-          center: {lat: 39.8333, lng: -98.5856}
-        });
-
-        // Create markers for each attraction
-        var attractions = [
-          {name: 'Grand Canyon', lat: 36.1069, lng: -112.1129, description: 'One of the most iconic natural wonders in the USA, the Grand Canyon is a steep-sided canyon carved by the Colorado River.'},
-          {name: 'Statue of Liberty', lat: 40.6933, lng: -74.0467, description: 'A symbol of freedom and democracy, the Statue of Liberty is a colossal neoclassical sculpture located on Liberty Island in New York Harbor.'},
-          {name: 'Golden Gate Bridge', lat: 37.7749, lng: -122.4194, description: 'An iconic suspension bridge located in San Francisco, California, the Golden Gate Bridge is a popular tourist destination and a symbol of the city.'},
-          {name: 'Las Vegas Strip', lat: 36.1343, lng: -115.1739, description: 'A famous stretch of road in Las Vegas, Nevada, known for its casinos, hotels, and entertainment options.'},
-          {name: 'Yellowstone National Park', lat: 44.4272, lng: -110.5659, description: 'A national park located in Wyoming, Montana, and Idaho, known for its geothermal features, wildlife, and natural beauty.'}
-        ];
-
-        // Add markers to the map
-        var bounds = new google.maps.LatLngBounds();
-        for (var i = 0; i < attractions.length; i++) {
-          var marker = new google.maps.Marker({
-            position: {lat: attractions[i].lat, lng: attractions[i].lng},
-            map: map,
-            title: attractions[i].name
-          });
-
-          // Add info window
-          (function(marker, attraction) {
-            var infowindow = new google.maps.InfoWindow({
-              content: '<div><strong>' + attraction.name + '</strong><p>' + attraction.description + '</p></div>'
-            });
-            marker.addListener('click', function() {
-              infowindow.open(map, marker);
-            });
-            bounds.extend(marker.getPosition());
-          })(marker, attractions[i]);
-        }
-        map.fitBounds(bounds);
-      }
-    </script>
-    <script async defer
-      src="https://maps.googleapis.com/maps/api/js?callback=initMap">
-    </script>
-  </section>
+            <img src="" alt="USA Flag" width="200" height="150">
+            <img src="" alt="Grand Canyon" width="200" height="150">
+            <img src="" alt="Statue of Liberty" width="200" height="150">
+        </section>
+        <section id="attractions">
+            <h2>Attractions</h2>
+            <ul>
+                <li>
+                    <h3>Grand Canyon</h3>
+                    <p>One of the most iconic natural wonders in the United States, the Grand Canyon is a steep-sided canyon carved by the Colorado River.</p>
+                    <p>Coordinates: 36.1069° N, 112.1129° W</p>
+                </li>
+                <li>
+                    <h3>Statue of Liberty</h3>
+                    <p>A symbol of freedom and democracy, the Statue of Liberty is a colossal neoclassical sculpture located on Liberty Island in New York Harbor.</p>
+                    <p>Coordinates: 40.6933° N, 74.0467° W</p>
+                </li>
+                <li>
+                    <h3>Golden Gate Bridge</h3>
+                    <p>An iconic suspension bridge located in San Francisco, California, the Golden Gate Bridge is a popular tourist destination and a symbol of the city.</p>
+                    <p>Coordinates: 37.7749° N, 122.4194° W</p>
+                </li>
+                <li>
+                    <h3>Yellowstone National Park</h3>
+                    <p>America's first national park, Yellowstone is a vast wilderness area located in Wyoming, Montana, and Idaho, known for its geothermal features and diverse wildlife.</p>
+                    <p>Coordinates: 44.4272° N, 110.5657° W</p>
+                </li>
+                <li>
+                    <h3>Las Vegas Strip</h3>
+                    <p>A four-mile stretch of road in Las Vegas, Nevada, known for its elaborate displays, fountains, and hotels, the Las Vegas Strip is a popular destination for entertainment and leisure.</p>
+                    <p>Coordinates: 36.0889° N, 115.1696° W</p>
+                </li>
+            </ul>
+        </section>
+        <section id="map-section">
+            <h2>Interactive Map</h2>
+            <div id="map" style="width: 100%; height: 500px;"></div>
+            <script>
+                function initMap() {
+                  var map = new google.maps.Map(document.getElementById('map'), {
+                    zoom: 7,
+                    center: {lat: 39.8333, lng: -98.5833}
+                  });
+  
+                  // Create markers for each attraction
+                  var attractions = [
+                    {name: 'Grand Canyon', lat: 36.1069, lng: -112.1129, description: 'One of the most iconic natural wonders in the United States, the Grand Canyon is a steep-sided canyon carved by the Colorado River.'},
+                    {name: 'Statue of Liberty', lat: 40.6933, lng: -74.0467, description: 'A symbol of freedom and democracy, the Statue of Liberty is a colossal neoclassical sculpture located on Liberty Island in New York Harbor.'},
+                    {name: 'Golden Gate Bridge', lat: 37.7749, lng: -122.4194, description: 'An iconic suspension bridge located in San Francisco, California, the Golden Gate Bridge is a popular tourist destination and a symbol of the city.'},
+                    {name: 'Yellowstone National Park', lat: 44.4272, lng: -110.5657, description: 'America\'s first national park, Yellowstone is a vast wilderness area located in Wyoming, Montana, and Idaho, known for its geothermal features and diverse wildlife.'},
+                    {name: 'Las Vegas Strip', lat: 36.0889, lng: -115.1696, description: 'A four-mile stretch of road in Las Vegas, Nevada, known for its elaborate displays, fountains, and hotels, the Las Vegas Strip is a popular destination for entertainment and leisure.'}
+                  ];
+  
+                  // Add markers to the map
+                  var bounds = new google.maps.LatLngBounds();
+                  for (var i = 0; i < attractions.length; i++) {
+                    var marker = new google.maps.Marker({
+                      position: {lat: attractions[i].lat, lng: attractions[i].lng},
+                      map: map,
+                      title: attractions[i].name
+                    });
+  
+                    // Add info window
+                    (function(marker, attraction) {
+                      var infowindow = new google.maps.InfoWindow({
+                        content: '<div><strong>' + attraction.name + '</strong><p>' + attraction.description + '</p></div>'
+                      });
+                      marker.addListener('click', function() {
+                        infowindow.open(map, marker);
+                      });
+                      bounds.extend(marker.getPosition());
+                    })(marker, attractions[i]);
+                  }
+                  map.fitBounds(bounds);
+                }
+            </script>
+            <script async defer
+              src="https://maps.googleapis.com/maps/api/js?callback=initMap">
+            </script>
+        </section>
+    </main>
 </body>
 </html>
-```
