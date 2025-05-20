@@ -20,6 +20,15 @@
     section {
       padding: 20px;
     }
+    h1, h2 {
+      color: #333;
+    }
+    img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      margin: 10px 0;
+    }
     #map {
       border: 1px solid #ddd;
     }
@@ -27,42 +36,55 @@
 </head>
 <body>
   <header>
-    <h1>USA</h1>
-    <p>The United States of America, commonly known as the USA, is a federal republic consisting of 50 states, a federal district, and several territories. It is a diverse country with a rich history, culture, and natural beauty.</p>
+    <h1>United States of America</h1>
+    <p>The United States of America, commonly referred to as the United States or America, is a federal republic consisting of 50 states, a federal district, and several territories. It is a global leader in various fields, including economy, technology, and culture.</p>
   </header>
-  <section id="photos">
-    <h2>Photos</h2>
-    <img src="https://source.unsplash.com/1200x800/?USA,landscape" alt="USA landscape" style="width: 100%; height: auto; display: block;"
-    <img src="https://source.unsplash.com/1200x800/?USA,city" alt="USA city" style="width: 100%; height: auto; display: block;"
-    <img src="https://source.unsplash.com/1200x800/?USA,culture" alt="USA culture" style="width: 100%; height: auto; display: block;"
-  </section>
+<section id="photos" style="margin: 30px 0;">
+    <h2 style="text-align: center; margin-bottom: 20px;">Photos of USA</h2>
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; margin: 0 auto; max-width: 1200px;">
+        <div style="flex: 0 0 30%; margin-bottom: 20px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden;">
+            <img src="https://source.unsplash.com/random/1200x800/?USA,landscape" alt="USA landscape" style="width: 100%; height: 250px; object-fit: cover;">
+            <div style="padding: 10px; text-align: center;">USA landscape</div>
+        </div>
+        <div style="flex: 0 0 30%; margin-bottom: 20px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden;">
+            <img src="https://source.unsplash.com/random/1200x800/?USA,city" alt="USA city" style="width: 100%; height: 250px; object-fit: cover;">
+            <div style="padding: 10px; text-align: center;">USA city</div>
+        </div>
+        <div style="flex: 0 0 30%; margin-bottom: 20px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden;">
+            <img src="https://source.unsplash.com/random/1200x800/?USA,culture" alt="USA culture" style="width: 100%; height: 250px; object-fit: cover;">
+            <div style="padding: 10px; text-align: center;">USA culture</div>
+        </div>
+    </div>
+</section>
+
+  
   <section id="attractions">
     <h2>Attractions</h2>
     <ul>
       <li>
         <h3>Grand Canyon</h3>
-        <p>One of the most iconic natural wonders in the USA, the Grand Canyon is a steep-sided canyon carved by the Colorado River.</p>
+        <p>One of the most iconic natural wonders in the United States, the Grand Canyon is a steep-sided canyon carved by the Colorado River.</p>
         <p>Coordinates: 36.1069, -112.1129</p>
       </li>
       <li>
         <h3>Statue of Liberty</h3>
-        <p>A symbol of freedom and democracy, the Statue of Liberty is a copper statue located on Liberty Island in New York Harbor.</p>
-        <p>Coordinates: 40.6933, -74.0467</p>
+        <p>A symbol of freedom and democracy, the Statue of Liberty is a iconic landmark located in New York Harbor.</p>
+        <p>Coordinates: 40.6932, -74.0467</p>
       </li>
       <li>
         <h3>Golden Gate Bridge</h3>
-        <p>An iconic suspension bridge connecting San Francisco to Marin County, the Golden Gate Bridge is a popular tourist destination.</p>
+        <p>An iconic suspension bridge located in San Francisco, California, the Golden Gate Bridge is a popular tourist destination.</p>
         <p>Coordinates: 37.7749, -122.4194</p>
       </li>
       <li>
-        <h3>Las Vegas Strip</h3>
-        <p>A famous stretch of road in Las Vegas known for its casinos, hotels, and entertainment options.</p>
-        <p>Coordinates: 36.1147, -115.1728</p>
+        <h3>Yellowstone National Park</h3>
+        <p>A vast wilderness area located in Wyoming, Montana, and Idaho, Yellowstone National Park is known for its geothermal features and diverse wildlife.</p>
+        <p>Coordinates: 44.4272, -110.5651</p>
       </li>
       <li>
-        <h3>Yellowstone National Park</h3>
-        <p>A vast wilderness area known for its geothermal features, wildlife, and natural beauty.</p>
-        <p>Coordinates: 44.4272, -110.5656</p>
+        <h3>Las Vegas Strip</h3>
+        <p>A vibrant and entertainment-rich destination, the Las Vegas Strip is home to many casinos, shows, and attractions.</p>
+        <p>Coordinates: 36.1147, -115.1728</p>
       </li>
     </ul>
   </section>
@@ -73,16 +95,16 @@
       function initMap() {
         var map = new google.maps.Map(document.getElementById('map'), {
           zoom: 7,
-          center: {lat: 39.8333, lng: -98.5833}
+          center: {lat: 39.8333, lng: -98.5673}
         });
 
         // Create markers for each attraction
         var attractions = [
-          {name: 'Grand Canyon', lat: 36.1069, lng: -112.1129, description: 'One of the most iconic natural wonders in the USA'},
-          {name: 'Statue of Liberty', lat: 40.6933, lng: -74.0467, description: 'A symbol of freedom and democracy'},
-          {name: 'Golden Gate Bridge', lat: 37.7749, lng: -122.4194, description: 'An iconic suspension bridge connecting San Francisco to Marin County'},
-          {name: 'Las Vegas Strip', lat: 36.1147, lng: -115.1728, description: 'A famous stretch of road in Las Vegas known for its casinos, hotels, and entertainment options'},
-          {name: 'Yellowstone National Park', lat: 44.4272, lng: -110.5656, description: 'A vast wilderness area known for its geothermal features, wildlife, and natural beauty'}
+          {name: 'Grand Canyon', lat: 36.1069, lng: -112.1129, description: 'One of the most iconic natural wonders in the United States, the Grand Canyon is a steep-sided canyon carved by the Colorado River.'},
+          {name: 'Statue of Liberty', lat: 40.6932, lng: -74.0467, description: 'A symbol of freedom and democracy, the Statue of Liberty is a iconic landmark located in New York Harbor.'},
+          {name: 'Golden Gate Bridge', lat: 37.7749, lng: -122.4194, description: 'An iconic suspension bridge located in San Francisco, California, the Golden Gate Bridge is a popular tourist destination.'},
+          {name: 'Yellowstone National Park', lat: 44.4272, lng: -110.5651, description: 'A vast wilderness area located in Wyoming, Montana, and Idaho, Yellowstone National Park is known for its geothermal features and diverse wildlife.'},
+          {name: 'Las Vegas Strip', lat: 36.1147, lng: -115.1728, description: 'A vibrant and entertainment-rich destination, the Las Vegas Strip is home to many casinos, shows, and attractions.'},
         ];
 
         // Add markers to the map
