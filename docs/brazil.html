@@ -1,135 +1,134 @@
-<html lang="pt-br">
+```html
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Brazil Travel Guide</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-    header {
-      background-color: #333;
-      color: #fff;
-      padding: 1em;
-      text-align: center;
-    }
-    section {
-      padding: 1em;
-    }
-    #map {
-      border: 1px solid #ddd;
-    }
-    img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-      margin: 1em 0;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brazil</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #f0f0f0;
+            padding: 20px;
+            text-align: center;
+        }
+        section {
+            padding: 20px;
+        }
+        h2 {
+            margin-top: 0;
+        }
+        #map {
+            border: 1px solid #ccc;
+        }
+        img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            margin: 10px 0;
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>Brazil Travel Guide</h1>
-    <p>Brazil, officially the Federative Republic of Brazil, is the largest country in both South America and the Latin American region. It is the world's fifth-largest country, both by geographical area and by population. Brazil is the largest Portuguese-speaking country in the world, and the only one in the Americas.</p>
-  </header>
-  <section id="photos">
-    <h2>Photos</h2>
-<div style="display: flex; flex-wrap: wrap; justify-content: space-between; margin: 20px 0;">
-  <div style="flex: 0 0 30%; margin: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden;">
-    <img src="https://source.unsplash.com/1200x800/?Brazil,landscape" alt="Brazil landscape" style="width: 100%; height: 250px; object-fit: cover; display: block;">
-    <div style="padding: 10px; text-align: center;">Brazil landscape</div>
-  </div>
-  <div style="flex: 0 0 30%; margin: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden;">
-    <img src="https://source.unsplash.com/1200x800/?Brazil,city" alt="Brazil city" style="width: 100%; height: 250px; object-fit: cover; display: block;">
-    <div style="padding: 10px; text-align: center;">Brazil city</div>
-  </div>
-  <div style="flex: 0 0 30%; margin: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden;">
-    <img src="https://source.unsplash.com/1200x800/?Brazil,culture" alt="Brazil culture" style="width: 100%; height: 250px; object-fit: cover; display: block;">
-    <div style="padding: 10px; text-align: center;">Brazil culture</div>
-  </div>
-</div>
+    <header>
+        <h1 style="color: #00698f;">Brazil: A Country of Vibrant Culture and Stunning Landscapes</h1>
+        <p>Brazil is the largest country in both South America and the Latin American region, known for its incredible beaches, vibrant cities, and rich cultural heritage. From the iconic Christ the Redeemer statue in Rio de Janeiro to the breathtaking Iguazu Falls, Brazil has something to offer for every kind of traveler.</p>
+    </header>
+<section id="photos">
+    <h2>Photos of Brazil</h2>
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; margin: 20px 0;">
 
-    <img src="" alt="Image 1">
-    <img src="" alt="Image 2">
-    <img src="" alt="Image 3">
-  </section>
-  <section id="attractions">
-    <h2>Attractions</h2>
-    <ul>
-      <li>
-        <h3>Christ the Redeemer</h3>
-        <p>Christ the Redeemer is a Art Deco statue of Jesus Christ in Rio de Janeiro, Brazil, created by French sculptor Paul Landowski and built by Brazilian engineer Heitor da Silva Costa, in collaboration with French engineer Albert Caquot.</p>
-        <p>Coordinates: -22.9068, -43.2105</p>
-      </li>
-      <li>
-        <h3>Sugarloaf Mountain</h3>
-        <p>Sugarloaf Mountain is a peak at the mouth of Guanabara Bay on a peninsula that juts out into the Atlantic Ocean. Rising 396 meters above the harbor, its name is said to refer to its resemblance to the traditional shape of concentrated refined loaf sugar.</p>
-        <p>Coordinates: -22.9122, -43.1632</p>
-      </li>
-      <li>
-        <h3>Iguazu Falls</h3>
-        <p>Iguazu Falls, located on the border of Brazil and Argentina, is one of the world's most impressive waterfalls, consisting of over 275 individual cascades.</p>
-        <p>Coordinates: -25.6953, -54.4367</p>
-      </li>
-      <li>
-        <h3>Amazon Rainforest</h3>
-        <p>The Amazon Rainforest, spanning across nine countries in South America, including Brazil, is the world's largest tropical rainforest, home to a vast array of wildlife and plant species.</p>
-        <p>Coordinates: -3.9719, -62.0152</p>
-      </li>
-      <li>
-        <h3>Copacabana Beach</h3>
-        <p>Copacabana Beach is one of the most iconic and vibrant beaches in Rio de Janeiro, Brazil, known for its stunning views, lively atmosphere, and wide range of amenities.</p>
-        <p>Coordinates: -22.9672, -43.1823</p>
-      </li>
-    </ul>
-  </section>
-  <section id="map-section">
-    <h2>Interactive Map</h2>
-    <div id="map" style="width: 100%; height: 500px;"></div>
-    <script>
-      function initMap() {
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 7,
-          center: {lat: -14.8779, lng: -51.9253}
-        });
+        <div style="flex: 0 0 30%; margin: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden;">
+            <img src="https://source.unsplash.com/1200x800/?Brazil,landscape" alt="Brazil landscape" style="width: 100%; height: 250px; object-fit: cover; display: block;">
+            <div style="padding: 10px; text-align: center;">Brazil landscape</div>
+        </div>
 
-        // Create markers for each attraction
-        var attractions = [
-          {name: 'Christ the Redeemer', lat: -22.9068, lng: -43.2105, description: 'Art Deco statue of Jesus Christ in Rio de Janeiro, Brazil'},
-          {name: 'Sugarloaf Mountain', lat: -22.9122, lng: -43.1632, description: 'Peak at the mouth of Guanabara Bay on a peninsula that juts out into the Atlantic Ocean'},
-          {name: 'Iguazu Falls', lat: -25.6953, lng: -54.4367, description: 'One of the world\'s most impressive waterfalls, consisting of over 275 individual cascades'},
-          {name: 'Amazon Rainforest', lat: -3.9719, lng: -62.0152, description: 'World\'s largest tropical rainforest, home to a vast array of wildlife and plant species'},
-          {name: 'Copacabana Beach', lat: -22.9672, lng: -43.1823, description: 'Iconic and vibrant beach in Rio de Janeiro, Brazil, known for its stunning views, lively atmosphere, and wide range of amenities'},
-        ];
+        <div style="flex: 0 0 30%; margin: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden;">
+            <img src="https://source.unsplash.com/1200x800/?Brazil,city" alt="Brazil city" style="width: 100%; height: 250px; object-fit: cover; display: block;">
+            <div style="padding: 10px; text-align: center;">Brazil city</div>
+        </div>
 
-        // Add markers to the map
-        var bounds = new google.maps.LatLngBounds();
-        for (var i = 0; i < attractions.length; i++) {
-          var marker = new google.maps.Marker({
-            position: {lat: attractions[i].lat, lng: attractions[i].lng},
-            map: map,
-            title: attractions[i].name
-          });
+        <div style="flex: 0 0 30%; margin: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden;">
+            <img src="https://source.unsplash.com/1200x800/?Brazil,culture" alt="Brazil culture" style="width: 100%; height: 250px; object-fit: cover; display: block;">
+            <div style="padding: 10px; text-align: center;">Brazil culture</div>
+        </div>
 
-          // Add info window
-          (function(marker, attraction) {
-            var infowindow = new google.maps.InfoWindow({
-              content: '<div><strong>' + attraction.name + '</strong><p>' + attraction.description + '</p></div>'
-            });
-            marker.addListener('click', function() {
-              infowindow.open(map, marker);
-            });
-            bounds.extend(marker.getPosition());
-          })(marker, attractions[i]);
-        }
-        map.fitBounds(bounds);
-      }
-    </script>
-    <script async defer
-      src="https://maps.googleapis.com/maps/api/js?callback=initMap">
-    </script>
-  </section>
+    </div>
+</section>
+
+    
+    <section id="attractions">
+        <h2>Attractions</h2>
+        <h3>1. Christ the Redeemer</h3>
+        <p>Location: -22.9083, -43.2105</p>
+        <pDescription>Christ the Redeemer is a iconic Art Deco statue of Jesus Christ in Rio de Janeiro, Brazil, designed by French sculptor Paul Landowski.</p>
+        <h3>2. Iguazu Falls</h3>
+        <p>Location: -25.6953, -54.4367</p>
+        <pDescription>Iguazu Falls, located on the border of Argentina and Brazil, is one of the world's largest and most spectacular waterfalls.</p>
+        <h3>3. Sugarloaf Mountain</h3>
+        <p>Location: -22.9122, -43.1623</p>
+        <pDescription>Sugarloaf Mountain, located in Rio de Janeiro, Brazil, is a iconic peak at the mouth of Guanabara Bay, offering stunning views of the city.</p>
+        <h3>4. Amazon Rainforest</h3>
+        <p>Location: -3.1333, -62.0667</p>
+        <pDescription>The Amazon Rainforest, spanning across nine countries in South America, including Brazil, is the world's largest tropical rainforest, home to an incredible array of plant and animal species.</p>
+        <h3>5. Copacabana Beach</h3>
+        <p>Location: -22.9673, -43.1823</p>
+        <pDescription>Copacabana Beach, located in Rio de Janeiro, Brazil, is one of the most famous and vibrant beaches in the world, known for its stunning views, white sand, and lively atmosphere.</p>
+        <h3>6. Salvador Historic Center</h3>
+        <p>Location: -12.9717, -38.5097</p>
+        <pDescription>The Historic Center of Salvador, Brazil, is a UNESCO World Heritage Site, featuring a rich colonial architecture and a blend of African, Portuguese, and indigenous influences.</p>
+    </section>
+    <section id="map-section">
+        <h2>Interactive Map</h2>
+        <div id="map" style="width: 100%; height: 500px;"></div>
+        <script>
+            function initMap() {
+                var map = new google.maps.Map(document.getElementById('map'), {
+                    zoom: 7,
+                    center: {lat: -14.9038, lng: -53.1805}
+                });
+
+                // Create markers for each attraction
+                var attractions = [
+                    {name: 'Christ the Redeemer', lat: -22.9083, lng: -43.2105, description: 'Christ the Redeemer is a iconic Art Deco statue of Jesus Christ in Rio de Janeiro, Brazil, designed by French sculptor Paul Landowski.'},
+                    {name: 'Iguazu Falls', lat: -25.6953, lng: -54.4367, description: 'Iguazu Falls, located on the border of Argentina and Brazil, is one of the world\'s largest and most spectacular waterfalls.'},
+                    {name: 'Sugarloaf Mountain', lat: -22.9122, lng: -43.1623, description: 'Sugarloaf Mountain, located in Rio de Janeiro, Brazil, is a iconic peak at the mouth of Guanabara Bay, offering stunning views of the city.'},
+                    {name: 'Amazon Rainforest', lat: -3.1333, lng: -62.0667, description: 'The Amazon Rainforest, spanning across nine countries in South America, including Brazil, is the world\'s largest tropical rainforest, home to an incredible array of plant and animal species.'},
+                    {name: 'Copacabana Beach', lat: -22.9673, lng: -43.1823, description: 'Copacabana Beach, located in Rio de Janeiro, Brazil, is one of the most famous and vibrant beaches in the world, known for its stunning views, white sand, and lively atmosphere.'},
+                    {name: 'Salvador Historic Center', lat: -12.9717, lng: -38.5097, description: 'The Historic Center of Salvador, Brazil, is a UNESCO World Heritage Site, featuring a rich colonial architecture and a blend of African, Portuguese, and indigenous influences.'},
+                ];
+
+                // Add markers to the map
+                var bounds = new google.maps.LatLngBounds();
+                for (var i = 0; i < attractions.length; i++) {
+                    var marker = new google.maps.Marker({
+                        position: {lat: attractions[i].lat, lng: attractions[i].lng},
+                        map: map,
+                        title: attractions[i].name
+                    });
+
+                    // Add info window
+                    (function(marker, attraction) {
+                        var infowindow = new google.maps.InfoWindow({
+                            content: '<div><strong>' + attraction.name + '</strong><p>' + attraction.description + '</p></div>'
+                        });
+                        marker.addListener('click', function() {
+                            infowindow.open(map, marker);
+                        });
+                        bounds.extend(marker.getPosition());
+                    })(marker, attractions[i]);
+                }
+                map.fitBounds(bounds);
+            }
+        </script>
+        <script async defer
+            src="https://maps.googleapis.com/maps/api/js?callback=initMap">
+        </script>
+    </section>
 </body>
 </html>
+```
