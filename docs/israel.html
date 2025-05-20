@@ -1,13 +1,22 @@
 <html>
 <head>
-	<title>Discover Israel</title>
+	<title>Israel</title>
 	<style>
 		body {
 			font-family: Arial, sans-serif;
 		}
 		.container {
-			width: 80%;
+			max-width: 800px;
 			margin: 40px auto;
+			padding: 20px;
+			background-color: #f9f9f9;
+			border: 1px solid #ddd;
+			box-shadow: 0 0 10px rgba(0,0,0,0.1);
+		}
+		.header {
+			background-color: #333;
+			color: #fff;
+			padding: 20px;
 			text-align: center;
 		}
 		.photos {
@@ -15,48 +24,72 @@
 			flex-wrap: wrap;
 			justify-content: center;
 		}
-		.photos img {
-			width: 30%;
-			margin: 10px;
-			border-radius: 10px;
-			box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-		}
-		.recommendations {
-			margin-top: 40px;
-		}
-		.recommendations ul {
+		.attractions {
 			list-style: none;
 			padding: 0;
 			margin: 0;
 		}
-		.recommendations li {
+		.attractions li {
 			margin-bottom: 20px;
 		}
+		.attractions li h2 {
+			margin-top: 0;
+		}
 		iframe {
-			width: 80%;
+			width: 100%;
 			height: 400px;
-			margin: 20px auto;
 			border: none;
 		}
 	</style>
 </head>
 <body>
 	<div class="container">
-		<h1>Discover Israel</h1>
-		<div class="photos">
-			<img src="https://source.unsplash.com/1200x800/?Israel,landscape" alt="Israel landscape" style="width: 100%; height: auto; display: block;" alt="Tel Aviv Beach">
-			<img src="https://source.unsplash.com/1200x800/?Israel,city" alt="Israel city" style="width: 100%; height: auto; display: block;" alt="Jerusalem Old City">
-			<img src="https://source.unsplash.com/1200x800/?Israel,culture" alt="Israel culture" style="width: 100%; height: auto; display: block;" alt="Dead Sea">
+		<div class="header">
+			<h1>Israel</h1>
+			<p>Introduction to Israel: Israel is a country located in the Middle East, known for its rich history, culture, and natural beauty.</p>
 		</div>
-		<div class="recommendations">
-			<h2>Local Attractions:</h2>
-			<ul>
-				<li><a href="https://www.visit-tel-aviv.com/" target="_blank">Tel Aviv</a>: Known for its vibrant nightlife, beautiful beaches, and rich cultural scene.</li>
-				<li><a href="https://www.jerusalem.muni.il/" target="_blank">Jerusalem</a>: A historic city with a rich spiritual heritage, home to the Western Wall and the Church of the Holy Sepulchre.</li>
-				<li><a href="https://www.deadseaisrael.com/" target="_blank">Dead Sea</a>: A unique natural wonder, famous for its floatation properties and stunning scenery.</li>
+		<section>
+			<h2>Photos</h2>
+			<div class="photos">
+				<img src="https://source.unsplash.com/1200x800/?Israel,landscape" alt="Israel landscape" style="width: 100%; height: auto; display: block;" alt="Image 1" style="width: 200px; height: 150px; margin: 10px;">
+				<img src="https://source.unsplash.com/1200x800/?Israel,city" alt="Israel city" style="width: 100%; height: auto; display: block;" alt="Image 2" style="width: 200px; height: 150px; margin: 10px;">
+				<img src="https://source.unsplash.com/1200x800/?Israel,culture" alt="Israel culture" style="width: 100%; height: auto; display: block;" alt="Image 3" style="width: 200px; height: 150px; margin: 10px;">
+			</div>
+		</section>
+		<section>
+			<h2>Attractions</h2>
+			<ul class="attractions">
+				<li>
+					<h2>Western Wall</h2>
+					<p>Description: The Western Wall is a sacred site in Jerusalem, considered the holiest site in Judaism.</p>
+					<p>Coordinates: 31.7767° N, 35.2343° E</p>
+				</li>
+				<li>
+					<h2>Masada</h2>
+					<p>Description: Masada is an ancient fortress located on a plateau overlooking the Dead Sea.</p>
+					<p>Coordinates: 31.3254° N, 35.3533° E</p>
+				</li>
+				<li>
+					<h2>Dead Sea</h2>
+					<p>Description: The Dead Sea is a saltwater lake located between Israel and Jordan, known for its unique properties and stunning scenery.</p>
+					<p>Coordinates: 31.5333° N, 35.6167° E</p>
+				</li>
+				<li>
+					<h2>Caesarea</h2>
+					<p>Description: Caesarea is an ancient Roman city located on the Mediterranean coast, featuring impressive ruins and a rich history.</p>
+					<p>Coordinates: 32.5167° N, 34.8833° E</p>
+				</li>
+				<li>
+					<h2>Tel Aviv</h2>
+					<p>Description: Tel Aviv is a vibrant city located on the Mediterranean coast, known for its beautiful beaches, cultural attractions, and nightlife.</p>
+					<p>Coordinates: 32.0667° N, 34.7667° E</p>
+				</li>
 			</ul>
+		</section>
+		<section>
+			<h2>Map</h2>
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d129294.33333333334!2d34.883333!3d31.766666!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1502c3bc1e3737e3%3A0x4876f6a4db5a4b0!2sIsrael!5e0!3m2!1sen!2sus!4v1643723414412!5m2!1sen!2sus" width="800" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
 		</div>
-		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3249.8865554156745!2d35.21430431539292!3d31.78303568124681!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1502e2e0d0c21f0b%3A0x40f6a5770c06986!2sTel%20Aviv-Yafo%2C%20Israel!5e0!3m2!1sen!2sus!4v1643723414548!5m2!1sen!2sus" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
 	</div>
 </body>
 </html>
