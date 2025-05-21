@@ -1,129 +1,154 @@
+```html
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Israel</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-        }
-        section {
-            padding: 20px;
-        }
-        #map-section {
-            padding: 20px;
-        }
-        #map {
-            border: 1px solid #ddd;
-        }
-        .attraction {
-            margin-bottom: 20px;
-        }
-        .photo {
-            width: 100%;
-            height: 200px;
-            margin-bottom: 10px;
-        }
-        @media (max-width: 768px) {
-            #map {
-                height: 300px;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Israel</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #f0f0f0;
+      padding: 20px;
+      text-align: center;
+    }
+    h1 {
+      color: #00698f;
+    }
+    section {
+      padding: 20px;
+    }
+    #map-section {
+      padding: 20px;
+    }
+    .photos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .photo {
+      margin: 10px;
+    }
+    .attractions {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .attraction {
+      padding: 10px;
+      border-bottom: 1px solid #ccc;
+    }
+    .attraction:last-child {
+      border-bottom: none;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Israel: A Land of History, Culture, and Beauty</h1>
-        <p>Located in the Middle East, Israel is a country with a rich history, diverse culture, and breathtaking landscapes. From the ancient city of Jerusalem to the stunning beaches of Tel Aviv, Israel has something to offer for every kind of traveler.</p>
-    </header>
-    
-    <section id="attractions">
-        <h2>Attractions</h2>
-        <div class="attraction">
-            <h3>Western Wall</h3>
-            <p>The Western Wall, also known as the Wailing Wall, is a sacred site in Jerusalem and one of the most important Jewish pilgrimage sites in the world.</p>
-            <p>Coordinates: 31.7762, 35.2344</p>
-        </div>
-        <div class="attraction">
-            <h3>Temple Mount</h3>
-            <p>Temple Mount is a sacred site in Jerusalem and the location of the Dome of the Rock and the Al-Aqsa Mosque.</p>
-            <p>Coordinates: 31.7781, 35.2354</p>
-        </div>
-        <div class="attraction">
-            <h3>Masada</h3>
-            <p>Masada is an ancient fortress located on a plateau overlooking the Dead Sea, and is one of Israel's most popular tourist attractions.</p>
-            <p>Coordinates: 31.3258, 35.3533</p>
-        </div>
-        <div class="attraction">
-            <h3>Dead Sea</h3>
-            <p>The Dead Sea is a saltwater lake located on the border between Israel and Jordan, and is known for its therapeutic properties and stunning scenery.</p>
-            <p>Coordinates: 31.5000, 35.5000</p>
-        </div>
-        <div class="attraction">
-            <h3>Tel Aviv Beach</h3>
-            <p>Tel Aviv Beach is a popular beach located in the heart of Tel Aviv, and is known for its vibrant nightlife, restaurants, and water sports.</p>
-            <p>Coordinates: 32.0739, 34.7639</p>
-        </div>
-    </section>
-    <section id="map-section">
-        <h2>Interactive Map</h2>
-        <div id="map" style="width: 100%; height: 500px;"></div>
-        <script>
-            function initMap() {
-                var map = new google.maps.Map(document.getElementById('map'), {
-                    zoom: 7,
-                    center: {lat: 31.7833, lng: 35.2167}
-                });
-                
-                // Create markers for each attraction
-                var attractions = [
-                    {name: 'Western Wall', lat: 31.7762, lng: 35.2344, description: 'The Western Wall, also known as the Wailing Wall, is a sacred site in Jerusalem and one of the most important Jewish pilgrimage sites in the world.'},
-                    {name: 'Temple Mount', lat: 31.7781, lng: 35.2354, description: 'Temple Mount is a sacred site in Jerusalem and the location of the Dome of the Rock and the Al-Aqsa Mosque.'},
-                    {name: 'Masada', lat: 31.3258, lng: 35.3533, description: 'Masada is an ancient fortress located on a plateau overlooking the Dead Sea, and is one of Israel\'s most popular tourist attractions.'},
-                    {name: 'Dead Sea', lat: 31.5000, lng: 35.5000, description: 'The Dead Sea is a saltwater lake located on the border between Israel and Jordan, and is known for its therapeutic properties and stunning scenery.'},
-                    {name: 'Tel Aviv Beach', lat: 32.0739, lng: 34.7639, description: 'Tel Aviv Beach is a popular beach located in the heart of Tel Aviv, and is known for its vibrant nightlife, restaurants, and water sports.'},
-                ];
-                
-                // Add markers to the map
-                var bounds = new google.maps.LatLngBounds();
-                for (var i = 0; i < attractions.length; i++) {
-                    var marker = new google.maps.Marker({
-                        position: {lat: attractions[i].lat, lng: attractions[i].lng},
-                        map: map,
-                        title: attractions[i].name
-                    });
-                    
-                    // Add info window
-                    (function(marker, attraction) {
-                        var infowindow = new google.maps.InfoWindow({
-                            content: '<div><strong>' + attraction.name + '</strong><p>' + attraction.description + '</p></div>'
-                        });
-                        marker.addListener('click', function() {
-                            infowindow.open(map, marker);
-                        });
-                        bounds.extend(marker.getPosition());
-                    })(marker, attractions[i]);
-                }
-                map.fitBounds(bounds);
-            }
-        </script>
-        <script async defer
-            src="https://maps.googleapis.com/maps/api/js?callback=initMap">
-        </script>
-    </section>
+  <header>
+    <h1>Israel: A Land of History, Culture, and Beauty</h1>
+    <p>Located in the Middle East, Israel is a country with a rich history, diverse culture, and breathtaking landscapes. From the ancient city of Jerusalem to the vibrant city of Tel Aviv, Israel has something to offer for every kind of traveler.</p>
+  </header>
+  
+  </section>
+  <section id="attractions">
+    <h2>Attractions</h2>
+    <ul class="attractions">
+      <li class="attraction">
+        <h3>Western Wall</h3>
+        <p>One of the most sacred sites in Jerusalem, the Western Wall is a remnant of the ancient Jewish Temple.</p>
+        <p>Coordinates: 31.7767, 35.2347</p>
+      </li>
+      <li class="attraction">
+        <h3>Tel Aviv Beach</h3>
+        <p>A popular destination for beachgoers, Tel Aviv Beach offers a vibrant atmosphere, clean sand, and clear waters.</p>
+        <p>Coordinates: 32.0713, 34.7683</p>
+      </li>
+      <li class="attraction">
+        <h3>Old City of Jerusalem</h3>
+        <p>A UNESCO World Heritage Site, the Old City of Jerusalem is a historic and cultural treasure trove, featuring ancient walls, churches, mosques, and synagogues.</p>
+        <p>Coordinates: 31.7767, 35.2347</p>
+      </li>
+      <li class="attraction">
+        <h3>Haifa Bay</h3>
+        <p>A scenic bay located in the northern city of Haifa, Haifa Bay offers stunning views, hiking trails, and a picturesque harbor.</p>
+        <p>Coordinates: 32.8213, 35.0243</p>
+      </li>
+      <li class="attraction">
+        <h3>Dead Sea</h3>
+        <p>The lowest point on Earth, the Dead Sea is a unique natural wonder, known for its saltwater, mineral-rich mud, and breathtaking scenery.</p>
+        <p>Coordinates: 31.5333, 35.5833</p>
+      </li>
+    </ul>
+  </section>
+  <section id="map-section">
+    <h2>Interactive Map</h2>
+    <div id="map" style="width: 100%; height: 500px;"></div>
+    <script>
+      function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 7,
+          center: {lat: 31.0461, lng: 34.8516}
+        });
+
+        // Create markers for each attraction
+        var attractions = [
+          {name: 'Western Wall', lat: 31.7767, lng: 35.2347, description: 'One of the most sacred sites in Jerusalem, the Western Wall is a remnant of the ancient Jewish Temple.'},
+          {name: 'Tel Aviv Beach', lat: 32.0713, lng: 34.7683, description: 'A popular destination for beachgoers, Tel Aviv Beach offers a vibrant atmosphere, clean sand, and clear waters.'},
+          {name: 'Old City of Jerusalem', lat: 31.7767, lng: 35.2347, description: 'A UNESCO World Heritage Site, the Old City of Jerusalem is a historic and cultural treasure trove, featuring ancient walls, churches, mosques, and synagogues.'},
+          {name: 'Haifa Bay', lat: 32.8213, lng: 35.0243, description: 'A scenic bay located in the northern city of Haifa, Haifa Bay offers stunning views, hiking trails, and a picturesque harbor.'},
+          {name: 'Dead Sea', lat: 31.5333, lng: 35.5833, description: 'The lowest point on Earth, the Dead Sea is a unique natural wonder, known for its saltwater, mineral-rich mud, and breathtaking scenery.'}
+        ];
+
+        // Add markers to the map
+        var bounds = new google.maps.LatLngBounds();
+        for (var i = 0; i < attractions.length; i++) {
+          var marker = new google.maps.Marker({
+            position: {lat: attractions[i].lat, lng: attractions[i].lng},
+            map: map,
+            title: attractions[i].name
+          });
+
+          // Add info window
+          (function(marker, attraction) {
+            var infowindow = new google.maps.InfoWindow({
+              content: '<div><strong>' + attraction.name + '</strong><p>' + attraction.description + '</p></div>'
+            });
+            marker.addListener('click', function() {
+              infowindow.open(map, marker);
+            });
+            bounds.extend(marker.getPosition());
+          })(marker, attractions[i]);
+        }
+        map.fitBounds(bounds);
+      }
+    </script>
+    <script async defer
+      src="https://maps.googleapis.com/maps/api/js?callback=initMap">
+    </script>
+  </section>
 
 <section id="photos">
 <h2>Photos of Israel</h2>
 <div style="display: flex; flex-wrap: wrap; justify-content: space-between; margin: 20px 0;">
+  <div style="flex: 0 0 30%; margin: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden;">
+    <img src="https://images.unsplash.com/photo-1547234935-80c7145ec969?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NTM4NzZ8MHwxfHNlYXJjaHwxfHxJc3JhZWwlMjBsYW5kc2NhcGV8ZW58MHwwfHx8MTc0NzgwNjU3OHww&ixlib=rb-4.1.0&q=80&w=1080" alt="Israel landscape" style="width: 100%; height: 250px; object-fit: cover;">
+    <div style="padding: 10px; text-align: center;">Israel landscape</div>
+  </div>
+  <div style="flex: 0 0 30%; margin: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden;">
+    <img src="https://images.unsplash.com/photo-1522141437349-93244ec08d61?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NTM4NzZ8MHwxfHNlYXJjaHwxfHxJc3JhZWwlMjBjaXR5fGVufDB8MHx8fDE3NDc4MDY1Nzl8MA&ixlib=rb-4.1.0&q=80&w=1080" alt="Israel city" style="width: 100%; height: 250px; object-fit: cover;">
+    <div style="padding: 10px; text-align: center;">Israel city</div>
+  </div>
+  <div style="flex: 0 0 30%; margin: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden;">
+    <img src="https://images.unsplash.com/photo-1659886353565-94e6200d0e14?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NTM4NzZ8MHwxfHNlYXJjaHwxfHxJc3JhZWwlMjBjdWx0dXJlfGVufDB8MHx8fDE3NDc4MDY1ODB8MA&ixlib=rb-4.1.0&q=80&w=1080" alt="Israel culture" style="width: 100%; height: 250px; object-fit: cover;">
+    <div style="padding: 10px; text-align: center;">Israel culture</div>
+  </div>
 </div>
 </section>
 </body>
 </html>
+```
