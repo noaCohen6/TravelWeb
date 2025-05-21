@@ -1,135 +1,145 @@
+```html
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Brazil: A Country of Rich Culture and Natural Beauty</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-    header {
-      background-image: linear-gradient(to bottom, #ff9900, #ffcc00);
-      color: #ffffff;
-      padding: 20px;
-      text-align: center;
-    }
-    section {
-      padding: 20px;
-      margin-bottom: 20px;
-      background-color: #f7f7f7;
-      border: 1px solid #ddd;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-    h1, h2 {
-      margin-top: 0;
-    }
-    .photos {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-    .photos img {
-      width: 200px;
-      height: 150px;
-      margin: 10px;
-      border-radius: 10px;
-    }
-    #map-section {
-      padding: 20px;
-    }
-    #map {
-      border: 1px solid #ddd;
-      border-radius: 10px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brazil Travel Guide</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+        .header {
+            background-image: linear-gradient(to bottom, #0099cc, #006699);
+            color: #ffffff;
+            padding: 20px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+        }
+        .photos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .photos img {
+            width: 200px;
+            height: 150px;
+            margin: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .attractions {
+            padding: 20px;
+        }
+        .attractions h2 {
+            margin-top: 0;
+        }
+        .attraction {
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .attraction h3 {
+            margin-top: 0;
+        }
+        #map-section {
+            padding: 20px;
+        }
+        #map {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>Brazil: A Country of Rich Culture and Natural Beauty</h1>
-    <p>Brazil, the largest country in both South America and the Latin American region, is known for its vibrant culture, stunning beaches, and breathtaking natural wonders. From the iconic Christ the Redeemer statue in Rio de Janeiro to the majestic Iguazu Falls, Brazil has something to offer for every kind of traveler.</p>
-  </header>
-  
-  </section>
-  <section id="attractions">
-    <h2>Attractions</h2>
-    <ul>
-      <li>
-        <h3>Christ the Redeemer</h3>
-        <p>One of the Seven Wonders of the World, this iconic statue of Jesus Christ is a must-visit attraction in Rio de Janeiro.</p>
-        <p>Coordinates: (-22.9068, -43.2106)</p>
-      </li>
-      <li>
-        <h3>Iguazu Falls</h3>
-        <p>Located on the border of Brazil and Argentina, Iguazu Falls is a breathtaking natural wonder that is sure to leave you awestruck.</p>
-        <p>Coordinates: (-25.6953, -54.4367)</p>
-      </li>
-      <li>
-        <h3>Amazon Rainforest</h3>
-        <p>The largest tropical rainforest in the world, the Amazon Rainforest is home to an incredible array of flora and fauna.</p>
-        <p>Coordinates: (-3.1333, -62.0667)</p>
-      </li>
-      <li>
-        <h3>Sugarloaf Mountain</h3>
-        <p>Located in Rio de Janeiro, Sugarloaf Mountain offers stunning views of the city and the Atlantic Ocean.</p>
-        <p>Coordinates: (-22.9503, -43.1633)</p>
-      </li>
-      <li>
-        <h3>Copacabana Beach</h3>
-        <p>One of the most famous beaches in the world, Copacabana Beach is known for its vibrant atmosphere and stunning views.</p>
-        <p>Coordinates: (-22.9673, -43.1833)</p>
-      </li>
-    </ul>
-  </section>
-  <section id="map-section">
-    <h2>Interactive Map</h2>
-    <div id="map" style="width: 100%; height: 500px;"></div>
-    <script>
-      function initMap() {
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 7,
-          center: {lat: -14.1372, lng: -53.1806}
-        });
+    <div class="header">
+        <h1>Brazil Travel Guide</h1>
+        <p>Welcome to Brazil, a country known for its rich culture, stunning beaches, and vibrant cities. From the iconic Christ the Redeemer statue in Rio de Janeiro to the breathtaking Iguazu Falls, Brazil has something to offer for every kind of traveler.</p>
+    </div>
+    <section class="photos">
+        <section class="attractions">
+        <h2>Attractions</h2>
+        <div class="attraction">
+            <h3>Christ the Redeemer</h3>
+            <p>Located in Rio de Janeiro, this iconic statue is one of the Seven Wonders of the World and offers breathtaking views of the city.</p>
+            <p>Coordinates: -22.9068, -43.2105</p>
+        </div>
+        <div class="attraction">
+            <h3>Iguazu Falls</h3>
+            <p>Located on the border of Brazil and Argentina, these stunning waterfalls are a must-visit for any nature lover.</p>
+            <p>Coordinates: -25.6953, -54.4367</p>
+        </div>
+        <div class="attraction">
+            <h3>Copacabana Beach</h3>
+            <p>Located in Rio de Janeiro, this iconic beach is known for its white sand and vibrant atmosphere.</p>
+            <p>Coordinates: -22.9675, -43.1823</p>
+        </div>
+        <div class="attraction">
+            <h3>Sugarloaf Mountain</h3>
+            <p>Located in Rio de Janeiro, this iconic mountain offers breathtaking views of the city and is a popular spot for hiking and rock climbing.</p>
+            <p>Coordinates: -22.9133, -43.1633</p>
+        </div>
+        <div class="attraction">
+            <h3>Amazon Rainforest</h3>
+            <p>Located in the north of Brazil, this stunning rainforest is home to a vast array of wildlife and is a must-visit for any nature lover.</p>
+            <p>Coordinates: -3.1339, -62.6353</p>
+        </div>
+    </section>
+    <section id="map-section">
+        <h2>Interactive Map</h2>
+        <div id="map" style="width: 100%; height: 500px;"></div>
+        <script>
+            function initMap() {
+                var map = new google.maps.Map(document.getElementById('map'), {
+                    zoom: 7,
+                    center: {lat: -14.1372, lng: -53.1806}
+                });
 
-        // Create markers for each attraction
-        var attractions = [
-          {name: 'Christ the Redeemer', lat: -22.9068, lng: -43.2106, description: 'One of the Seven Wonders of the World, this iconic statue of Jesus Christ is a must-visit attraction in Rio de Janeiro.'},
-          {name: 'Iguazu Falls', lat: -25.6953, lng: -54.4367, description: 'Located on the border of Brazil and Argentina, Iguazu Falls is a breathtaking natural wonder that is sure to leave you awestruck.'},
-          {name: 'Amazon Rainforest', lat: -3.1333, lng: -62.0667, description: 'The largest tropical rainforest in the world, the Amazon Rainforest is home to an incredible array of flora and fauna.'},
-          {name: 'Sugarloaf Mountain', lat: -22.9503, lng: -43.1633, description: 'Located in Rio de Janeiro, Sugarloaf Mountain offers stunning views of the city and the Atlantic Ocean.'},
-          {name: 'Copacabana Beach', lat: -22.9673, lng: -43.1833, description: 'One of the most famous beaches in the world, Copacabana Beach is known for its vibrant atmosphere and stunning views.'},
-        ];
+                // Create markers for each attraction
+                var attractions = [
+                    {name: 'Christ the Redeemer', lat: -22.9068, lng: -43.2105, description: 'Located in Rio de Janeiro, this iconic statue is one of the Seven Wonders of the World and offers breathtaking views of the city.'},
+                    {name: 'Iguazu Falls', lat: -25.6953, lng: -54.4367, description: 'Located on the border of Brazil and Argentina, these stunning waterfalls are a must-visit for any nature lover.'},
+                    {name: 'Copacabana Beach', lat: -22.9675, lng: -43.1823, description: 'Located in Rio de Janeiro, this iconic beach is known for its white sand and vibrant atmosphere.'},
+                    {name: 'Sugarloaf Mountain', lat: -22.9133, lng: -43.1633, description: 'Located in Rio de Janeiro, this iconic mountain offers breathtaking views of the city and is a popular spot for hiking and rock climbing.'},
+                    {name: 'Amazon Rainforest', lat: -3.1339, lng: -62.6353, description: 'Located in the north of Brazil, this stunning rainforest is home to a vast array of wildlife and is a must-visit for any nature lover.'}
+                ];
 
-        // Add markers to the map
-        var bounds = new google.maps.LatLngBounds();
-        for (var i = 0; i < attractions.length; i++) {
-          var marker = new google.maps.Marker({
-            position: {lat: attractions[i].lat, lng: attractions[i].lng},
-            map: map,
-            title: attractions[i].name
-          });
+                // Add markers to the map
+                var bounds = new google.maps.LatLngBounds();
+                for (var i = 0; i < attractions.length; i++) {
+                    var marker = new google.maps.Marker({
+                        position: {lat: attractions[i].lat, lng: attractions[i].lng},
+                        map: map,
+                        title: attractions[i].name
+                    });
 
-          // Add info window
-          (function(marker, attraction) {
-            var infowindow = new google.maps.InfoWindow({
-              content: '<div><strong>' + attraction.name + '</strong><p>' + attraction.description + '</p></div>'
-            });
-            marker.addListener('click', function() {
-              infowindow.open(map, marker);
-            });
-            bounds.extend(marker.getPosition());
-          })(marker, attractions[i]);
-        }
-        map.fitBounds(bounds);
-      }
-    </script>
-    <script async defer
-      src="https://maps.googleapis.com/maps/api/js?callback=initMap">
-    </script>
-  </section>
+                    // Add info window
+                    (function(marker, attraction) {
+                        var infowindow = new google.maps.InfoWindow({
+                            content: '<div><strong>' + attraction.name + '</strong><p>' + attraction.description + '</p></div>'
+                        });
+                        marker.addListener('click', function() {
+                            infowindow.open(map, marker);
+                        });
+                        bounds.extend(marker.getPosition());
+                    })(marker, attractions[i]);
+                }
+                map.fitBounds(bounds);
+            }
+        </script>
+        <script async defer
+            src="https://maps.googleapis.com/maps/api/js?callback=initMap">
+        </script>
+    </section>
 
 <section id="photos">
 <h2>Photos of Brazil</h2>
@@ -147,3 +157,4 @@
 </section>
 </body>
 </html>
+```
