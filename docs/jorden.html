@@ -1,96 +1,144 @@
-<html>
+```html
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<title>Jorden</title>
-	<style>
-		body {
-			font-family: Arial, sans-serif;
-		}
-		.header {
-			background-color: #f0f0f0;
-			padding: 20px;
-			text-align: center;
-		}
-		.photos {
-			display: flex;
-			flex-wrap: wrap;
-			justify-content: center;
-		}
-		.attractions {
-			padding: 20px;
-		}
-		.attraction {
-			margin-bottom: 20px;
-		}
-		.map {
-			padding: 20px;
-		}
-	</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jorden</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+        }
+        section {
+            padding: 1em;
+        }
+        h2 {
+            margin-top: 0;
+        }
+        #map-section {
+            padding: 0;
+        }
+        #map {
+            border: 1px solid #ccc;
+        }
+        img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            margin-bottom: 1em;
+        }
+        @media only screen and (max-width: 768px) {
+            #map {
+                height: 300px;
+            }
+        }
+    </style>
 </head>
 <body>
-	<header class="header">
-		<h1>Welcome to Jorden</h1>
-		<p>Jorden is a beautiful country with a rich history and culture.</p>
-	</header>
-	<section class="photos">
-		<h2>Photos</h2>
+    <header>
+        <h1>Welcome to Jorden</h1>
+        <p>Jorden, officially the Hashemite Kingdom of Jordan, is a country in the Middle East. It is bordered by Saudi Arabia to the south and east, Iraq to the northeast, Syria to the north, and Israel and Palestine to the west.</p>
+    </header>
+    
+    <section id="attractions">
+        <h2>Attractions</h2>
+        <ul>
+            <li>
+                <h3>Petra</h3>
+                <p>Petra is an ancient archaeological site and one of the New 7 Wonders of the World. It is famous for its rock-cut architecture and water conduit system.</p>
+                <p>Coordinates: 30.3286, 35.4444</p>
+            </li>
+            <li>
+                <h3>Wadi Rum</h3>
+                <p>Wadi Rum is a protected area and a popular tourist destination, known for its stunning natural beauty and unique rock formations.</p>
+                <p>Coordinates: 29.5753, 35.4147</p>
+            </li>
+            <li>
+                <h3>Aqaba</h3>
+                <p>Aqaba is a coastal city and a popular tourist destination, known for its beautiful beaches, coral reefs, and historic sites.</p>
+                <p>Coordinates: 29.5167, 35.0000</p>
+            </li>
+            <li>
+                <h3>Jordan River</h3>
+                <p>The Jordan River is a significant river in the Middle East and a popular tourist destination, known for its historic and biblical significance.</p>
+                <p>Coordinates: 31.7642, 35.5547</p>
+            </li>
+            <li>
+                <h3>Dead Sea</h3>
+                <p>The Dead Sea is a saltwater lake and a popular tourist destination, known for its unique natural properties and stunning scenery.</p>
+                <p>Coordinates: 31.5333, 35.5833</p>
+            </li>
+        </ul>
+    </section>
+    <section id="map-section">
+        <h2>Interactive Map</h2>
+        <div id="map" style="width: 100%; height: 500px;"></div>
+        <script>
+            function initMap() {
+                var map = new google.maps.Map(document.getElementById('map'), {
+                    zoom: 7,
+                    center: {lat: 31.9454, lng: 35.9333}
+                });
+
+                // Create markers for each attraction
+                var attractions = [
+                    {name: 'Petra', lat: 30.3286, lng: 35.4444, description: 'Petra is an ancient archaeological site and one of the New 7 Wonders of the World.'},
+                    {name: 'Wadi Rum', lat: 29.5753, lng: 35.4147, description: 'Wadi Rum is a protected area and a popular tourist destination, known for its stunning natural beauty and unique rock formations.'},
+                    {name: 'Aqaba', lat: 29.5167, lng: 35.0000, description: 'Aqaba is a coastal city and a popular tourist destination, known for its beautiful beaches, coral reefs, and historic sites.'},
+                    {name: 'Jordan River', lat: 31.7642, lng: 35.5547, description: 'The Jordan River is a significant river in the Middle East and a popular tourist destination, known for its historic and biblical significance.'},
+                    {name: 'Dead Sea', lat: 31.5333, lng: 35.5833, description: 'The Dead Sea is a saltwater lake and a popular tourist destination, known for its unique natural properties and stunning scenery.'}
+                ];
+
+                // Add markers to the map
+                var bounds = new google.maps.LatLngBounds();
+                for (var i = 0; i < attractions.length; i++) {
+                    var marker = new google.maps.Marker({
+                        position: {lat: attractions[i].lat, lng: attractions[i].lng},
+                        map: map,
+                        title: attractions[i].name
+                    });
+
+                    // Add info window
+                    (function(marker, attraction) {
+                        var infowindow = new google.maps.InfoWindow({
+                            content: '<div><strong>' + attraction.name + '</strong><p>' + attraction.description + '</p></div>'
+                        });
+                        marker.addListener('click', function() {
+                            infowindow.open(map, marker);
+                        });
+                        bounds.extend(marker.getPosition());
+                    })(marker, attractions[i]);
+                }
+                map.fitBounds(bounds);
+            }
+        </script>
+        <script async defer
+            src="https://maps.googleapis.com/maps/api/js?callback=initMap">
+        </script>
+    </section>
+
+<section id="photos">
+<h2>Photos of Jorden</h2>
 <div style="display: flex; flex-wrap: wrap; justify-content: space-between; margin: 20px 0;">
   <div style="flex: 0 0 30%; margin: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden;">
-    <img src="https://source.unsplash.com/1200x800/?Jorden,landscape" alt="Jorden landscape" style="width: 100%; height: 250px; object-fit: cover; display: block;">
-    <div style="padding: 10px; text-align: center;">Jorden landscape</div>
+    <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NTM4NzZ8MHwxfHNlYXJjaHwxfHxKb3JkZW4lMjBsYW5kc2NhcGV8ZW58MHwwfHx8MTc0NzgwNzg1N3ww&ixlib=rb-4.1.0&q=80&w=1080" alt="Jorden landscape" style="width: 100%; height: 250px; object-fit: cover;">
   </div>
   <div style="flex: 0 0 30%; margin: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden;">
-    <img src="https://source.unsplash.com/1200x800/?Jorden,city" alt="Jorden city" style="width: 100%; height: 250px; object-fit: cover; display: block;">
-    <div style="padding: 10px; text-align: center;">Jorden city</div>
+    <img src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NTM4NzZ8MHwxfHNlYXJjaHwxfHxKb3JkZW4lMjBjaXR5fGVufDB8MHx8fDE3NDc4MDc4NTh8MA&ixlib=rb-4.1.0&q=80&w=1080" alt="Jorden city" style="width: 100%; height: 250px; object-fit: cover;">
   </div>
   <div style="flex: 0 0 30%; margin: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden;">
-    <img src="https://source.unsplash.com/1200x800/?Jorden,culture" alt="Jorden culture" style="width: 100%; height: 250px; object-fit: cover; display: block;">
-    <div style="padding: 10px; text-align: center;">Jorden culture</div>
-  </div>
-  <div style="flex: 0 0 30%; margin: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden;">
-    <img src="https://source.unsplash.com/1200x800/?Jorden,travel" alt="Jorden travel" style="width: 100%; height: 250px; object-fit: cover; display: block;">
-    <div style="padding: 10px; text-align: center;">Jorden travel</div>
-  </div>
-  <div style="flex: 0 0 30%; margin: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden;">
-    <img src="https://source.unsplash.com/1200x800/?Jorden,architecture" alt="Jorden architecture" style="width: 100%; height: 250px; object-fit: cover; display: block;">
-    <div style="padding: 10px; text-align: center;">Jorden architecture</div>
+    <img src="https://images.unsplash.com/photo-1488972685288-c3fd157d7c7a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NTM4NzZ8MHwxfHNlYXJjaHwxfHxKb3JkZW4lMjBhcmNoaXRlY3R1cmV8ZW58MHwwfHx8MTc0NzgwNzg1OXww&ixlib=rb-4.1.0&q=80&w=1080" alt="Jorden architecture" style="width: 100%; height: 250px; object-fit: cover;">
   </div>
 </div>
-
-		<img src="" alt="Image 1" style="width: 200px; height: 150px; margin: 10px;">
-		<img src="" alt="Image 2" style="width: 200px; height: 150px; margin: 10px;">
-		<img src="" alt="Image 3" style="width: 200px; height: 150px; margin: 10px;">
-	</section>
-	<section class="attractions">
-		<h2>Attractions</h2>
-		<article class="attraction">
-			<h3>Petra</h3>
-			<p>Petra is an ancient city carved into the sandstone cliffs.</p>
-			<p>Coordinates: 30.3286, 35.4444</p>
-		</article>
-		<article class="attraction">
-			<h3>Wadi Rum</h3>
-			<p>Wadi Rum is a stunning desert valley with unique rock formations.</p>
-			<p>Coordinates: 29.5792, 35.4167</p>
-		</article>
-		<article class="attraction">
-			<h3>Dead Sea</h3>
-			<p>The Dead Sea is a saltwater lake with a unique ecosystem.</p>
-			<p>Coordinates: 31.4972, 35.5953</p>
-		</article>
-		<article class="attraction">
-			<h3>Aqaba</h3>
-			<p>Aqaba is a coastal city with a rich history and beautiful beaches.</p>
-			<p>Coordinates: 29.5211, 35.0053</p>
-		</article>
-		<article class="attraction">
-			<h3>Amman</h3>
-			<p>Amman is the capital city of Jorden, with a rich history and culture.</p>
-			<p>Coordinates: 31.9563, 35.9453</p>
-		</article>
-	</section>
-	<section class="map">
-		<h2>Map</h2>
-		<iframe src="https://maps.google.com/maps?q=Jorden&t=&z=6&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" style="width: 100%; height: 400px;"></iframe>
-	</section>
+</section>
 </body>
 </html>
+```
