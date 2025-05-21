@@ -1,3 +1,5 @@
+```html
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -10,97 +12,96 @@
             padding: 0;
         }
         header {
-            background-color: #f0f0f0;
-            padding: 20px;
+            background-color: #333;
+            color: #fff;
+            padding: 1em;
             text-align: center;
         }
-        header h1 {
-            color: #00698f;
-        }
         section {
-            padding: 20px;
+            padding: 1em;
         }
-        #photos {
+        h2 {
+            margin-top: 0;
+        }
+        .photos {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
         }
-        #photos img {
+        .photo {
+            margin: 1em;
             width: 200px;
-            height: 150px;
-            margin: 10px;
         }
-        #attractions {
-            display: flex;
-            flex-direction: column;
+        .attractions {
+            list-style: none;
+            padding: 0;
+            margin: 0;
         }
-        #attractions article {
-            background-color: #f0f0f0;
-            padding: 10px;
-            margin-bottom: 10px;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        #attractions h3 {
-            color: #00698f;
+        .attraction {
+            margin-bottom: 1em;
         }
         #map-section {
-            padding: 20px;
+            padding: 1em;
         }
         #map {
             border: 1px solid #ddd;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Israel: A Land of Beauty and Diversity</h1>
+        <h1>Israel</h1>
 <section id="photos">
 <h2 style="text-align: center; color: #2c3e50; margin: 30px 0 20px;">Photos of Israel</h2>
 <div style="display: flex; flex-wrap: wrap; justify-content: space-between; max-width: 1200px; margin: 0 auto; padding: 0 15px;">
   <div style="flex: 0 0 31%; margin-bottom: 20px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden;">
-    <img src="https://images.pexels.com/photos/965878/pexels-photo-965878.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&dpr=1" alt="Famous Landmarks of Israel" style="width: 100%; height: 300px; object-fit: cover; display: block;" onerror="this.onerror=null; this.src='https://picsum.photos/seed/851/1200/800';">
-    <div style="padding: 10px; text-align: center; background: #f8f9fa;">Famous Landmarks of Israel</div>
+    <img src="https://images.pexels.com/photos/2818123/pexels-photo-2818123.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&dpr=1" alt="Western Wall, Jerusalem" style="width: 100%; height: 300px; object-fit: cover; display: block;">
+    <div style="padding: 10px; text-align: center; background: #f8f9fa;"><strong>Western Wall, Jerusalem</strong></div>
   </div>
   <div style="flex: 0 0 31%; margin-bottom: 20px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden;">
-    <img src="https://images.pexels.com/photos/2115997/pexels-photo-2115997.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&dpr=1" alt="Beautiful Landscapes of Israel" style="width: 100%; height: 300px; object-fit: cover; display: block;" onerror="this.onerror=null; this.src='https://picsum.photos/seed/808/1200/800';">
-    <div style="padding: 10px; text-align: center; background: #f8f9fa;">Beautiful Landscapes of Israel</div>
+    <img src="https://images.pexels.com/photos/1766899/pexels-photo-1766899.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&dpr=1" alt="Dead Sea" style="width: 100%; height: 300px; object-fit: cover; display: block;">
+    <div style="padding: 10px; text-align: center; background: #f8f9fa;"><strong>Dead Sea</strong></div>
   </div>
   <div style="flex: 0 0 31%; margin-bottom: 20px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden;">
-    <img src="https://images.pexels.com/photos/290608/pexels-photo-290608.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&dpr=1" alt="Must-visit Places in Israel" style="width: 100%; height: 300px; object-fit: cover; display: block;" onerror="this.onerror=null; this.src='https://picsum.photos/seed/375/1200/800';">
-    <div style="padding: 10px; text-align: center; background: #f8f9fa;">Must-visit Places in Israel</div>
+    <img src="https://images.pexels.com/photos/5516221/pexels-photo-5516221.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&dpr=1" alt="Tel Aviv Coastline" style="width: 100%; height: 300px; object-fit: cover; display: block;">
+    <div style="padding: 10px; text-align: center; background: #f8f9fa;"><strong>Tel Aviv Coastline</strong></div>
   </div>
 </div>
 </section>
 
-        <p>Israel is a country located in the Middle East, bordered by Lebanon, Syria, Jordan, and Egypt. With a rich history, diverse culture, and breathtaking landscapes, Israel is a popular destination for tourists and travelers. From the scenic beaches of Tel Aviv to the historic city of Jerusalem, Israel has something to offer for everyone.</p>
+        <p>Israel, officially known as the State of Israel, is a country located in the Middle East, situated on the southeastern shore of the Mediterranean Sea and the northern shore of the Red Sea. It has a diverse geography, with a mix of mountains, deserts, and coastal plains.</p>
     </header>
     
+    </section>
     <section id="attractions">
         <h2>Attractions</h2>
-        <article>
-            <h3>Western Wall</h3>
-            <p>The Western Wall, also known as the Wailing Wall, is a sacred site in Jerusalem and one of the most important landmarks in Israel. Latitude: 31.7767, Longitude: 35.2344</p>
-        </article>
-        <article>
-            <h3>Dead Sea</h3>
-            <p>The Dead Sea is a saltwater lake located on the border of Israel and Jordan. It is known for its unique mineral properties and is a popular destination for spa and wellness treatments. Latitude: 31.5828, Longitude: 35.5527</p>
-        </article>
-        <article>
-            <h3>Masada</h3>
-            <p>Masada is an ancient fortress located on a plateau overlooking the Dead Sea. It is a UNESCO World Heritage Site and a popular tourist destination. Latitude: 31.3255, Longitude: 35.3533</p>
-        </article>
-        <article>
-            <h3>Caesarea</h3>
-            <p>Caesarea is an ancient city located on the coast of Israel. It is known for its well-preserved Roman ruins and is a popular destination for history buffs. Latitude: 32.5056, Longitude: 34.8928</p>
-        </article>
-        <article>
-            <h3>Haifa</h3>
-            <p>Haifa is a city located in northern Israel. It is known for its stunning coastline, scenic parks, and historic landmarks such as the Baha'i Gardens. Latitude: 32.7948, Longitude: 34.9897</p>
-        </article>
+        <ul class="attractions">
+            <li class="attraction">
+                <h3>Western Wall</h3>
+                <p>The Western Wall, also known as the Wailing Wall, is a sacred site in Jerusalem and one of the most significant attractions in Israel.</p>
+                <p>Coordinates: 31.7767, 35.2343</p>
+            </li>
+            <li class="attraction">
+                <h3>Masada</h3>
+                <p>Masada is an ancient fortress located on a plateau overlooking the Dead Sea, and is one of Israel's most popular tourist attractions.</p>
+                <p>Coordinates: 31.3123, 35.3533</p>
+            </li>
+            <li class="attraction">
+                <h3>Church of the Holy Sepulchre</h3>
+                <p>The Church of the Holy Sepulchre is a significant Christian site in Jerusalem, believed to be the location of Jesus' crucifixion and burial.</p>
+                <p>Coordinates: 31.7785, 35.2304</p>
+            </li>
+            <li class="attraction">
+                <h3>Haifa Baha'i Gardens</h3>
+                <p>The Haifa Baha'i Gardens are a stunning example of landscape architecture, featuring beautiful gardens and a shrine.</p>
+                <p>Coordinates: 32.8216, 34.9783</p>
+            </li>
+            <li class="attraction">
+                <h3>Dead Sea</h3>
+                <p>The Dead Sea is a unique natural wonder, with its salty waters and stunning scenery.</p>
+                <p>Coordinates: 31.5333, 35.6167</p>
+            </li>
+        </ul>
     </section>
     <section id="map-section">
         <h2>Interactive Map</h2>
@@ -109,16 +110,16 @@
             function initMap() {
                 var map = new google.maps.Map(document.getElementById('map'), {
                     zoom: 7,
-                    center: {lat: 31.7833, lng: 35.2167}
+                    center: {lat: 31.0461, lng: 34.8516}
                 });
 
                 // Create markers for each attraction
                 var attractions = [
-                    {name: 'Western Wall', lat: 31.7767, lng: 35.2344, description: 'The Western Wall, also known as the Wailing Wall, is a sacred site in Jerusalem and one of the most important landmarks in Israel.'},
-                    {name: 'Dead Sea', lat: 31.5828, lng: 35.5527, description: 'The Dead Sea is a saltwater lake located on the border of Israel and Jordan. It is known for its unique mineral properties and is a popular destination for spa and wellness treatments.'},
-                    {name: 'Masada', lat: 31.3255, lng: 35.3533, description: 'Masada is an ancient fortress located on a plateau overlooking the Dead Sea. It is a UNESCO World Heritage Site and a popular tourist destination.'},
-                    {name: 'Caesarea', lat: 32.5056, lng: 34.8928, description: 'Caesarea is an ancient city located on the coast of Israel. It is known for its well-preserved Roman ruins and is a popular destination for history buffs.'},
-                    {name: 'Haifa', lat: 32.7948, lng: 34.9897, description: 'Haifa is a city located in northern Israel. It is known for its stunning coastline, scenic parks, and historic landmarks such as the Baha\'i Gardens.'}
+                    {name: 'Western Wall', lat: 31.7767, lng: 35.2343, description: 'The Western Wall, also known as the Wailing Wall, is a sacred site in Jerusalem and one of the most significant attractions in Israel.'},
+                    {name: 'Masada', lat: 31.3123, lng: 35.3533, description: 'Masada is an ancient fortress located on a plateau overlooking the Dead Sea, and is one of Israel\'s most popular tourist attractions.'},
+                    {name: 'Church of the Holy Sepulchre', lat: 31.7785, lng: 35.2304, description: 'The Church of the Holy Sepulchre is a significant Christian site in Jerusalem, believed to be the location of Jesus\' crucifixion and burial.'},
+                    {name: 'Haifa Baha\'i Gardens', lat: 32.8216, lng: 34.9783, description: 'The Haifa Baha\'i Gardens are a stunning example of landscape architecture, featuring beautiful gardens and a shrine.'},
+                    {name: 'Dead Sea', lat: 31.5333, lng: 35.6167, description: 'The Dead Sea is a unique natural wonder, with its salty waters and stunning scenery.'}
                 ];
 
                 // Add markers to the map
@@ -150,3 +151,4 @@
     </section>
 </body>
 </html>
+```
