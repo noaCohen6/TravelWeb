@@ -1,9 +1,6 @@
-```html
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Israel</title>
     <style>
@@ -13,39 +10,13 @@
             padding: 0;
         }
         header {
-            background-color: #f0f0f0;
+            background-color: #333;
+            color: #fff;
             padding: 20px;
             text-align: center;
         }
-        header h1 {
-            color: #333;
-        }
         section {
             padding: 20px;
-        }
-        #photos {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-        #photos img {
-            width: 30%;
-            margin: 10px;
-        }
-        #attractions {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .attraction {
-            background-color: #f0f0f0;
-            padding: 20px;
-            margin: 10px;
-            width: 80%;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        .attraction h3 {
-            margin-top: 0;
         }
         #map-section {
             padding: 20px;
@@ -53,66 +24,53 @@
         #map {
             border: 1px solid #ddd;
         }
+        .attraction {
+            margin-bottom: 20px;
+        }
+        .photo {
+            width: 100%;
+            height: 200px;
+            margin-bottom: 10px;
+        }
+        @media (max-width: 768px) {
+            #map {
+                height: 300px;
+            }
+        }
     </style>
 </head>
 <body>
     <header>
-        <h1>Israel: A Land of Ancient History and Natural Beauty</h1>
-<section id="photos" style="margin: 40px 0; padding: 20px;">
-<h2 style="text-align: center; margin-bottom: 30px;">Photos of Israel</h2>
-<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
-  <div style="flex: 0 0 30%; min-width: 300px; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.1); margin-bottom: 20px;">
-    <img src="https://via.placeholder.com/800x500.png/007bff/ffffff?text=Western+Wall" alt="Western Wall" style="width: 100%; height: 250px; object-fit: cover; display: block;">
-    <div style="padding: 15px; text-align: center;"><h3 style="margin: 0; font-size: 1.2rem;">Western Wall</h3></div>
-  </div>
-  <div style="flex: 0 0 30%; min-width: 300px; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.1); margin-bottom: 20px;">
-    <img src="https://via.placeholder.com/800x500.png/007bff/ffffff?text=Dead+Sea" alt="Dead Sea" style="width: 100%; height: 250px; object-fit: cover; display: block;">
-    <div style="padding: 15px; text-align: center;"><h3 style="margin: 0; font-size: 1.2rem;">Dead Sea</h3></div>
-  </div>
-  <div style="flex: 0 0 30%; min-width: 300px; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.1); margin-bottom: 20px;">
-    <img src="https://via.placeholder.com/800x500.png/007bff/ffffff?text=Masada" alt="Masada" style="width: 100%; height: 250px; object-fit: cover; display: block;">
-    <div style="padding: 15px; text-align: center;"><h3 style="margin: 0; font-size: 1.2rem;">Masada</h3></div>
-  </div>
-</div>
-
-    <div style="margin-top: 20px; padding: 15px; background-color: #f8f9fa; border-radius: 8px; text-align: center;">
-      <p>נוצרו תמונות placeholder עבור האטרקציות המובילות ב-Israel. להחלפת התמונות באמיתיות, אנא חפש תמונות ספציפיות של:</p>
-      <ul style="text-align: left; display: inline-block;">
-        <li><strong>Western Wall</strong></li> <li><strong>Dead Sea</strong></li> <li><strong>Masada</strong></li>
-      </ul>
-    </div>
-    </section>
-
-    
-        <p>Israel, a country located in the Middle East, is a land of rich history, diverse culture, and breathtaking natural beauty. From the ancient city of Jerusalem to the stunning beaches of the Mediterranean, Israel has something to offer for every kind of traveler.</p>
+        <h1>Israel: A Land of History, Culture, and Beauty</h1>
+        <p>Located in the Middle East, Israel is a country with a rich history, diverse culture, and breathtaking landscapes. From the ancient city of Jerusalem to the stunning beaches of Tel Aviv, Israel has something to offer for every kind of traveler.</p>
     </header>
-    <section id="photos">
-        <h2>Photos</h2>
-        
-        
-        
-    </section>
+    
     <section id="attractions">
         <h2>Attractions</h2>
         <div class="attraction">
             <h3>Western Wall</h3>
-            <p>The Western Wall, also known as the Wailing Wall, is a sacred site in Jerusalem and one of the most famous landmarks in Israel. It is located at 31.7762, 35.2344.</p>
+            <p>The Western Wall, also known as the Wailing Wall, is a sacred site in Jerusalem and one of the most important Jewish pilgrimage sites in the world.</p>
+            <p>Coordinates: 31.7762, 35.2344</p>
         </div>
         <div class="attraction">
-            <h3>Dead Sea</h3>
-            <p>The Dead Sea, a saltwater lake located between Israel and Jordan, is a popular destination for tourists and locals alike. It is known for its therapeutic properties and stunning natural beauty, and is located at 31.5497, 35.5733.</p>
+            <h3>Temple Mount</h3>
+            <p>Temple Mount is a sacred site in Jerusalem and the location of the Dome of the Rock and the Al-Aqsa Mosque.</p>
+            <p>Coordinates: 31.7781, 35.2354</p>
         </div>
         <div class="attraction">
             <h3>Masada</h3>
-            <p>Masada, an ancient fortress located on a plateau overlooking the Dead Sea, is a UNESCO World Heritage Site and one of the most popular tourist attractions in Israel. It is located at 31.3293, 35.3533.</p>
+            <p>Masada is an ancient fortress located on a plateau overlooking the Dead Sea, and is one of Israel's most popular tourist attractions.</p>
+            <p>Coordinates: 31.3258, 35.3533</p>
         </div>
         <div class="attraction">
-            <h3>Caesarea</h3>
-            <p>Caesarea, an ancient Roman city located on the Mediterranean coast, is a popular destination for tourists and history buffs. It is known for its well-preserved ruins and stunning natural beauty, and is located at 32.5044, 34.8953.</p>
+            <h3>Dead Sea</h3>
+            <p>The Dead Sea is a saltwater lake located on the border between Israel and Jordan, and is known for its therapeutic properties and stunning scenery.</p>
+            <p>Coordinates: 31.5000, 35.5000</p>
         </div>
         <div class="attraction">
-            <h3>Tel Aviv</h3>
-            <p>Tel Aviv, the largest city in Israel, is a vibrant and cosmopolitan metropolis known for its stunning beaches, vibrant nightlife, and rich cultural scene. It is located at 32.0853, 34.7803.</p>
+            <h3>Tel Aviv Beach</h3>
+            <p>Tel Aviv Beach is a popular beach located in the heart of Tel Aviv, and is known for its vibrant nightlife, restaurants, and water sports.</p>
+            <p>Coordinates: 32.0739, 34.7639</p>
         </div>
     </section>
     <section id="map-section">
@@ -122,18 +80,18 @@
             function initMap() {
                 var map = new google.maps.Map(document.getElementById('map'), {
                     zoom: 7,
-                    center: {lat: 31.0461, lng: 34.8516}
+                    center: {lat: 31.7833, lng: 35.2167}
                 });
-
+                
                 // Create markers for each attraction
                 var attractions = [
-                    {name: 'Western Wall', lat: 31.7762, lng: 35.2344, description: 'The Western Wall, also known as the Wailing Wall, is a sacred site in Jerusalem and one of the most famous landmarks in Israel.'},
-                    {name: 'Dead Sea', lat: 31.5497, lng: 35.5733, description: 'The Dead Sea, a saltwater lake located between Israel and Jordan, is a popular destination for tourists and locals alike.'},
-                    {name: 'Masada', lat: 31.3293, lng: 35.3533, description: 'Masada, an ancient fortress located on a plateau overlooking the Dead Sea, is a UNESCO World Heritage Site and one of the most popular tourist attractions in Israel.'},
-                    {name: 'Caesarea', lat: 32.5044, lng: 34.8953, description: 'Caesarea, an ancient Roman city located on the Mediterranean coast, is a popular destination for tourists and history buffs.'},
-                    {name: 'Tel Aviv', lat: 32.0853, lng: 34.7803, description: 'Tel Aviv, the largest city in Israel, is a vibrant and cosmopolitan metropolis known for its stunning beaches, vibrant nightlife, and rich cultural scene.'},
+                    {name: 'Western Wall', lat: 31.7762, lng: 35.2344, description: 'The Western Wall, also known as the Wailing Wall, is a sacred site in Jerusalem and one of the most important Jewish pilgrimage sites in the world.'},
+                    {name: 'Temple Mount', lat: 31.7781, lng: 35.2354, description: 'Temple Mount is a sacred site in Jerusalem and the location of the Dome of the Rock and the Al-Aqsa Mosque.'},
+                    {name: 'Masada', lat: 31.3258, lng: 35.3533, description: 'Masada is an ancient fortress located on a plateau overlooking the Dead Sea, and is one of Israel\'s most popular tourist attractions.'},
+                    {name: 'Dead Sea', lat: 31.5000, lng: 35.5000, description: 'The Dead Sea is a saltwater lake located on the border between Israel and Jordan, and is known for its therapeutic properties and stunning scenery.'},
+                    {name: 'Tel Aviv Beach', lat: 32.0739, lng: 34.7639, description: 'Tel Aviv Beach is a popular beach located in the heart of Tel Aviv, and is known for its vibrant nightlife, restaurants, and water sports.'},
                 ];
-
+                
                 // Add markers to the map
                 var bounds = new google.maps.LatLngBounds();
                 for (var i = 0; i < attractions.length; i++) {
@@ -142,7 +100,7 @@
                         map: map,
                         title: attractions[i].name
                     });
-
+                    
                     // Add info window
                     (function(marker, attraction) {
                         var infowindow = new google.maps.InfoWindow({
@@ -161,6 +119,11 @@
             src="https://maps.googleapis.com/maps/api/js?callback=initMap">
         </script>
     </section>
+
+<section id="photos">
+<h2>Photos of Israel</h2>
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; margin: 20px 0;">
+</div>
+</section>
 </body>
 </html>
-```
