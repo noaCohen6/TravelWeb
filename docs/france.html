@@ -1,0 +1,133 @@
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>France</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 1em;
+      text-align: center;
+    }
+    section {
+      padding: 1em;
+    }
+    h1, h2 {
+      color: #333;
+    }
+    img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      margin: 1em 0;
+    }
+    #map {
+      border: 1px solid #ddd;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>France: The Land of Love and Beauty</h1>
+    <p>France, officially known as the French Republic, is a country located in Western Europe. It is known for its stunning landscapes, rich history, and vibrant culture. From the snow-capped Alps to the beautiful beaches of the French Riviera, France has something to offer for every kind of traveler.</p>
+  </header>
+  
+  <section id="attractions">
+    <h2>Attractions</h2>
+    <ul>
+      <li>
+        <h3>Eiffel Tower</h3>
+        <p>The Eiffel Tower is an iron lattice tower located in Paris, France. It was built for the 1889 World's Fair and stands at 324 meters tall.</p>
+        <p>Coordinates: 48.8583, 2.2945</p>
+      </li>
+      <li>
+        <h3>Louvre Museum</h3>
+        <p>The Louvre Museum is one of the world's largest and most famous museums. It is located in Paris, France and is home to a vast collection of art and artifacts from around the world.</p>
+        <p>Coordinates: 48.8607, 2.2945</p>
+      </li>
+      <li>
+        <h3>Arc de Triomphe</h3>
+        <p>The Arc de Triomphe is a triumphal arch located in Paris, France. It was built to honor the soldiers who fought and died for France.</p>
+        <p>Coordinates: 48.8739, 2.2950</p>
+      </li>
+      <li>
+        <h3>Palace of Versailles</h3>
+        <p>The Palace of Versailles is a former royal palace located in Versailles, France. It is known for its stunning architecture and beautiful gardens.</p>
+        <p>Coordinates: 48.8038, 2.1270</p>
+      </li>
+      <li>
+        <h3>Mont Saint-Michel</h3>
+        <p>Mont Saint-Michel is a tidal island located off the coast of Normandy, France. It is known for its stunning abbey and beautiful scenery.</p>
+        <p>Coordinates: 48.6344, -1.5111</p>
+      </li>
+    </ul>
+  </section>
+  <section id="map-section">
+    <h2>Interactive Map</h2>
+    <div id="map" style="width: 100%; height: 500px;"></div>
+    <script>
+      function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 7,
+          center: {lat: 46.2276, lng: 2.2137}
+        });
+
+        // Create markers for each attraction
+        var attractions = [
+          {name: 'Eiffel Tower', lat: 48.8583, lng: 2.2945, description: 'The Eiffel Tower is an iron lattice tower located in Paris, France.'},
+          {name: 'Louvre Museum', lat: 48.8607, lng: 2.2945, description: 'The Louvre Museum is one of the world\'s largest and most famous museums.'},
+          {name: 'Arc de Triomphe', lat: 48.8739, lng: 2.2950, description: 'The Arc de Triomphe is a triumphal arch located in Paris, France.'},
+          {name: 'Palace of Versailles', lat: 48.8038, lng: 2.1270, description: 'The Palace of Versailles is a former royal palace located in Versailles, France.'},
+          {name: 'Mont Saint-Michel', lat: 48.6344, lng: -1.5111, description: 'Mont Saint-Michel is a tidal island located off the coast of Normandy, France.'}
+        ];
+
+        // Add markers to the map
+        var bounds = new google.maps.LatLngBounds();
+        for (var i = 0; i < attractions.length; i++) {
+          var marker = new google.maps.Marker({
+            position: {lat: attractions[i].lat, lng: attractions[i].lng},
+            map: map,
+            title: attractions[i].name
+          });
+
+          // Add info window
+          (function(marker, attraction) {
+            var infowindow = new google.maps.InfoWindow({
+              content: '<div><strong>' + attraction.name + '</strong><p>' + attraction.description + '</p></div>'
+            });
+            marker.addListener('click', function() {
+              infowindow.open(map, marker);
+            });
+            bounds.extend(marker.getPosition());
+          })(marker, attractions[i]);
+        }
+        map.fitBounds(bounds);
+      }
+    </script>
+    <script async defer
+      src="https://maps.googleapis.com/maps/api/js?callback=initMap">
+    </script>
+  </section>
+
+<section id="photos">
+<h2>Photos of France</h2>
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; margin: 20px 0;">
+  <div style="flex: 0 0 30%; margin: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden;">
+    <img src="https://images.unsplash.com/photo-1623054881510-1397527d7fca?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NTM4NzZ8MHwxfHNlYXJjaHwxfHxGcmFuY2UlMjBsYW5kc2NhcGV8ZW58MHwwfHx8MTc0NzgwNzg5NHww&ixlib=rb-4.1.0&q=80&w=1080" alt="France landscape" style="width: 100%; height: 250px; object-fit: cover;">
+  </div>
+  <div style="flex: 0 0 30%; margin: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden;">
+    <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NTM4NzZ8MHwxfHNlYXJjaHwxfHxGcmFuY2UlMjBjaXR5fGVufDB8MHx8fDE3NDc4MDc4OTV8MA&ixlib=rb-4.1.0&q=80&w=1080" alt="France city" style="width: 100%; height: 250px; object-fit: cover;">
+  </div>
+  <div style="flex: 0 0 30%; margin: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden;">
+    <img src="https://images.unsplash.com/photo-1667812823347-b5f948dcd658?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NTM4NzZ8MHwxfHNlYXJjaHwxfHxGcmFuY2UlMjBhcmNoaXRlY3R1cmV8ZW58MHwwfHx8MTc0NzgwNzg5NXww&ixlib=rb-4.1.0&q=80&w=1080" alt="France architecture" style="width: 100%; height: 250px; object-fit: cover;">
+  </div>
+</div>
+</section>
+</body>
+</html>
