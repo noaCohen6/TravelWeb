@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>USA Travel Guide</title>
+    <title>USA - The Land of Freedom</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -12,14 +12,18 @@
             padding: 0;
         }
         header {
-            background-color: #333;
-            color: #fff;
+            background-color: #f0f0f0;
             padding: 20px;
             text-align: center;
         }
         section {
-            display: block;
             padding: 20px;
+        }
+        #map-section {
+            padding: 20px;
+        }
+        #map {
+            border: 1px solid black;
         }
         .photos {
             display: flex;
@@ -37,12 +41,17 @@
         .attraction {
             margin-bottom: 20px;
         }
+        @media only screen and (max-width: 768px) {
+            #map {
+                height: 300px;
+            }
+        }
     </style>
 </head>
 <body>
     <header>
-        <h1>USA Travel Guide</h1>
-        <p>The United States of America is a vast and diverse country, offering a wide range of experiences for travelers. From the bright lights of New York City to the sun-kissed beaches of California, and from the majestic mountains of Colorado to the vibrant music scene of New Orleans, the USA has something for everyone.</p>
+        <h1>Welcome to USA - The Land of Freedom</h1>
+        <p>The United States of America, commonly known as the USA, is a federal republic consisting of 50 states, a federal district, and several territories. It is a country with a rich history, diverse culture, and breathtaking natural beauty. From the sun-kissed beaches of California to the vibrant cities of New York and Chicago, the USA has something to offer for every kind of traveler.</p>
     </header>
     
     </section>
@@ -50,24 +59,24 @@
         <h2>Attractions</h2>
         <ul class="attractions">
             <li class="attraction">
-                <h3>Statue of Liberty</h3>
-                <p>Located in New York City, the Statue of Liberty is a iconic symbol of freedom and democracy. (40.6933, -74.0467)</p>
+                <h3>Grand Canyon</h3>
+                <p>One of the most iconic natural wonders in the USA, the Grand Canyon is a steep-sided canyon carved by the Colorado River. (Latitude: 36.1069, Longitude: -112.1129)</p>
             </li>
             <li class="attraction">
-                <h3>Grand Canyon</h3>
-                <p>Located in Arizona, the Grand Canyon is one of the most spectacular natural wonders in the USA. (36.1069, -112.1129)</p>
+                <h3>Statue of Liberty</h3>
+                <p>A symbol of freedom and democracy, the Statue of Liberty is a colossal neoclassical sculpture located in New York Harbor. (Latitude: 40.6933, Longitude: -74.0467)</p>
             </li>
             <li class="attraction">
                 <h3>Golden Gate Bridge</h3>
-                <p>Located in San Francisco, California, the Golden Gate Bridge is a iconic suspension bridge with stunning views of the city. (37.7749, -122.4194)</p>
-            </li>
-            <li class="attraction">
-                <h3>Mount Rushmore</h3>
-                <p>Located in South Dakota, Mount Rushmore is a famous monument featuring the faces of four U.S. presidents. (43.8789, -103.4591)</p>
+                <p>An iconic suspension bridge located in San Francisco, California, the Golden Gate Bridge is a masterpiece of engineering and a popular tourist destination. (Latitude: 37.7749, Longitude: -122.4194)</p>
             </li>
             <li class="attraction">
                 <h3>Las Vegas Strip</h3>
-                <p>Located in Nevada, the Las Vegas Strip is a vibrant and lively destination known for its casinos, shows, and nightlife. (36.1699, -115.1398)</p>
+                <p>A hub of entertainment and nightlife, the Las Vegas Strip is home to some of the world's most famous casinos, hotels, and shows. (Latitude: 36.1147, Longitude: -115.1728)</p>
+            </li>
+            <li class="attraction">
+                <h3>Yellowstone National Park</h3>
+                <p>America's first national park, Yellowstone is a vast wilderness area known for its geothermal features like Old Faithful, hot springs, and geysers. (Latitude: 44.4272, Longitude: -110.5775)</p>
             </li>
         </ul>
     </section>
@@ -83,11 +92,11 @@
 
                 // Create markers for each attraction
                 var attractions = [
-                    {name: 'Statue of Liberty', lat: 40.6933, lng: -74.0467, description: 'Located in New York City, the Statue of Liberty is a iconic symbol of freedom and democracy.'},
-                    {name: 'Grand Canyon', lat: 36.1069, lng: -112.1129, description: 'Located in Arizona, the Grand Canyon is one of the most spectacular natural wonders in the USA.'},
-                    {name: 'Golden Gate Bridge', lat: 37.7749, lng: -122.4194, description: 'Located in San Francisco, California, the Golden Gate Bridge is a iconic suspension bridge with stunning views of the city.'},
-                    {name: 'Mount Rushmore', lat: 43.8789, lng: -103.4591, description: 'Located in South Dakota, Mount Rushmore is a famous monument featuring the faces of four U.S. presidents.'},
-                    {name: 'Las Vegas Strip', lat: 36.1699, lng: -115.1398, description: 'Located in Nevada, the Las Vegas Strip is a vibrant and lively destination known for its casinos, shows, and nightlife.'}
+                    {name: 'Grand Canyon', lat: 36.1069, lng: -112.1129, description: 'One of the most iconic natural wonders in the USA'},
+                    {name: 'Statue of Liberty', lat: 40.6933, lng: -74.0467, description: 'A symbol of freedom and democracy'},
+                    {name: 'Golden Gate Bridge', lat: 37.7749, lng: -122.4194, description: 'An iconic suspension bridge located in San Francisco, California'},
+                    {name: 'Las Vegas Strip', lat: 36.1147, lng: -115.1728, description: 'A hub of entertainment and nightlife'},
+                    {name: 'Yellowstone National Park', lat: 44.4272, lng: -110.5775, description: 'America\'s first national park'}
                 ];
 
                 // Add markers to the map
@@ -123,15 +132,12 @@
 <div style="display: flex; flex-wrap: wrap; justify-content: space-between; margin: 20px 0;">
   <div style="flex: 0 0 30%; margin: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden;">
     <img src="https://images.unsplash.com/photo-1578249949606-334a0dd4dd8b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NTM4NzZ8MHwxfHNlYXJjaHwxfHxVU0ElMjBsYW5kc2NhcGV8ZW58MHwwfHx8MTc0NzgwNjcwNXww&ixlib=rb-4.1.0&q=80&w=1080" alt="USA landscape" style="width: 100%; height: 250px; object-fit: cover;">
-    <div style="padding: 10px; text-align: center;">USA landscape</div>
   </div>
   <div style="flex: 0 0 30%; margin: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden;">
     <img src="https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NTM4NzZ8MHwxfHNlYXJjaHwxfHxVU0ElMjBjaXR5fGVufDB8MHx8fDE3NDc4MDY3MDZ8MA&ixlib=rb-4.1.0&q=80&w=1080" alt="USA city" style="width: 100%; height: 250px; object-fit: cover;">
-    <div style="padding: 10px; text-align: center;">USA city</div>
   </div>
   <div style="flex: 0 0 30%; margin: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden;">
-    <img src="https://images.unsplash.com/photo-1606114175460-31ba3462a098?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NTM4NzZ8MHwxfHNlYXJjaHwxfHxVU0ElMjBjdWx0dXJlfGVufDB8MHx8fDE3NDc4MDY3MDd8MA&ixlib=rb-4.1.0&q=80&w=1080" alt="USA culture" style="width: 100%; height: 250px; object-fit: cover;">
-    <div style="padding: 10px; text-align: center;">USA culture</div>
+    <img src="https://images.unsplash.com/photo-1556220079-4f707a952005?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NTM4NzZ8MHwxfHNlYXJjaHwxfHxVU0ElMjBhcmNoaXRlY3R1cmV8ZW58MHwwfHx8MTc0NzgwNzM4NHww&ixlib=rb-4.1.0&q=80&w=1080" alt="USA architecture" style="width: 100%; height: 250px; object-fit: cover;">
   </div>
 </div>
 </section>
