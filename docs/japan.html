@@ -1,150 +1,156 @@
+```html
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Japan</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #f0f0f0;
-            padding: 20px;
-            text-align: center;
-        }
-        #photos {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-        #photos img {
-            width: 200px;
-            height: 150px;
-            margin: 10px;
-            border-radius: 10px;
-        }
-        #attractions {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 20px;
-        }
-        .attraction {
-            background-color: #f7f7f7;
-            padding: 20px;
-            margin: 10px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        #map-section {
-            padding: 20px;
-        }
-        #map {
-            border: 1px solid #ddd;
-            border-radius: 10px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Discover Japan</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    section {
+      padding: 20px;
+    }
+    #map-section {
+      padding: 0;
+    }
+    h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+    h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+    .photos {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .photos img {
+      width: 25%;
+      margin: 10px;
+    }
+    .attractions {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .attractions li {
+      margin-bottom: 20px;
+    }
+    @media only screen and (max-width: 600px) {
+      .photos img {
+        width: 50%;
+      }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Japan: A Land of Vibrant Culture and Rich History</h1>
+  <header>
+    <h1>Welcome to Japan</h1>
+    <p>Japan is a country located in East Asia, known for its vibrant culture, rich history, and breathtaking natural beauty. From bustling cities to serene landscapes, Japan has something to offer for every kind of traveler.</p>
+  </header>
+  <section>
+    <section>
+    <h2>Attractions</h2>
+    <ul class="attractions">
+      <li>
+        <h3>Fushimi Inari Shrine</h3>
+        <p>Located in Kyoto, Fushimi Inari Shrine is famous for its thousands of vermilion torii gates.</p>
+        <p>Coordinates: 34.9667, 135.7722</p>
+      </li>
+      <li>
+        <h3>Tokyo Skytree</h3>
+        <p>At 634 meters tall, Tokyo Skytree is the tallest tower in the world, offering breathtaking views of the city.</p>
+        <p>Coordinates: 35.7101, 139.7091</p>
+      </li>
+      <li>
+        <h3>Osaka Castle</h3>
+        <p>One of Japan's most famous landmarks, Osaka Castle is a must-visit for history buffs and architecture enthusiasts.</p>
+        <p>Coordinates: 34.6873, 135.5263</p>
+      </li>
+      <li>
+        <h3>Meiji Shrine</h3>
+        <p>Dedicated to the deified spirits of Emperor Meiji and his wife, Empress Shoken, Meiji Shrine is a serene Shinto shrine located in a tranquil forested area.</p>
+        <p>Coordinates: 35.6763, 139.6993</p>
+      </li>
+      <li>
+        <h3>Mount Fuji</h3>
+        <p>Japan's highest mountain, Mount Fuji is an iconic symbol of the country and a popular destination for hikers and nature lovers.</p>
+        <p>Coordinates: 35.3629, 138.7273</p>
+      </li>
+    </ul>
+  </section>
+  <section id="map-section">
+    <h2>Interactive Map</h2>
+    <div id="map" style="width: 100%; height: 500px;"></div>
+    <script>
+      function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 7,
+          center: {lat: 36.2048, lng: 138.2529}
+        });
+
+        // Create markers for each attraction
+        var attractions = [
+          {name: 'Fushimi Inari Shrine', lat: 34.9667, lng: 135.7722, description: 'Located in Kyoto, Fushimi Inari Shrine is famous for its thousands of vermilion torii gates.'},
+          {name: 'Tokyo Skytree', lat: 35.7101, lng: 139.7091, description: 'At 634 meters tall, Tokyo Skytree is the tallest tower in the world, offering breathtaking views of the city.'},
+          {name: 'Osaka Castle', lat: 34.6873, lng: 135.5263, description: 'One of Japan\'s most famous landmarks, Osaka Castle is a must-visit for history buffs and architecture enthusiasts.'},
+          {name: 'Meiji Shrine', lat: 35.6763, lng: 139.6993, description: 'Dedicated to the deified spirits of Emperor Meiji and his wife, Empress Shoken, Meiji Shrine is a serene Shinto shrine located in a tranquil forested area.'},
+          {name: 'Mount Fuji', lat: 35.3629, lng: 138.7273, description: 'Japan\'s highest mountain, Mount Fuji is an iconic symbol of the country and a popular destination for hikers and nature lovers.'}
+        ];
+
+        // Add markers to the map
+        var bounds = new google.maps.LatLngBounds();
+        for (var i = 0; i < attractions.length; i++) {
+          var marker = new google.maps.Marker({
+            position: {lat: attractions[i].lat, lng: attractions[i].lng},
+            map: map,
+            title: attractions[i].name
+          });
+
+          // Add info window
+          (function(marker, attraction) {
+            var infowindow = new google.maps.InfoWindow({
+              content: '<div><strong>' + attraction.name + '</strong><p>' + attraction.description + '</p></div>'
+            });
+            marker.addListener('click', function() {
+              infowindow.open(map, marker);
+            });
+            bounds.extend(marker.getPosition());
+          })(marker, attractions[i]);
+        }
+        map.fitBounds(bounds);
+      }
+    </script>
+    <script async defer
+      src="https://maps.googleapis.com/maps/api/js?callback=initMap">
+    </script>
+  </section>
+
 <section id="photos">
-<h2 style="text-align: center; color: #2c3e50; margin: 30px 0 20px;">Photos of Japan</h2>
-<div style="display: flex; flex-wrap: wrap; justify-content: space-between; max-width: 1200px; margin: 0 auto; padding: 0 15px;">
-  <div style="flex: 0 0 31%; margin-bottom: 20px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden;">
-    <img src="https://picsum.photos/seed/302/1200/800" alt="Japan landscape" style="width: 100%; height: 300px; object-fit: cover; display: block;">
-    <div style="padding: 10px; text-align: center; background: #f8f9fa;">Japan landscape</div>
+<h2>Photos of Japan</h2>
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; margin: 20px 0;">
+  <div style="flex: 0 0 30%; margin: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden;">
+    <img src="https://images.unsplash.com/photo-1472149110793-7aa262859995?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NTM4NzZ8MHwxfHNlYXJjaHwxfHxKYXBhbiUyMGxhbmRzY2FwZXxlbnwwfDB8fHwxNzQ3ODA3OTM1fDA&ixlib=rb-4.1.0&q=80&w=1080" alt="Japan landscape" style="width: 100%; height: 250px; object-fit: cover;">
   </div>
-  <div style="flex: 0 0 31%; margin-bottom: 20px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden;">
-    <img src="https://picsum.photos/seed/458/1200/800" alt="Japan city" style="width: 100%; height: 300px; object-fit: cover; display: block;">
-    <div style="padding: 10px; text-align: center; background: #f8f9fa;">Japan city</div>
+  <div style="flex: 0 0 30%; margin: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden;">
+    <img src="https://images.unsplash.com/photo-1542051841857-5f90071e7989?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NTM4NzZ8MHwxfHNlYXJjaHwxfHxKYXBhbiUyMGNpdHl8ZW58MHwwfHx8MTc0NzgwNzkzNnww&ixlib=rb-4.1.0&q=80&w=1080" alt="Japan city" style="width: 100%; height: 250px; object-fit: cover;">
   </div>
-  <div style="flex: 0 0 31%; margin-bottom: 20px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden;">
-    <img src="https://picsum.photos/seed/727/1200/800" alt="Japan culture" style="width: 100%; height: 300px; object-fit: cover; display: block;">
-    <div style="padding: 10px; text-align: center; background: #f8f9fa;">Japan culture</div>
+  <div style="flex: 0 0 30%; margin: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden;">
+    <img src="https://images.unsplash.com/photo-1551241090-67de81d3541c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NTM4NzZ8MHwxfHNlYXJjaHwxfHxKYXBhbiUyMGFyY2hpdGVjdHVyZXxlbnwwfDB8fHwxNzQ3ODA3OTM2fDA&ixlib=rb-4.1.0&q=80&w=1080" alt="Japan architecture" style="width: 100%; height: 250px; object-fit: cover;">
   </div>
 </div>
 </section>
-
-        <p>Japan is an island country located in East Asia, known for its unique blend of traditional and modern culture. From ancient temples and shrines to cutting-edge technology and innovative cuisine, Japan has something to offer for every interest and preference.</p>
-    </header>
-    
-    <section id="attractions">
-        <h2>Attractions</h2>
-        <div class="attraction">
-            <h3>Fushimi Inari Shrine</h3>
-            <p>Located in Kyoto, Fushimi Inari Shrine is famous for its thousands of vermillion torii gates that form a tunnel up the mountain.</p>
-            <p>Coordinates: 34.9673° N, 135.7714° E</p>
-        </div>
-        <div class="attraction">
-            <h3>Tokyo Skytree</h3>
-            <p>At 634 meters tall, Tokyo Skytree is the tallest tower in the world, offering breathtaking views of the city.</p>
-            <p>Coordinates: 35.7101° N, 139.8089° E</p>
-        </div>
-        <div class="attraction">
-            <h3>Meiji Shrine</h3>
-            <p>Located in Yoyogi Park, Meiji Shrine is a serene Shinto shrine dedicated to the deified spirits of Emperor Meiji and his wife, Empress Shoken.</p>
-            <p>Coordinates: 35.6763° N, 139.6992° E</p>
-        </div>
-        <div class="attraction">
-            <h3>Osaka Castle</h3>
-            <p>Located in Osaka, Osaka Castle is one of Japan's most famous landmarks, offering a glimpse into the country's rich history.</p>
-            <p>Coordinates: 34.6873° N, 135.5263° E</p>
-        </div>
-        <div class="attraction">
-            <h3>Miyajima Island</h3>
-            <p>Located in Hiroshima, Miyajima Island is famous for its beautiful scenery and historic landmarks, including the famous Itsukushima Shrine.</p>
-            <p>Coordinates: 34.2793° N, 132.3193° E</p>
-        </div>
-    </section>
-    <section id="map-section">
-        <h2>Interactive Map</h2>
-        <div id="map" style="width: 100%; height: 500px;"></div>
-        <script>
-            function initMap() {
-                var map = new google.maps.Map(document.getElementById('map'), {
-                    zoom: 7,
-                    center: {lat: 35.6895, lng: 139.7670}
-                });
-
-                // Create markers for each attraction
-                var attractions = [
-                    {name: 'Fushimi Inari Shrine', lat: 34.9673, lng: 135.7714, description: 'Located in Kyoto, Fushimi Inari Shrine is famous for its thousands of vermillion torii gates that form a tunnel up the mountain.'},
-                    {name: 'Tokyo Skytree', lat: 35.7101, lng: 139.8089, description: 'At 634 meters tall, Tokyo Skytree is the tallest tower in the world, offering breathtaking views of the city.'},
-                    {name: 'Meiji Shrine', lat: 35.6763, lng: 139.6992, description: 'Located in Yoyogi Park, Meiji Shrine is a serene Shinto shrine dedicated to the deified spirits of Emperor Meiji and his wife, Empress Shoken.'},
-                    {name: 'Osaka Castle', lat: 34.6873, lng: 135.5263, description: 'Located in Osaka, Osaka Castle is one of Japan\'s most famous landmarks, offering a glimpse into the country\'s rich history.'},
-                    {name: 'Miyajima Island', lat: 34.2793, lng: 132.3193, description: 'Located in Hiroshima, Miyajima Island is famous for its beautiful scenery and historic landmarks, including the famous Itsukushima Shrine.'},
-                ];
-
-                // Add markers to the map
-                var bounds = new google.maps.LatLngBounds();
-                for (var i = 0; i < attractions.length; i++) {
-                    var marker = new google.maps.Marker({
-                        position: {lat: attractions[i].lat, lng: attractions[i].lng},
-                        map: map,
-                        title: attractions[i].name
-                    });
-
-                    // Add info window
-                    (function(marker, attraction) {
-                        var infowindow = new google.maps.InfoWindow({
-                            content: '<div><strong>' + attraction.name + '</strong><p>' + attraction.description + '</p></div>'
-                        });
-                        marker.addListener('click', function() {
-                            infowindow.open(map, marker);
-                        });
-                        bounds.extend(marker.getPosition());
-                    })(marker, attractions[i]);
-                }
-                map.fitBounds(bounds);
-            }
-        </script>
-        <script async defer
-            src="https://maps.googleapis.com/maps/api/js?callback=initMap">
-        </script>
-    </section>
 </body>
 </html>
+```
