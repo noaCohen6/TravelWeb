@@ -2,184 +2,165 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Israel</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-    header {
-      background-color: #007bff;
-      color: #ffffff;
-      padding: 1em;
-      text-align: center;
-    }
-    main {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 2em;
-    }
-    section {
-      background-color: #f7f7f7;
-      padding: 1em;
-      margin-bottom: 1em;
-      border: 1px solid #dddddd;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-    h2 {
-      margin-top: 0;
-    }
-    .photos {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-    .photo {
-      margin: 1em;
-      width: 200px;
-      height: 150px;
-      border: 1px solid #dddddd;
-      border-radius: 10px;
-    }
-    .attractions {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-    .attraction {
-      margin-bottom: 1em;
-    }
-    .attraction-name {
-      font-weight: bold;
-    }
-    #map-section {
-      height: 600px;
-    }
-    #map {
-      width: 100%;
-      height: 500px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Israel</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #f0f0f0;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            color: #333;
+        }
+        section {
+            padding: 20px;
+        }
+        #photos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        #photos img {
+            width: 30%;
+            margin: 10px;
+        }
+        #attractions {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .attraction {
+            background-color: #f0f0f0;
+            padding: 20px;
+            margin: 10px;
+            width: 80%;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .attraction h3 {
+            margin-top: 0;
+        }
+        #map-section {
+            padding: 20px;
+        }
+        #map {
+            border: 1px solid #ddd;
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>Welcome to Israel</h1>
-    <p>Israel, a country in Western Asia, located on the southeastern shore of the Mediterranean Sea and the northern shore of the Red Sea. It has a long and complex history, with a mix of cultures and influences.</p>
-  </header>
-  <main>
-    <section id="photos-section">
-      <h2>Photos</h2>
-<div style="display: flex; flex-wrap: wrap; justify-content: space-between; margin: 20px 0;">
-  <div style="flex: 0 0 30%; margin: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden;">
-    <img src="https://source.unsplash.com/1200x800/?Israel,landscape" alt="Israel landscape" style="width: 100%; height: 250px; object-fit: cover; display: block;">
-    <div style="padding: 10px; text-align: center;">Israel landscape</div>
+    <header>
+        <h1>Israel: A Land of Ancient History and Natural Beauty</h1>
+<section id="photos" style="margin: 40px 0; padding: 20px;">
+<h2 style="text-align: center; margin-bottom: 30px;">Photos of Israel</h2>
+<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
+  <div style="flex: 0 0 30%; min-width: 300px; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.1); margin-bottom: 20px;">
+    <img src="https://via.placeholder.com/800x500.png/007bff/ffffff?text=Western+Wall" alt="Western Wall" style="width: 100%; height: 250px; object-fit: cover; display: block;">
+    <div style="padding: 15px; text-align: center;"><h3 style="margin: 0; font-size: 1.2rem;">Western Wall</h3></div>
   </div>
-  <div style="flex: 0 0 30%; margin: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden;">
-    <img src="https://source.unsplash.com/1200x800/?Israel,city" alt="Israel city" style="width: 100%; height: 250px; object-fit: cover; display: block;">
-    <div style="padding: 10px; text-align: center;">Israel city</div>
+  <div style="flex: 0 0 30%; min-width: 300px; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.1); margin-bottom: 20px;">
+    <img src="https://via.placeholder.com/800x500.png/007bff/ffffff?text=Dead+Sea" alt="Dead Sea" style="width: 100%; height: 250px; object-fit: cover; display: block;">
+    <div style="padding: 15px; text-align: center;"><h3 style="margin: 0; font-size: 1.2rem;">Dead Sea</h3></div>
   </div>
-  <div style="flex: 0 0 30%; margin: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden;">
-    <img src="https://source.unsplash.com/1200x800/?Israel,culture" alt="Israel culture" style="width: 100%; height: 250px; object-fit: cover; display: block;">
-    <div style="padding: 10px; text-align: center;">Israel culture</div>
-  </div>
-  <div style="flex: 0 0 30%; margin: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden;">
-    <img src="https://source.unsplash.com/1200x800/?Israel,travel" alt="Israel travel" style="width: 100%; height: 250px; object-fit: cover; display: block;">
-    <div style="padding: 10px; text-align: center;">Israel travel</div>
-  </div>
-  <div style="flex: 0 0 30%; margin: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden;">
-    <img src="https://source.unsplash.com/1200x800/?Israel,architecture" alt="Israel architecture" style="width: 100%; height: 250px; object-fit: cover; display: block;">
-    <div style="padding: 10px; text-align: center;">Israel architecture</div>
+  <div style="flex: 0 0 30%; min-width: 300px; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.1); margin-bottom: 20px;">
+    <img src="https://via.placeholder.com/800x500.png/007bff/ffffff?text=Masada" alt="Masada" style="width: 100%; height: 250px; object-fit: cover; display: block;">
+    <div style="padding: 15px; text-align: center;"><h3 style="margin: 0; font-size: 1.2rem;">Masada</h3></div>
   </div>
 </div>
 
-      <div class="photos">
-        <img class="photo" src="" alt="Photo 1">
-        <img class="photo" src="" alt="Photo 2">
-        <img class="photo" src="" alt="Photo 3">
-      </div>
-    </section>
-    <section id="attractions-section">
-      <h2>Attractions</h2>
-      <ul class="attractions">
-        <li class="attraction">
-          <span class="attraction-name">Western Wall</span>
-          <p>One of the holiest sites in Judaism, located in the Old City of Jerusalem.</p>
-          <p>Latitude: 31.7767, Longitude: 35.2344</p>
-        </li>
-        <li class="attraction">
-          <span class="attraction-name">Masada</span>
-          <p>An ancient fortress located on a plateau overlooking the Dead Sea.</p>
-          <p>Latitude: 31.3254, Longitude: 35.3533</p>
-        </li>
-        <li class="attraction">
-          <span class="attraction-name">Church of the Holy Sepulchre</span>
-          <p>A significant site in Christianity, located in the Old City of Jerusalem.</p>
-          <p>Latitude: 31.7786, Longitude: 35.2294</p>
-        </li>
-        <li class="attraction">
-          <span class="attraction-name">Haifa Bahai Gardens</span>
-          <p>A beautiful garden located on Mount Carmel in Haifa.</p>
-          <p>Latitude: 32.8222, Longitude: 34.9833</p>
-        </li>
-        <li class="attraction">
-          <span class="attraction-name">Dead Sea</span>
-          <p>A saltwater lake located in the Jordan Rift Valley.</p>
-          <p>Latitude: 31.5333, Longitude: 35.5833</p>
-        </li>
+    <div style="margin-top: 20px; padding: 15px; background-color: #f8f9fa; border-radius: 8px; text-align: center;">
+      <p>נוצרו תמונות placeholder עבור האטרקציות המובילות ב-Israel. להחלפת התמונות באמיתיות, אנא חפש תמונות ספציפיות של:</p>
+      <ul style="text-align: left; display: inline-block;">
+        <li><strong>Western Wall</strong></li> <li><strong>Dead Sea</strong></li> <li><strong>Masada</strong></li>
       </ul>
+    </div>
+    </section>
+
+    
+        <p>Israel, a country located in the Middle East, is a land of rich history, diverse culture, and breathtaking natural beauty. From the ancient city of Jerusalem to the stunning beaches of the Mediterranean, Israel has something to offer for every kind of traveler.</p>
+    </header>
+    <section id="photos">
+        <h2>Photos</h2>
+        
+        
+        
+    </section>
+    <section id="attractions">
+        <h2>Attractions</h2>
+        <div class="attraction">
+            <h3>Western Wall</h3>
+            <p>The Western Wall, also known as the Wailing Wall, is a sacred site in Jerusalem and one of the most famous landmarks in Israel. It is located at 31.7762, 35.2344.</p>
+        </div>
+        <div class="attraction">
+            <h3>Dead Sea</h3>
+            <p>The Dead Sea, a saltwater lake located between Israel and Jordan, is a popular destination for tourists and locals alike. It is known for its therapeutic properties and stunning natural beauty, and is located at 31.5497, 35.5733.</p>
+        </div>
+        <div class="attraction">
+            <h3>Masada</h3>
+            <p>Masada, an ancient fortress located on a plateau overlooking the Dead Sea, is a UNESCO World Heritage Site and one of the most popular tourist attractions in Israel. It is located at 31.3293, 35.3533.</p>
+        </div>
+        <div class="attraction">
+            <h3>Caesarea</h3>
+            <p>Caesarea, an ancient Roman city located on the Mediterranean coast, is a popular destination for tourists and history buffs. It is known for its well-preserved ruins and stunning natural beauty, and is located at 32.5044, 34.8953.</p>
+        </div>
+        <div class="attraction">
+            <h3>Tel Aviv</h3>
+            <p>Tel Aviv, the largest city in Israel, is a vibrant and cosmopolitan metropolis known for its stunning beaches, vibrant nightlife, and rich cultural scene. It is located at 32.0853, 34.7803.</p>
+        </div>
     </section>
     <section id="map-section">
-      <h2>Interactive Map</h2>
-      <div id="map" style="width: 100%; height: 500px;"></div>
-      <script>
-        function initMap() {
-          var map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 7,
-            center: {lat: 31.7833, lng: 35.2167}
-          });
+        <h2>Interactive Map</h2>
+        <div id="map" style="width: 100%; height: 500px;"></div>
+        <script>
+            function initMap() {
+                var map = new google.maps.Map(document.getElementById('map'), {
+                    zoom: 7,
+                    center: {lat: 31.0461, lng: 34.8516}
+                });
 
-          // Create markers for each attraction
-          var attractions = [
-            {name: 'Western Wall', lat: 31.7767, lng: 35.2344, description: 'One of the holiest sites in Judaism, located in the Old City of Jerusalem.'},
-            {name: 'Masada', lat: 31.3254, lng: 35.3533, description: 'An ancient fortress located on a plateau overlooking the Dead Sea.'},
-            {name: 'Church of the Holy Sepulchre', lat: 31.7786, lng: 35.2294, description: 'A significant site in Christianity, located in the Old City of Jerusalem.'},
-            {name: 'Haifa Bahai Gardens', lat: 32.8222, lng: 34.9833, description: 'A beautiful garden located on Mount Carmel in Haifa.'},
-            {name: 'Dead Sea', lat: 31.5333, lng: 35.5833, description: 'A saltwater lake located in the Jordan Rift Valley.'},
-          ];
+                // Create markers for each attraction
+                var attractions = [
+                    {name: 'Western Wall', lat: 31.7762, lng: 35.2344, description: 'The Western Wall, also known as the Wailing Wall, is a sacred site in Jerusalem and one of the most famous landmarks in Israel.'},
+                    {name: 'Dead Sea', lat: 31.5497, lng: 35.5733, description: 'The Dead Sea, a saltwater lake located between Israel and Jordan, is a popular destination for tourists and locals alike.'},
+                    {name: 'Masada', lat: 31.3293, lng: 35.3533, description: 'Masada, an ancient fortress located on a plateau overlooking the Dead Sea, is a UNESCO World Heritage Site and one of the most popular tourist attractions in Israel.'},
+                    {name: 'Caesarea', lat: 32.5044, lng: 34.8953, description: 'Caesarea, an ancient Roman city located on the Mediterranean coast, is a popular destination for tourists and history buffs.'},
+                    {name: 'Tel Aviv', lat: 32.0853, lng: 34.7803, description: 'Tel Aviv, the largest city in Israel, is a vibrant and cosmopolitan metropolis known for its stunning beaches, vibrant nightlife, and rich cultural scene.'},
+                ];
 
-          // Add markers to the map
-          var bounds = new google.maps.LatLngBounds();
-          for (var i = 0; i < attractions.length; i++) {
-            var marker = new google.maps.Marker({
-              position: {lat: attractions[i].lat, lng: attractions[i].lng},
-              map: map,
-              title: attractions[i].name
-            });
+                // Add markers to the map
+                var bounds = new google.maps.LatLngBounds();
+                for (var i = 0; i < attractions.length; i++) {
+                    var marker = new google.maps.Marker({
+                        position: {lat: attractions[i].lat, lng: attractions[i].lng},
+                        map: map,
+                        title: attractions[i].name
+                    });
 
-            // Add info window
-            (function(marker, attraction) {
-              var infowindow = new google.maps.InfoWindow({
-                content: '<div><strong>' + attraction.name + '</strong><p>' + attraction.description + '</p></div>'
-              });
-              marker.addListener('click', function() {
-                infowindow.open(map, marker);
-              });
-              bounds.extend(marker.getPosition());
-            })(marker, attractions[i]);
-          }
-          map.fitBounds(bounds);
-        }
-      </script>
-      <script async defer
-        src="https://maps.googleapis.com/maps/api/js?callback=initMap">
-      </script>
+                    // Add info window
+                    (function(marker, attraction) {
+                        var infowindow = new google.maps.InfoWindow({
+                            content: '<div><strong>' + attraction.name + '</strong><p>' + attraction.description + '</p></div>'
+                        });
+                        marker.addListener('click', function() {
+                            infowindow.open(map, marker);
+                        });
+                        bounds.extend(marker.getPosition());
+                    })(marker, attractions[i]);
+                }
+                map.fitBounds(bounds);
+            }
+        </script>
+        <script async defer
+            src="https://maps.googleapis.com/maps/api/js?callback=initMap">
+        </script>
     </section>
-  </main>
 </body>
 </html>
 ```
