@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover Chile</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        
+        .photos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        
+        .photo {
+            width: 30%;
+            margin: 10px;
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        
+        .attractions {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .attraction {
+            padding: 20px;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .attraction:last-child {
+            border-bottom: none;
+        }
+        
+        .map-section {
+            margin-top: 40px;
+        }
+        
+        #map {
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Discover Chile</h1>
+        <p>Chile is a long, narrow country in the southern hemisphere, known for its unique culture, stunning landscapes, and rich history. From the Atacama Desert in the north to the glaciers of Patagonia in the south, Chile has something to offer for every kind of traveler.</p>
+    </header>
+    <main class="container">
+        <section class="photos">
+            <div class="photo">
+                
+            </div>
+            <div class="photo">
+                
+            </div>
+            <div class="photo">
+                
+            </div>
+        </section>
+        <section class="attractions-section">
+            <h2>Top Attractions</h2>
+            <ul class="attractions">
+                <li class="attraction">
+                    <h3>Easter Island</h3>
+                    <p>Easter Island is a remote island in the southeastern Pacific Ocean, famous for its giant moai statues.</p>
+                    <p>Coordinates: -27.1123, -109.3492</p>
+                </li>
+                <li class="attraction">
+                    <h3>Torres del Paine National Park</h3>
+                    <p>Torres del Paine National Park is a stunning park in Patagonia, known for its towering mountains, glaciers, and wildlife.</p>
+                    <p>Coordinates: -51.0658, -72.5266</p>
+                </li>
+                <li class="attraction">
+                    <h3>San Cristóbal Hill</h3>
+                    <p>San Cristóbal Hill is a hill in Santiago, offering stunning views of the city and the Andes Mountains.</p>
+                    <p>Coordinates: -33.4273, -70.6353</p>
+                </li>
+                <li class="attraction">
+                    <h3>Valparaíso</h3>
+                    <p>Valparaíso is a charming coastal city, known for its colorful houses, steep streets, and vibrant arts scene.</p>
+                    <p>Coordinates: -33.0394, -71.6133</p>
+                </li>
+                <li class="attraction">
+                    <h3>Atacama Desert</h3>
+                    <p>The Atacama Desert is a unique and awe-inspiring landscape, known for its salt flats, geysers, and stargazing opportunities.</p>
+                    <p>Coordinates: -23.6963, -67.6156</p>
+                </li>
+            </ul>
+        </section>
+        <section class="map-section" id="map-section">
+            <h2>Interactive Map</h2>
+            <div id="map" style="width: 100%; height: 500px;"></div>
+            <script>
+                function initMap() {
+                  var map = new google.maps.Map(document.getElementById('map'), {
+                    zoom: 7,
+                    center: {lat: -30.0000, lng: -71.0000}
+                  });
+
+                  // Create markers for each attraction
+                  var attractions = [
+                    {name: 'Easter Island', lat: -27.1123, lng: -109.3492, description: 'Easter Island is a remote island in the southeastern Pacific Ocean, famous for its giant moai statues.'},
+                    {name: 'Torres del Paine National Park', lat: -51.0658, lng: -72.5266, description: 'Torres del Paine National Park is a stunning park in Patagonia, known for its towering mountains, glaciers, and wildlife.'},
+                    {name: 'San Cristóbal Hill', lat: -33.4273, lng: -70.6353, description: 'San Cristóbal Hill is a hill in Santiago, offering stunning views of the city and the Andes Mountains.'},
+                    {name: 'Valparaíso', lat: -33.0394, lng: -71.6133, description: 'Valparaíso is a charming coastal city, known for its colorful houses, steep streets, and vibrant arts scene.'},
+                    {name: 'Atacama Desert', lat: -23.6963, lng: -67.6156, description: 'The Atacama Desert is a unique and awe-inspiring landscape, known for its salt flats, geysers, and stargazing opportunities.'},
+                  ];
+
+                  // Add markers to the map
+                  var bounds = new google.maps.LatLngBounds();
+                  for (var i = 0; i < attractions.length; i++) {
+                    var marker = new google.maps.Marker({
+                      position: {lat: attractions[i].lat, lng: attractions[i].lng},
+                      map: map,
+                      title: attractions[i].name
+                    });
+
+                    // Add info window
+                    (function(marker, attraction) {
+                      var infowindow = new google.maps.InfoWindow({
+                        content: '<div><strong>' + attraction.name + '</strong><p>' + attraction.description + '</p></div>'
+                      });
+                      marker.addListener('click', function() {
+                        infowindow.open(map, marker);
+                      });
+                      bounds.extend(marker.getPosition());
+                    })(marker, attractions[i]);
+                  }
+                  map.fitBounds(bounds);
+                }
+            </script>
+            <script async defer
+              src="https://maps.googleapis.com/maps/api/js?callback=initMap">
+            </script>
+        </section>
+    </main>
+
+<section id="photos">
+<h2>Photos of Chile</h2>
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; margin: 20px 0;">
+  <div style="flex: 0 0 30%; margin: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden;">
+    <img src="https://images.unsplash.com/photo-1616354287942-93b9340abff8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NTM4NzZ8MHwxfHNlYXJjaHwxfHxDaGlsZSUyMGxhbmRzY2FwZXxlbnwwfDB8fHwxNzQ3ODA3OTczfDA&ixlib=rb-4.1.0&q=80&w=1080" alt="Chile landscape" style="width: 100%; height: 250px; object-fit: cover;">
+  </div>
+  <div style="flex: 0 0 30%; margin: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden;">
+    <img src="https://images.unsplash.com/photo-1526792678699-fcb4e5be0fd0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NTM4NzZ8MHwxfHNlYXJjaHwxfHxDaGlsZSUyMGNpdHl8ZW58MHwwfHx8MTc0NzgwNzk3NHww&ixlib=rb-4.1.0&q=80&w=1080" alt="Chile city" style="width: 100%; height: 250px; object-fit: cover;">
+  </div>
+  <div style="flex: 0 0 30%; margin: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden;">
+    <img src="https://images.unsplash.com/photo-1739220457240-0b85b889501c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NTM4NzZ8MHwxfHNlYXJjaHwxfHxDaGlsZSUyMGFyY2hpdGVjdHVyZXxlbnwwfDB8fHwxNzQ3ODA3OTc0fDA&ixlib=rb-4.1.0&q=80&w=1080" alt="Chile architecture" style="width: 100%; height: 250px; object-fit: cover;">
+  </div>
+</div>
+</section>
+</body>
+</html>
